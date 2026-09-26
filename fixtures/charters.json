@@ -1,0 +1,1200 @@
+{
+ "AS01": {
+  "assessment_window": 1200,
+  "authority_domains": [
+   "raw.githubusercontent.com"
+  ],
+  "bands": [
+   {
+    "band_id": "watch",
+    "conditions": "A flood warning is in force for the region, or river gauges stand above their warning level.",
+    "label": "Watch",
+    "min_corroboration": 1,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 4
+     }
+    ]
+   },
+   {
+    "band_id": "declared",
+    "conditions": "A flood warning is in force and a gauge has passed its danger level, or an evacuation has been ordered for part of the region.",
+    "label": "Declared",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 4
+     },
+     {
+      "category": "MEDICAL",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   },
+   {
+    "band_id": "severe",
+    "conditions": "Widespread inundation is reported with residents displaced, or a state of emergency has been declared for the region.",
+    "label": "Severe",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "3000000000000000000",
+      "max_grants": 3
+     },
+     {
+      "category": "EVACUATION",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   }
+  ],
+  "budget_atto": "30000000000000000000",
+  "hazard": "FLOOD",
+  "max_age_seconds": 1209600,
+  "max_grants_per_wallet": 3,
+  "monitors": [
+   {
+    "description": "The provincial hazards agency flood bulletin for the basin",
+    "source_id": "M1",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS01-bulletin.html"
+   },
+   {
+    "description": "The published river gauge readings for the basin",
+    "source_id": "M2",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS01-gauges.html"
+   }
+  ],
+  "name": "Lower Marrow flood relief",
+  "qualification": "A request qualifies when the evidence places the need inside the area this event was declared for, establishes the need in the category asked for, and ties that need to this event rather than to an earlier or unrelated cause.",
+  "region": "The Lower Marrow river basin, Eastfield province",
+  "request_window": 300
+ },
+ "AS02": {
+  "assessment_window": 1200,
+  "authority_domains": [
+   "raw.githubusercontent.com"
+  ],
+  "bands": [
+   {
+    "band_id": "watch",
+    "conditions": "A flood warning is in force for the region, or river gauges stand above their warning level.",
+    "label": "Watch",
+    "min_corroboration": 1,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 4
+     }
+    ]
+   },
+   {
+    "band_id": "declared",
+    "conditions": "A flood warning is in force and a gauge has passed its danger level, or an evacuation has been ordered for part of the region.",
+    "label": "Declared",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 4
+     },
+     {
+      "category": "MEDICAL",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   },
+   {
+    "band_id": "severe",
+    "conditions": "Widespread inundation is reported with residents displaced, or a state of emergency has been declared for the region.",
+    "label": "Severe",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "3000000000000000000",
+      "max_grants": 3
+     },
+     {
+      "category": "EVACUATION",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   }
+  ],
+  "budget_atto": "30000000000000000000",
+  "hazard": "FLOOD",
+  "max_age_seconds": 1209600,
+  "max_grants_per_wallet": 3,
+  "monitors": [
+   {
+    "description": "The provincial hazards agency flood bulletin for the basin",
+    "source_id": "M1",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS02-bulletin.html"
+   },
+   {
+    "description": "The published river gauge readings for the basin",
+    "source_id": "M2",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS02-gauges.html"
+   }
+  ],
+  "name": "Lower Marrow flood relief, second reading",
+  "qualification": "A request qualifies when the evidence places the need inside the area this event was declared for, establishes the need in the category asked for, and ties that need to this event rather than to an earlier or unrelated cause.",
+  "region": "The Lower Marrow river basin, Eastfield province",
+  "request_window": 300
+ },
+ "AS03": {
+  "assessment_window": 1200,
+  "authority_domains": [
+   "raw.githubusercontent.com"
+  ],
+  "bands": [
+   {
+    "band_id": "watch",
+    "conditions": "A flood warning is in force for the region, or river gauges stand above their warning level.",
+    "label": "Watch",
+    "min_corroboration": 1,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 4
+     }
+    ]
+   },
+   {
+    "band_id": "declared",
+    "conditions": "A flood warning is in force and a gauge has passed its danger level, or an evacuation has been ordered for part of the region.",
+    "label": "Declared",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 4
+     },
+     {
+      "category": "MEDICAL",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   },
+   {
+    "band_id": "severe",
+    "conditions": "Widespread inundation is reported with residents displaced, or a state of emergency has been declared for the region.",
+    "label": "Severe",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "3000000000000000000",
+      "max_grants": 3
+     },
+     {
+      "category": "EVACUATION",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   }
+  ],
+  "budget_atto": "30000000000000000000",
+  "hazard": "FLOOD",
+  "max_age_seconds": 1209600,
+  "max_grants_per_wallet": 3,
+  "monitors": [
+   {
+    "description": "The provincial hazards agency flood bulletin for the basin",
+    "source_id": "M1",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS03-bulletin.html"
+   },
+   {
+    "description": "The published river gauge readings for the basin",
+    "source_id": "M2",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS03-gauges.html"
+   }
+  ],
+  "name": "Lower Marrow flood relief, severe reading",
+  "qualification": "A request qualifies when the evidence places the need inside the area this event was declared for, establishes the need in the category asked for, and ties that need to this event rather than to an earlier or unrelated cause.",
+  "region": "The Lower Marrow river basin, Eastfield province",
+  "request_window": 300
+ },
+ "AS04": {
+  "assessment_window": 1200,
+  "authority_domains": [
+   "raw.githubusercontent.com"
+  ],
+  "bands": [
+   {
+    "band_id": "watch",
+    "conditions": "A flood warning is in force for the region, or river gauges stand above their warning level.",
+    "label": "Watch",
+    "min_corroboration": 1,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 4
+     }
+    ]
+   },
+   {
+    "band_id": "declared",
+    "conditions": "A flood warning is in force and a gauge has passed its danger level, or an evacuation has been ordered for part of the region.",
+    "label": "Declared",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 4
+     },
+     {
+      "category": "MEDICAL",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   },
+   {
+    "band_id": "severe",
+    "conditions": "Widespread inundation is reported with residents displaced, or a state of emergency has been declared for the region.",
+    "label": "Severe",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "3000000000000000000",
+      "max_grants": 3
+     },
+     {
+      "category": "EVACUATION",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   }
+  ],
+  "budget_atto": "30000000000000000000",
+  "hazard": "FLOOD",
+  "max_age_seconds": 0,
+  "max_grants_per_wallet": 3,
+  "monitors": [
+   {
+    "description": "The provincial hazards agency flood bulletin for the basin",
+    "source_id": "M1",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS04-bulletin.html"
+   },
+   {
+    "description": "The published river gauge readings for the basin",
+    "source_id": "M2",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS04-gauges.html"
+   }
+  ],
+  "name": "Lower Marrow flood relief, quiet season",
+  "qualification": "A request qualifies when the evidence places the need inside the area this event was declared for, establishes the need in the category asked for, and ties that need to this event rather than to an earlier or unrelated cause.",
+  "region": "The Lower Marrow river basin, Eastfield province",
+  "request_window": 300
+ },
+ "AS05": {
+  "assessment_window": 1200,
+  "authority_domains": [
+   "raw.githubusercontent.com"
+  ],
+  "bands": [
+   {
+    "band_id": "declared",
+    "conditions": "A flood warning is in force and a gauge has passed its danger level, or an evacuation has been ordered for part of the region.",
+    "label": "Declared",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 4
+     }
+    ]
+   }
+  ],
+  "budget_atto": "30000000000000000000",
+  "hazard": "FLOOD",
+  "max_age_seconds": 1209600,
+  "max_grants_per_wallet": 3,
+  "monitors": [
+   {
+    "description": "The provincial hazards agency flood bulletin for the basin",
+    "source_id": "M1",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS05-bulletin.html"
+   },
+   {
+    "description": "The published river gauge readings for the basin",
+    "source_id": "M2",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS05-gauges.html"
+   }
+  ],
+  "name": "Lower Marrow flood relief, single witness",
+  "qualification": "A request qualifies when the evidence places the need inside the area this event was declared for, establishes the need in the category asked for, and ties that need to this event rather than to an earlier or unrelated cause.",
+  "region": "The Lower Marrow river basin, Eastfield province",
+  "request_window": 300
+ },
+ "AS06": {
+  "assessment_window": 1200,
+  "authority_domains": [
+   "raw.githubusercontent.com"
+  ],
+  "bands": [
+   {
+    "band_id": "watch",
+    "conditions": "A flood warning is in force for the region, or river gauges stand above their warning level.",
+    "label": "Watch",
+    "min_corroboration": 1,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 4
+     }
+    ]
+   },
+   {
+    "band_id": "declared",
+    "conditions": "A flood warning is in force and a gauge has passed its danger level, or an evacuation has been ordered for part of the region.",
+    "label": "Declared",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 4
+     },
+     {
+      "category": "MEDICAL",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   },
+   {
+    "band_id": "severe",
+    "conditions": "Widespread inundation is reported with residents displaced, or a state of emergency has been declared for the region.",
+    "label": "Severe",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "3000000000000000000",
+      "max_grants": 3
+     },
+     {
+      "category": "EVACUATION",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   }
+  ],
+  "budget_atto": "30000000000000000000",
+  "hazard": "FLOOD",
+  "max_age_seconds": 1209600,
+  "max_grants_per_wallet": 3,
+  "monitors": [
+   {
+    "description": "The provincial hazards agency flood bulletin for the basin",
+    "source_id": "M1",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS06-bulletin.html"
+   },
+   {
+    "description": "The published river gauge readings for the basin",
+    "source_id": "M2",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS06-gauges.html"
+   }
+  ],
+  "name": "Lower Marrow flood relief, heat advisory",
+  "qualification": "A request qualifies when the evidence places the need inside the area this event was declared for, establishes the need in the category asked for, and ties that need to this event rather than to an earlier or unrelated cause.",
+  "region": "The Lower Marrow river basin, Eastfield province",
+  "request_window": 300
+ },
+ "AS07": {
+  "assessment_window": 1200,
+  "authority_domains": [
+   "raw.githubusercontent.com"
+  ],
+  "bands": [
+   {
+    "band_id": "watch",
+    "conditions": "A flood warning is in force for the region, or river gauges stand above their warning level.",
+    "label": "Watch",
+    "min_corroboration": 1,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 4
+     }
+    ]
+   },
+   {
+    "band_id": "declared",
+    "conditions": "A flood warning is in force and a gauge has passed its danger level, or an evacuation has been ordered for part of the region.",
+    "label": "Declared",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 4
+     },
+     {
+      "category": "MEDICAL",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   },
+   {
+    "band_id": "severe",
+    "conditions": "Widespread inundation is reported with residents displaced, or a state of emergency has been declared for the region.",
+    "label": "Severe",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "3000000000000000000",
+      "max_grants": 3
+     },
+     {
+      "category": "EVACUATION",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   }
+  ],
+  "budget_atto": "30000000000000000000",
+  "hazard": "FLOOD",
+  "max_age_seconds": 1209600,
+  "max_grants_per_wallet": 3,
+  "monitors": [
+   {
+    "description": "The provincial hazards agency flood bulletin for the basin",
+    "source_id": "M1",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS07-bulletin.html"
+   },
+   {
+    "description": "The published river gauge readings for the basin",
+    "source_id": "M2",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS07-gauges.html"
+   }
+  ],
+  "name": "Lower Marrow flood relief, undated",
+  "qualification": "A request qualifies when the evidence places the need inside the area this event was declared for, establishes the need in the category asked for, and ties that need to this event rather than to an earlier or unrelated cause.",
+  "region": "The Lower Marrow river basin, Eastfield province",
+  "request_window": 300
+ },
+ "AS08": {
+  "assessment_window": 1200,
+  "authority_domains": [
+   "raw.githubusercontent.com"
+  ],
+  "bands": [
+   {
+    "band_id": "watch",
+    "conditions": "A flood warning is in force for the region, or river gauges stand above their warning level.",
+    "label": "Watch",
+    "min_corroboration": 1,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 4
+     }
+    ]
+   },
+   {
+    "band_id": "declared",
+    "conditions": "A flood warning is in force and a gauge has passed its danger level, or an evacuation has been ordered for part of the region.",
+    "label": "Declared",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 4
+     },
+     {
+      "category": "MEDICAL",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   },
+   {
+    "band_id": "severe",
+    "conditions": "Widespread inundation is reported with residents displaced, or a state of emergency has been declared for the region.",
+    "label": "Severe",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "3000000000000000000",
+      "max_grants": 3
+     },
+     {
+      "category": "EVACUATION",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   }
+  ],
+  "budget_atto": "30000000000000000000",
+  "hazard": "FLOOD",
+  "max_age_seconds": 1209600,
+  "max_grants_per_wallet": 3,
+  "monitors": [
+   {
+    "description": "The provincial hazards agency flood bulletin for the basin",
+    "source_id": "M1",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS08-bulletin.html"
+   },
+   {
+    "description": "The published river gauge readings for the basin",
+    "source_id": "M2",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS08-gauges.html"
+   }
+  ],
+  "name": "Lower Marrow flood relief, stale signal",
+  "qualification": "A request qualifies when the evidence places the need inside the area this event was declared for, establishes the need in the category asked for, and ties that need to this event rather than to an earlier or unrelated cause.",
+  "region": "The Lower Marrow river basin, Eastfield province",
+  "request_window": 300
+ },
+ "AS09": {
+  "assessment_window": 1200,
+  "authority_domains": [
+   "raw.githubusercontent.com"
+  ],
+  "bands": [
+   {
+    "band_id": "watch",
+    "conditions": "A flood warning is in force for the region, or river gauges stand above their warning level.",
+    "label": "Watch",
+    "min_corroboration": 1,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 4
+     }
+    ]
+   },
+   {
+    "band_id": "declared",
+    "conditions": "A flood warning is in force and a gauge has passed its danger level, or an evacuation has been ordered for part of the region.",
+    "label": "Declared",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 4
+     },
+     {
+      "category": "MEDICAL",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   },
+   {
+    "band_id": "severe",
+    "conditions": "Widespread inundation is reported with residents displaced, or a state of emergency has been declared for the region.",
+    "label": "Severe",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "3000000000000000000",
+      "max_grants": 3
+     },
+     {
+      "category": "EVACUATION",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   }
+  ],
+  "budget_atto": "30000000000000000000",
+  "hazard": "FLOOD",
+  "max_age_seconds": 1209600,
+  "max_grants_per_wallet": 3,
+  "monitors": [
+   {
+    "description": "The provincial hazards agency flood bulletin for the basin",
+    "source_id": "M1",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS09-missing-bulletin.html"
+   },
+   {
+    "description": "The published river gauge readings for the basin",
+    "source_id": "M2",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS09-missing-gauges.html"
+   }
+  ],
+  "name": "Lower Marrow flood relief, silent sources",
+  "qualification": "A request qualifies when the evidence places the need inside the area this event was declared for, establishes the need in the category asked for, and ties that need to this event rather than to an earlier or unrelated cause.",
+  "region": "The Lower Marrow river basin, Eastfield province",
+  "request_window": 300
+ },
+ "AS10": {
+  "assessment_window": 1200,
+  "authority_domains": [
+   "raw.githubusercontent.com"
+  ],
+  "bands": [
+   {
+    "band_id": "watch",
+    "conditions": "A flood warning is in force for the region, or river gauges stand above their warning level.",
+    "label": "Watch",
+    "min_corroboration": 1,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 4
+     }
+    ]
+   }
+  ],
+  "budget_atto": "30000000000000000000",
+  "hazard": "FLOOD",
+  "max_age_seconds": 1209600,
+  "max_grants_per_wallet": 3,
+  "monitors": [
+   {
+    "description": "The provincial hazards agency flood bulletin for the basin",
+    "source_id": "M1",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS10-bulletin.html"
+   },
+   {
+    "description": "The published river gauge readings for the basin",
+    "source_id": "M2",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS10-missing.html"
+   }
+  ],
+  "name": "Lower Marrow flood relief, one source down",
+  "qualification": "A request qualifies when the evidence places the need inside the area this event was declared for, establishes the need in the category asked for, and ties that need to this event rather than to an earlier or unrelated cause.",
+  "region": "The Lower Marrow river basin, Eastfield province",
+  "request_window": 300
+ },
+ "AS11": {
+  "assessment_window": 1200,
+  "authority_domains": [
+   "raw.githubusercontent.com"
+  ],
+  "bands": [
+   {
+    "band_id": "watch",
+    "conditions": "A flood warning is in force for the region, or river gauges stand above their warning level.",
+    "label": "Watch",
+    "min_corroboration": 1,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 4
+     }
+    ]
+   },
+   {
+    "band_id": "declared",
+    "conditions": "A flood warning is in force and a gauge has passed its danger level, or an evacuation has been ordered for part of the region.",
+    "label": "Declared",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 4
+     },
+     {
+      "category": "MEDICAL",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   },
+   {
+    "band_id": "severe",
+    "conditions": "Widespread inundation is reported with residents displaced, or a state of emergency has been declared for the region.",
+    "label": "Severe",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "3000000000000000000",
+      "max_grants": 3
+     },
+     {
+      "category": "EVACUATION",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   }
+  ],
+  "budget_atto": "30000000000000000000",
+  "hazard": "FLOOD",
+  "max_age_seconds": 1209600,
+  "max_grants_per_wallet": 3,
+  "monitors": [
+   {
+    "description": "The provincial hazards agency flood bulletin for the basin",
+    "source_id": "M1",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS11-bulletin.html"
+   },
+   {
+    "description": "The published river gauge readings for the basin",
+    "source_id": "M2",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS11-gauges.html"
+   }
+  ],
+  "name": "Lower Marrow flood relief, injected body",
+  "qualification": "A request qualifies when the evidence places the need inside the area this event was declared for, establishes the need in the category asked for, and ties that need to this event rather than to an earlier or unrelated cause.",
+  "region": "The Lower Marrow river basin, Eastfield province",
+  "request_window": 300
+ },
+ "AS12": {
+  "assessment_window": 1200,
+  "authority_domains": [
+   "raw.githubusercontent.com"
+  ],
+  "bands": [
+   {
+    "band_id": "watch",
+    "conditions": "A flood warning is in force for the region, or river gauges stand above their warning level.",
+    "label": "Watch",
+    "min_corroboration": 1,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 4
+     }
+    ]
+   },
+   {
+    "band_id": "declared",
+    "conditions": "A flood warning is in force and a gauge has passed its danger level, or an evacuation has been ordered for part of the region.",
+    "label": "Declared",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 4
+     },
+     {
+      "category": "MEDICAL",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   },
+   {
+    "band_id": "severe",
+    "conditions": "Widespread inundation is reported with residents displaced, or a state of emergency has been declared for the region.",
+    "label": "Severe",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "3000000000000000000",
+      "max_grants": 3
+     },
+     {
+      "category": "EVACUATION",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   }
+  ],
+  "budget_atto": "30000000000000000000",
+  "hazard": "FLOOD",
+  "max_age_seconds": 1209600,
+  "max_grants_per_wallet": 3,
+  "monitors": [
+   {
+    "description": "The provincial hazards agency flood bulletin for the basin",
+    "source_id": "M1",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS12-bulletin.html"
+   },
+   {
+    "description": "The published river gauge readings for the basin",
+    "source_id": "M2",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS12-gauges.html"
+   }
+  ],
+  "name": "Lower Marrow flood relief, injected markup",
+  "qualification": "A request qualifies when the evidence places the need inside the area this event was declared for, establishes the need in the category asked for, and ties that need to this event rather than to an earlier or unrelated cause.",
+  "region": "The Lower Marrow river basin, Eastfield province",
+  "request_window": 300
+ },
+ "AS13": {
+  "assessment_window": 1200,
+  "authority_domains": [
+   "raw.githubusercontent.com"
+  ],
+  "bands": [
+   {
+    "band_id": "watch",
+    "conditions": "A flood warning is in force for the region, or river gauges stand above their warning level.",
+    "label": "Watch",
+    "min_corroboration": 1,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 4
+     }
+    ]
+   },
+   {
+    "band_id": "declared",
+    "conditions": "A flood warning is in force and a gauge has passed its danger level, or an evacuation has been ordered for part of the region.",
+    "label": "Declared",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 4
+     },
+     {
+      "category": "MEDICAL",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   },
+   {
+    "band_id": "severe",
+    "conditions": "Widespread inundation is reported with residents displaced, or a state of emergency has been declared for the region.",
+    "label": "Severe",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "3000000000000000000",
+      "max_grants": 3
+     },
+     {
+      "category": "EVACUATION",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   }
+  ],
+  "budget_atto": "30000000000000000000",
+  "hazard": "FLOOD",
+  "max_age_seconds": 1209600,
+  "max_grants_per_wallet": 3,
+  "monitors": [
+   {
+    "description": "The provincial hazards agency flood bulletin for the basin",
+    "source_id": "M1",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS13-bulletin.html"
+   },
+   {
+    "description": "The published river gauge readings for the basin",
+    "source_id": "M2",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS13-gauges.html"
+   }
+  ],
+  "name": "Lower Marrow flood relief, hidden instruction",
+  "qualification": "A request qualifies when the evidence places the need inside the area this event was declared for, establishes the need in the category asked for, and ties that need to this event rather than to an earlier or unrelated cause.",
+  "region": "The Lower Marrow river basin, Eastfield province",
+  "request_window": 300
+ },
+ "AS14": {
+  "assessment_window": 1200,
+  "authority_domains": [
+   "raw.githubusercontent.com"
+  ],
+  "bands": [
+   {
+    "band_id": "watch",
+    "conditions": "A flood warning is in force for the region, or river gauges stand above their warning level.",
+    "label": "Watch",
+    "min_corroboration": 1,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 4
+     }
+    ]
+   },
+   {
+    "band_id": "declared",
+    "conditions": "A flood warning is in force and a gauge has passed its danger level, or an evacuation has been ordered for part of the region.",
+    "label": "Declared",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 4
+     },
+     {
+      "category": "MEDICAL",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   },
+   {
+    "band_id": "severe",
+    "conditions": "Widespread inundation is reported with residents displaced, or a state of emergency has been declared for the region.",
+    "label": "Severe",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "3000000000000000000",
+      "max_grants": 3
+     },
+     {
+      "category": "EVACUATION",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   }
+  ],
+  "budget_atto": "30000000000000000000",
+  "hazard": "FLOOD",
+  "max_age_seconds": 1209600,
+  "max_grants_per_wallet": 3,
+  "monitors": [
+   {
+    "description": "The provincial hazards agency flood bulletin for the basin",
+    "source_id": "M1",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS14-bulletin.html"
+   },
+   {
+    "description": "The basin's live operational feed",
+    "source_id": "M2",
+    "stability": "DYNAMIC",
+    "url": "{base}sources/monitors/AS14-feed.html"
+   }
+  ],
+  "name": "Lower Marrow flood relief, live feed",
+  "qualification": "A request qualifies when the evidence places the need inside the area this event was declared for, establishes the need in the category asked for, and ties that need to this event rather than to an earlier or unrelated cause.",
+  "region": "The Lower Marrow river basin, Eastfield province",
+  "request_window": 300
+ },
+ "AS15": {
+  "assessment_window": 1200,
+  "authority_domains": [
+   "raw.githubusercontent.com"
+  ],
+  "bands": [
+   {
+    "band_id": "watch",
+    "conditions": "A flood warning is in force for the region, or river gauges stand above their warning level.",
+    "label": "Watch",
+    "min_corroboration": 1,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 4
+     }
+    ]
+   },
+   {
+    "band_id": "declared",
+    "conditions": "A flood warning is in force and a gauge has passed its danger level, or an evacuation has been ordered for part of the region.",
+    "label": "Declared",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 4
+     },
+     {
+      "category": "MEDICAL",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   },
+   {
+    "band_id": "severe",
+    "conditions": "Widespread inundation is reported with residents displaced, or a state of emergency has been declared for the region.",
+    "label": "Severe",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "3000000000000000000",
+      "max_grants": 3
+     },
+     {
+      "category": "EVACUATION",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   }
+  ],
+  "budget_atto": "30000000000000000000",
+  "hazard": "FLOOD",
+  "max_age_seconds": 1209600,
+  "max_grants_per_wallet": 3,
+  "monitors": [
+   {
+    "description": "The provincial hazards agency flood bulletin for the basin",
+    "source_id": "M1",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS15-bulletin.html"
+   },
+   {
+    "description": "The published river gauge readings for the basin",
+    "source_id": "M2",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS15-gauges.html"
+   }
+  ],
+  "name": "Lower Marrow flood relief, future onset",
+  "qualification": "A request qualifies when the evidence places the need inside the area this event was declared for, establishes the need in the category asked for, and ties that need to this event rather than to an earlier or unrelated cause.",
+  "region": "The Lower Marrow river basin, Eastfield province",
+  "request_window": 300
+ },
+ "AS16": {
+  "assessment_window": 1200,
+  "authority_domains": [
+   "raw.githubusercontent.com"
+  ],
+  "bands": [
+   {
+    "band_id": "watch",
+    "conditions": "A flood warning is in force for the region, or river gauges stand above their warning level.",
+    "label": "Watch",
+    "min_corroboration": 1,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 4
+     }
+    ]
+   },
+   {
+    "band_id": "declared",
+    "conditions": "A flood warning is in force and a gauge has passed its danger level, or an evacuation has been ordered for part of the region.",
+    "label": "Declared",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 4
+     },
+     {
+      "category": "MEDICAL",
+      "grant_atto": "1000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   },
+   {
+    "band_id": "severe",
+    "conditions": "Widespread inundation is reported with residents displaced, or a state of emergency has been declared for the region.",
+    "label": "Severe",
+    "min_corroboration": 2,
+    "relief": [
+     {
+      "category": "SHELTER",
+      "grant_atto": "3000000000000000000",
+      "max_grants": 3
+     },
+     {
+      "category": "EVACUATION",
+      "grant_atto": "2000000000000000000",
+      "max_grants": 3
+     }
+    ]
+   }
+  ],
+  "budget_atto": "30000000000000000000",
+  "hazard": "FLOOD",
+  "max_age_seconds": 1209600,
+  "max_grants_per_wallet": 3,
+  "monitors": [
+   {
+    "description": "The provincial hazards agency flood bulletin for the basin",
+    "source_id": "M1",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS16-bulletin.html"
+   },
+   {
+    "description": "The published river gauge readings for the basin",
+    "source_id": "M2",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS16-gauges.html"
+   },
+   {
+    "description": "The district relief office situation report",
+    "source_id": "M3",
+    "stability": "STABLE",
+    "url": "{base}sources/monitors/AS16-field.html"
+   }
+  ],
+  "name": "Lower Marrow flood relief, three sources",
+  "qualification": "A request qualifies when the evidence places the need inside the area this event was declared for, establishes the need in the category asked for, and ties that need to this event rather than to an earlier or unrelated cause.",
+  "region": "The Lower Marrow river basin, Eastfield province",
+  "request_window": 300
+ }
+}

@@ -1,0 +1,22 @@
+[project]
+name = "succour"
+version = "0.1.0"
+description = "A relief organisation that declares a disaster and authorises the relief its charter promised - a standalone GenLayer Intelligent Contract"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests/direct"]
+addopts = "-p no:cacheprovider"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+# fixtures/sources holds bulletin texts that merely look like Python
+extend-exclude = ["fixtures"]
+
+[tool.ruff.lint]
+select = ["E9", "E7", "F"]
+# The contract imports the GenLayer SDK with a star import, as the SDK's own
+# examples do; lambdas bind small assertion helpers in tests.
+ignore = ["F403", "F405", "E731"]

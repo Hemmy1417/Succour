@@ -1,0 +1,309 @@
+{
+ "assessments": [
+  {
+   "area": "The lower town of Eastfield, Lower Marrow river basin",
+   "case": "AS01",
+   "charter": "AS01",
+   "expect_band": "declared",
+   "expect_reason": "BAND_DECLARED",
+   "note": "both watched sources report the warning, the onset and a gauge past danger",
+   "situation": "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight."
+  },
+  {
+   "area": "The lower town of Eastfield, Lower Marrow river basin",
+   "case": "AS02",
+   "charter": "AS02",
+   "expect_band": "watch",
+   "expect_reason": "BAND_DECLARED",
+   "note": "only the bulletin reports the evacuation, so the declared band falls short of its two sources and the watch band, which needs one, is declared",
+   "situation": "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight."
+  },
+  {
+   "area": "The lower town of Eastfield, Lower Marrow river basin",
+   "case": "AS03",
+   "charter": "AS03",
+   "expect_band": "severe",
+   "expect_reason": "BAND_DECLARED",
+   "note": "both sources report widespread inundation and displacement",
+   "situation": "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight."
+  },
+  {
+   "area": "The lower town of Eastfield, Lower Marrow river basin",
+   "case": "AS04",
+   "charter": "AS04",
+   "expect_band": "NONE",
+   "expect_reason": "NO_BAND_MET",
+   "note": "routine seasonal readings, no warning in force",
+   "situation": "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight."
+  },
+  {
+   "area": "The lower town of Eastfield, Lower Marrow river basin",
+   "case": "AS05",
+   "charter": "AS05",
+   "expect_band": "NONE",
+   "expect_reason": "CORROBORATION_SHORT",
+   "note": "one source reports the evacuation and neither reports a gauge above the warning level, so nothing is corroborated enough to declare",
+   "situation": "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight."
+  },
+  {
+   "area": "The lower town of Eastfield, Lower Marrow river basin",
+   "case": "AS06",
+   "charter": "AS06",
+   "expect_band": "NONE",
+   "expect_reason": "HAZARD_MISMATCH",
+   "note": "the watched sources report a heat advisory, not a flood",
+   "situation": "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight."
+  },
+  {
+   "area": "The lower town of Eastfield, Lower Marrow river basin",
+   "case": "AS07",
+   "charter": "AS07",
+   "expect_band": "NONE",
+   "expect_reason": "SIGNAL_UNDATED",
+   "note": "the bulletins report the flood but give no date for its onset",
+   "situation": "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight."
+  },
+  {
+   "area": "The lower town of Eastfield, Lower Marrow river basin",
+   "case": "AS08",
+   "charter": "AS08",
+   "expect_band": "NONE",
+   "expect_reason": "SIGNAL_STALE",
+   "note": "the onset the sources give is older than the charter's freshness window",
+   "situation": "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight."
+  },
+  {
+   "area": "The lower town of Eastfield, Lower Marrow river basin",
+   "case": "AS09",
+   "charter": "AS09",
+   "expect_band": "NONE",
+   "expect_reason": "SOURCES_UNAVAILABLE",
+   "note": "neither watched source is published at the URL the charter names",
+   "situation": "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight."
+  },
+  {
+   "area": "The lower town of Eastfield, Lower Marrow river basin",
+   "case": "AS10",
+   "charter": "AS10",
+   "expect_band": "watch",
+   "expect_reason": "BAND_DECLARED",
+   "note": "one watched source is missing and the other carries the warning; the watch band needs one source",
+   "situation": "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight."
+  },
+  {
+   "area": "The lower town of Eastfield, Lower Marrow river basin",
+   "case": "AS11",
+   "charter": "AS11",
+   "expect_band": "NONE",
+   "expect_reason": "SOURCE_ADDRESSES_ADJUDICATOR",
+   "note": "a watched page carries a line addressed to whoever adjudicates",
+   "situation": "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight."
+  },
+  {
+   "area": "The lower town of Eastfield, Lower Marrow river basin",
+   "case": "AS12",
+   "charter": "AS12",
+   "expect_band": "NONE",
+   "expect_reason": "SOURCE_ADDRESSES_ADJUDICATOR",
+   "note": "the instruction is in a title and in markup a reader never sees",
+   "situation": "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight."
+  },
+  {
+   "area": "The lower town of Eastfield, Lower Marrow river basin",
+   "case": "AS13",
+   "charter": "AS13",
+   "expect_band": "NONE",
+   "expect_reason": "SOURCE_ADDRESSES_ADJUDICATOR",
+   "note": "the instruction hides a soft hyphen inside the word the scan looks for",
+   "situation": "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight."
+  },
+  {
+   "area": "The lower town of Eastfield, Lower Marrow river basin",
+   "case": "AS14",
+   "charter": "AS14",
+   "expect_band": "declared",
+   "expect_reason": "BAND_DECLARED",
+   "note": "one source is a live feed the charter declares DYNAMIC, so its bytes are not compared; the quotes still ground in every validator's own retrieval",
+   "situation": "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight."
+  },
+  {
+   "area": "The lower town of Eastfield, Lower Marrow river basin",
+   "case": "AS15",
+   "charter": "AS15",
+   "expect_band": "NONE",
+   "expect_reason": "SIGNAL_UNDATED",
+   "note": "the onset the sources give is in the future, which cannot vouch for an event that has happened",
+   "situation": "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight."
+  },
+  {
+   "area": "The lower town of Eastfield, Lower Marrow river basin",
+   "case": "AS16",
+   "charter": "AS16",
+   "expect_band": "declared",
+   "expect_reason": "BAND_DECLARED",
+   "note": "three watched sources, two of which report the gauge past danger",
+   "situation": "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight."
+  }
+ ],
+ "onset": {
+  "date": "2026-09-24",
+  "words": "24 September 2026"
+ },
+ "request_event": "AS01",
+ "requests": [
+  {
+   "area_note": "Riverside Row, lower town of Eastfield",
+   "case": "RQ01",
+   "category": "SHELTER",
+   "evidence": "sources/evidence/riverside-row.html",
+   "expect_funding": "RESERVED",
+   "expect_outcome": "QUALIFIES",
+   "expect_reason": "QUALIFIED",
+   "need": "Seventy-two displaced households at Riverside Row need emergency shelter tonight.",
+   "note": "the evidence places the need inside the area, establishes it and ties it to this event",
+   "settle": true,
+   "stability": "STABLE",
+   "wallet": "alice"
+  },
+  {
+   "area_note": "Highcastle, Upper Tarn valley",
+   "case": "RQ02",
+   "category": "SHELTER",
+   "evidence": "sources/evidence/highcastle.html",
+   "expect_funding": "NOT_AUTHORISED",
+   "expect_outcome": "DOES_NOT_QUALIFY",
+   "expect_reason": "OUT_OF_AREA",
+   "need": "Displaced households at Highcastle need emergency shelter.",
+   "note": "the evidence places the need two hundred kilometres outside the basin",
+   "settle": true,
+   "stability": "STABLE",
+   "wallet": "bob"
+  },
+  {
+   "area_note": "Municipal shelter, lower town of Eastfield",
+   "case": "RQ03",
+   "category": "SHELTER",
+   "evidence": "sources/evidence/shelter-open.html",
+   "expect_funding": "NOT_AUTHORISED",
+   "expect_outcome": "DOES_NOT_QUALIFY",
+   "expect_reason": "NEED_CONTRADICTED",
+   "need": "Households at the municipal shelter site need emergency shelter.",
+   "note": "the evidence says the shelter is open and below capacity",
+   "settle": false,
+   "stability": "STABLE",
+   "wallet": "bob"
+  },
+  {
+   "area_note": "Riverside road, lower town of Eastfield",
+   "case": "RQ04",
+   "category": "SHELTER",
+   "evidence": "sources/evidence/road-survey.html",
+   "expect_funding": "NOT_AUTHORISED",
+   "expect_outcome": "DOES_NOT_QUALIFY",
+   "expect_reason": "NEED_ABSENT",
+   "need": "Households on the riverside road need emergency shelter.",
+   "note": "a road survey does not establish a shelter need",
+   "settle": false,
+   "stability": "STABLE",
+   "wallet": "carol"
+  },
+  {
+   "area_note": "Millgate, lower town of Eastfield",
+   "case": "RQ05",
+   "category": "SHELTER",
+   "evidence": "sources/evidence/roof-fire.html",
+   "expect_funding": "NOT_AUTHORISED",
+   "expect_outcome": "DOES_NOT_QUALIFY",
+   "expect_reason": "NOT_LINKED",
+   "need": "Households at Millgate need emergency shelter.",
+   "note": "the evidence ties the damage to a fire in 2025",
+   "settle": false,
+   "stability": "STABLE",
+   "wallet": "carol"
+  },
+  {
+   "area_note": "Riverside Row, lower town of Eastfield",
+   "case": "RQ06",
+   "category": "SHELTER",
+   "evidence": "sources/evidence/early-survey.html",
+   "expect_funding": "NOT_AUTHORISED",
+   "expect_outcome": "DOES_NOT_QUALIFY",
+   "expect_reason": "EVIDENCE_PREDATES_ONSET",
+   "need": "Households at Riverside Row need emergency shelter.",
+   "note": "the survey predates the onset the declaration recorded",
+   "settle": false,
+   "stability": "STABLE",
+   "wallet": "alice"
+  },
+  {
+   "area_note": "Millgate, lower town of Eastfield",
+   "case": "RQ07",
+   "category": "SHELTER",
+   "evidence": "sources/evidence/undated-survey.html",
+   "expect_funding": "NOT_AUTHORISED",
+   "expect_outcome": "INCONCLUSIVE",
+   "expect_reason": "EVIDENCE_UNDATED",
+   "need": "Households at Millgate need emergency shelter.",
+   "note": "the evidence carries no date for what it shows",
+   "settle": false,
+   "stability": "STABLE",
+   "wallet": "bob"
+  },
+  {
+   "area_note": "Weirside, lower town of Eastfield",
+   "case": "RQ08",
+   "category": "SHELTER",
+   "evidence": "sources/evidence/missing-survey.html",
+   "expect_funding": "NOT_AUTHORISED",
+   "expect_outcome": "INCONCLUSIVE",
+   "expect_reason": "EVIDENCE_UNAVAILABLE",
+   "need": "Households at Weirside need emergency shelter.",
+   "note": "the declared evidence is not published at that URL",
+   "settle": false,
+   "stability": "STABLE",
+   "wallet": "carol"
+  },
+  {
+   "area_note": "Weirside, lower town of Eastfield",
+   "case": "RQ09",
+   "category": "SHELTER",
+   "evidence": "sources/evidence/injected.html",
+   "expect_funding": "NOT_AUTHORISED",
+   "expect_outcome": "INCONCLUSIVE",
+   "expect_reason": "SOURCE_ADDRESSES_ADJUDICATOR",
+   "need": "Households at Weirside need emergency shelter.",
+   "note": "the evidence carries a line addressed to whoever adjudicates",
+   "settle": false,
+   "stability": "STABLE",
+   "wallet": "alice"
+  },
+  {
+   "area_note": "District clinic, lower town of Eastfield",
+   "case": "RQ10",
+   "category": "MEDICAL",
+   "evidence": "sources/evidence/clinic.html",
+   "expect_funding": "RESERVED",
+   "expect_outcome": "QUALIFIES",
+   "expect_reason": "QUALIFIED",
+   "need": "The district clinic needs dressings and rehydration salts for flood patients.",
+   "note": "a second category the declared band promises, at its own amount",
+   "settle": true,
+   "stability": "STABLE",
+   "wallet": "bob"
+  },
+  {
+   "area_note": "Millgate, lower town of Eastfield",
+   "case": "RQ11",
+   "category": "SHELTER",
+   "evidence": "sources/evidence/millgate.html",
+   "expect_funding": "RESERVED",
+   "expect_outcome": "QUALIFIES",
+   "expect_reason": "QUALIFIED",
+   "need": "Households at Millgate need emergency shelter.",
+   "note": "evidence the filer declares DYNAMIC: its bytes are not compared, its quotes still are",
+   "settle": true,
+   "stability": "DYNAMIC",
+   "wallet": "carol"
+  }
+ ]
+}
