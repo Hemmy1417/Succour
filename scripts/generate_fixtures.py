@@ -44,6 +44,10 @@ ROUTINE = ("River levels across the basin are within their seasonal range and no
            "is in force.")
 SEASONAL = ("Marrow Bridge gauge reading 2.1 metres against a warning level of 4.2 "
             "metres; no advisories are current.")
+CLOSURES = ("Roads through the lower basin are closed to traffic following the "
+            "flooding, including the Marrow Bridge approach.")
+NO_READINGS = ("This notice lists road closures only. It carries no flood warnings and no "
+               "gauge readings.")
 HEATWAVE = ("A heat advisory is in force for Eastfield province, with temperatures above "
             "38 degrees expected for four days.")
 HEAT_DETAIL = ("Cooling centres are open in the provincial capital. No river warnings are "
@@ -244,13 +248,15 @@ def build() -> tuple:
          sources_for_case("AS04", [ROUTINE, onset], [ROUTINE, SEASONAL, onset]))
 
     case("AS05", "NONE", "CORROBORATION_SHORT",
-         "one source reports the evacuation and neither reports a gauge above the warning "
-         "level, so nothing is corroborated enough to declare",
+         "only the bulletin bears on the band's conditions at all - the second watched "
+         "source is a road closure notice - so the band is met by one source where the "
+         "charter demands two",
          charter("Lower Marrow flood relief, single witness",
                  two_monitors("AS05"),
                  bands=[band("declared", "Declared", DECLARED_CONDITIONS, 2,
                              [relief("SHELTER", 2 * GEN, 4)])]),
-         sources_for_case("AS05", [WARNING, onset, DANGER], [WARNING, onset]))
+         sources_for_case("AS05", [WARNING, onset, DANGER], [CLOSURES, onset, NO_READINGS],
+                          gauge_title="Lower Marrow road closure notice"))
 
     case("AS06", "NONE", "HAZARD_MISMATCH",
          "the watched sources report a heat advisory, not a flood",

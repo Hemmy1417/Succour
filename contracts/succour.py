@@ -1745,37 +1745,39 @@ def _derive(ctx: dict, payload: dict) -> dict:
         # panels cite different subsets of the same bulletin set, and the
         # charter's floor is what the band rests on.
         reached = reason in ONSET_REACHED
+        # the onset date is compared because every later relief request is
+        # measured against it. Its outcome - current, stale, undated - is not a
+        # field of its own: the reason already says which one it was.
         consequence = {
             "declared_band": band, "reason_code": reason, "short_band": short,
             "onset": onset if reached else "",
-            "onset_outcome": outcome if reached else "",
             "digests": _digests(ctx, payload),
         }
         subject_ids = [SUBJECT_HAZARD, SUBJECT_ONSET] + (
             [_band_subject(band)] if band != NO_BAND else [])
         return {"consequence": consequence, "band_id": band, "reason_code": reason,
                 "short_band": short, "corroborating_sources": cited,
-                "onset_outcome": outcome, "onset": onset,
+                "onset_outcome": outcome if reached else "",
+                "onset": onset if reached else "",
                 "excerpt": _excerpt(ctx, payload, subject_ids)
                 if payload["panel_state"] == PANEL_ASSESSED else "",
                 "findings": payload["findings"]}
     outcome, reason, dated_outcome, dated = _request_status(ctx, payload)
-    # a request granted rests on every subject, so every state is compared. A
-    # request refused rests on the one subject named in its reason; the others
-    # were never reached, and comparing them would split a round over readings
-    # that cannot change it.
-    on_merits = reason == "QUALIFIED"
+    # the reason is the whole of it: each reason names exactly one reading, and
+    # QUALIFIED can only follow from the area being inside, the need
+    # established and the link made - so comparing those states again would add
+    # nothing, while comparing the readings a refusal never reached would split
+    # a round over findings that cannot change it. The evidence date is
+    # compared, because it is a value and not an implication.
+    reached = reason in EVIDENCE_DATE_REACHED
     consequence = {
         "outcome": outcome, "reason_code": reason,
-        "subject_states": {s: _state_of(payload, s)
-                           for s in (SUBJECT_AREA, SUBJECT_NEED, SUBJECT_LINK)}
-        if on_merits else {},
-        "evidence_date": dated if reason in EVIDENCE_DATE_REACHED else "",
-        "evidence_outcome": dated_outcome if reason in EVIDENCE_DATE_REACHED else "",
+        "evidence_date": dated if reached else "",
         "digests": _digests(ctx, payload),
     }
     return {"consequence": consequence, "outcome": outcome, "reason_code": reason,
-            "evidence_outcome": dated_outcome, "evidence_date": dated,
+            "evidence_outcome": dated_outcome if reached else "",
+            "evidence_date": dated if reached else "",
             "excerpt": _excerpt(ctx, payload, [SUBJECT_AREA, SUBJECT_NEED, SUBJECT_LINK])
             if payload["panel_state"] == PANEL_ASSESSED else "",
             "findings": payload["findings"]}
@@ -2062,6 +2064,13 @@ class Succour(gl.Contract):
     def _evidence_key(self, event_id: str, url: str) -> str:
         return event_id + "|" + url
 
+    def _free_claim(self, request: Request):
+        """Give a source back, but only from the request that holds it."""
+        key = self._evidence_key(str(request.event_id), str(request.source_url))
+        held = self.evidence_claims.get(key)
+        if held is not None and str(held) == str(request.request_id):
+            del self.evidence_claims[key]
+
     # -- the rounds --------------------------------------------------------------
 
     def _assess_ctx(self, event: Event, charter: Charter, mode: str, now: str) -> dict:
@@ -2173,8 +2182,7 @@ class Succour(gl.Contract):
             "declared_band": outcome["band_id"],
             "band_label": band["label"] if band is not None else "",
             "reason_code": outcome["reason_code"], "short_band": outcome["short_band"],
-            "onset": outcome["consequence"]["onset"],
-            "onset_outcome": outcome["consequence"]["onset_outcome"],
+            "onset": outcome["onset"], "onset_outcome": outcome["onset_outcome"],
             "relief": band["relief"] if band is not None else [],
             "min_corroboration": band["min_corroboration"] if band is not None else 0,
             "corroborating_sources": outcome["corroborating_sources"],
@@ -2197,8 +2205,8 @@ class Succour(gl.Contract):
             "supersedes": supersedes, "decided_by": BY_PANEL,
             "band_id": ctx["band_id"], "category": ctx["category"],
             "outcome": outcome["outcome"], "reason_code": outcome["reason_code"],
-            "evidence_date": outcome["consequence"]["evidence_date"],
-            "evidence_outcome": outcome["consequence"]["evidence_outcome"],
+            "evidence_date": outcome["evidence_date"],
+            "evidence_outcome": outcome["evidence_outcome"],
             "authorised_atto": str(authorised), "funding": funding,
             "sources": self._source_records(ctx, payload),
             "markers": payload["markers"], "panel_state": payload["panel_state"],
@@ -2273,8 +2281,10 @@ class Succour(gl.Contract):
 
     def _cap_reason(self, request: Request, event: Event, spec: dict) -> str:
         """The deterministic refusals, checked at every adjudication because
-        another request may have taken the last grant since this one was
-        filed."""
+        another request may have taken the last grant since this one was filed.
+        The counters hold every grant reserved or paid, and a superseded
+        reservation is released before this runs, so a request that was already
+        holding a grant is never refused in favour of itself."""
         if str(event.band_id) != str(request.band_id):
             return "BAND_WITHDRAWN"
         _index, band = _band_by_id(spec, str(request.band_id))
@@ -2452,7 +2462,7 @@ class Succour(gl.Contract):
         receipt = self._declaration(event, charter, ctx, payload, outcome, supersedes)
         declaration_id = self._store_declaration(event, receipt)
         event.band_id = outcome["band_id"]
-        event.onset = outcome["consequence"]["onset"]
+        event.onset = outcome["onset"]
         if mode == MODE_ASSESS:
             event.status = EV_ASSESSED
             event.assessed_at = now
@@ -2594,6 +2604,9 @@ class Succour(gl.Contract):
         request = self._request(request_id)
         if str(request.status) != RQ_ADJUDICATED:
             self._fail("only an adjudicated request is rechecked")
+        charter_of = self.charters.get(str(request.charter_id))
+        if self._sender_hex() not in (str(request.filer), str(charter_of.steward)):
+            self._fail("only the filer or the charter's steward rechecks a request")
         if bool(request.rechecked):
             self._fail("this request has been rechecked once already")
         now = self._now()
@@ -2627,8 +2640,7 @@ class Succour(gl.Contract):
             request.paid_atto = u256(amount)
             self._credit(str(request.filer), amount)
         else:
-            del self.evidence_claims[self._evidence_key(str(request.event_id),
-                                                        str(request.source_url))]
+            self._free_claim(request)
         request.status = RQ_SETTLED
         request.settled_at = now
         self._count("R:" + str(request.filer), -1)
@@ -2644,8 +2656,7 @@ class Succour(gl.Contract):
         if _iso_epoch(self._now()) <= _iso_epoch(str(request.window_ends)):
             self._fail("the adjudication window closes at " + str(request.window_ends))
         request.status = RQ_LAPSED
-        del self.evidence_claims[self._evidence_key(str(request.event_id),
-                                                    str(request.source_url))]
+        self._free_claim(request)
         self._count("R:" + str(request.filer), -1)
         return RQ_LAPSED
 

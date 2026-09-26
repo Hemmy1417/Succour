@@ -653,3 +653,55 @@ def test_the_authority_rule_matches_suffixes_only(mod):
     assert mod._domain_allowed("example.gov", ["example.gov"])
     assert not mod._domain_allowed("notexample.gov", ["example.gov"])
     assert not mod._domain_allowed("example.gov.attacker.test", ["example.gov"])
+
+
+def test_only_the_filer_or_the_steward_rechecks(court, direct_vm, direct_alice, direct_bob,
+                                                direct_charlie, direct_accounts):
+    """A recheck re-runs the panel and can overturn a standing grant. Anyone may
+    adjudicate or settle - those cannot change an outcome - but a stranger must
+    not be able to make somebody else's granted request roll the dice again."""
+    charter_id = s.published(court, direct_vm, direct_alice)
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    s.funded(court, direct_vm, direct_alice, charter_id, 10 * s.GEN)
+    s.serve_all(direct_vm)
+    event_id, _d = s.declared(court, direct_vm, direct_bob, charter_id, charter_hash)
+    request_id = s.filed(court, direct_vm, direct_charlie, event_id, charter_hash)
+    s.panel(direct_vm, s.request_said(), header="relief")
+    court.adjudicate(request_id)
+    s.panel(direct_vm, s.request_said(need="ABSENT"), header="relief")
+    direct_vm.sender = direct_accounts[4]
+    with direct_vm.expect_revert("only the filer or the charter's steward rechecks"):
+        court.recheck_request(request_id)
+    assert court.get_request(request_id)["reserved_atto"] == str(2 * s.GEN)
+    direct_vm.sender = direct_alice
+    court.recheck_request(request_id)
+    assert court.get_request(request_id)["reserved_atto"] == "0"
+
+
+def test_a_request_keeps_its_grant_slot_across_a_recheck(court, direct_vm, direct_alice,
+                                                         direct_bob, direct_charlie):
+    """The grant counters hold reservations as well as payments, and a
+    superseded reservation is released before the caps are checked, so a
+    recheck never refuses a request in favour of itself."""
+    bands = [s.band("watch", "Watch", "A flood warning is in force.", 1,
+                    [s.relief("SHELTER", s.GEN, 1)])]
+    monitors = [{"source_id": "M1", "url": s.M1_URL, "stability": "STABLE",
+                 "description": "The provincial flood bulletin"}]
+    charter_id = s.published(court, direct_vm, direct_alice, bands=bands,
+                             monitors=monitors, max_grants_per_wallet=1)
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    s.funded(court, direct_vm, direct_alice, charter_id, 10 * s.GEN)
+    s.serve_all(direct_vm)
+    said = {"HAZARD_MATCH": s.said("MATCHES", [("M1", s.HAZARD_LINE)]),
+            "ONSET": s.said("DATED", [("M1", s.ONSET_LINE)], date=s.ONSET_DATE),
+            "BAND_WATCH": s.said("MET", [("M1", s.WATCH_LINE)])}
+    event_id, _d = s.declared(court, direct_vm, direct_bob, charter_id, charter_hash,
+                              subjects=said)
+    request_id = s.filed(court, direct_vm, direct_charlie, event_id, charter_hash)
+    s.panel(direct_vm, s.request_said(), header="relief")
+    court.adjudicate(request_id)
+    assert court.get_actions(request_id, s.NOW)["grants_left"] == 0
+    s.panel(direct_vm, s.request_said(), header="relief")
+    direct_vm.sender = direct_charlie
+    ruling = court.get_adjudication(court.recheck_request(request_id))["adjudication"]
+    assert ruling["reason_code"] == "QUALIFIED" and ruling["funding"] == "RESERVED"

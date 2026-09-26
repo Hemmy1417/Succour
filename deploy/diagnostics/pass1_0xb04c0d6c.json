@@ -1,0 +1,909 @@
+{
+ "address": "0xB04C0D6C185b68b0AFd7645E28D9bBEE420a3301",
+ "finished_at": "2026-09-26T17:48:04Z",
+ "order": [
+  "faucet",
+  "charter:AS01",
+  "charter:AS02",
+  "charter:AS03",
+  "charter:AS04",
+  "charter:AS05",
+  "charter:AS06",
+  "charter:AS07",
+  "charter:AS08",
+  "charter:AS09",
+  "charter:AS10",
+  "charter:AS11",
+  "charter:AS12",
+  "charter:AS13",
+  "charter:AS14",
+  "charter:AS15",
+  "charter:AS16",
+  "fund:request_charter",
+  "open:AS01",
+  "assess:AS01",
+  "open:AS02",
+  "assess:AS02",
+  "open:AS03",
+  "assess:AS03",
+  "open:AS04",
+  "assess:AS04",
+  "open:AS05",
+  "assess:AS05",
+  "open:AS06",
+  "assess:AS06",
+  "open:AS07",
+  "assess:AS07",
+  "open:AS08"
+ ],
+ "raw_base": "https://raw.githubusercontent.com/Hemmy1417/Succour/6e7c961428a47933e36ead3a7532a00187af235a/fixtures/",
+ "started_at": "2026-09-26T17:20:55Z",
+ "steps": {
+  "assess:AS01": {
+   "args": [
+    "EV-000001"
+   ],
+   "at": "2026-09-26T17:35:04Z",
+   "corroborating_sources": [
+    "M1",
+    "M2"
+   ],
+   "declaration_id": "DE-000001",
+   "event_id": "EV-000001",
+   "expected_band": "declared",
+   "expected_reason": "BAND_DECLARED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "both watched sources report the warning, the onset and a gauge past danger",
+   "observed_band": "declared",
+   "observed_onset": "2026-09-24",
+   "observed_reason": "BAND_DECLARED",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS01",
+   "tx": "0x5a38e4b99e37422daadae29e7396885e831819076d483c3af075ae3fd1acd50a",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS02": {
+   "args": [
+    "EV-000002"
+   ],
+   "at": "2026-09-26T17:36:50Z",
+   "corroborating_sources": [
+    "M1",
+    "M2"
+   ],
+   "declaration_id": "DE-000002",
+   "event_id": "EV-000002",
+   "expected_band": "watch",
+   "expected_reason": "BAND_DECLARED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "only the bulletin reports the evacuation, so the declared band falls short of its two sources and the watch band, which needs one, is declared",
+   "observed_band": "watch",
+   "observed_onset": "2026-09-24",
+   "observed_reason": "BAND_DECLARED",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS02",
+   "tx": "0xaaef1139cc7968c9b6007ed4a4980ed5c7e332031bfa121bdceb9b7ba5cdf16a",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS03": {
+   "args": [
+    "EV-000003"
+   ],
+   "at": "2026-09-26T17:38:41Z",
+   "corroborating_sources": [
+    "M1",
+    "M2"
+   ],
+   "declaration_id": "DE-000003",
+   "event_id": "EV-000003",
+   "expected_band": "severe",
+   "expected_reason": "BAND_DECLARED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "both sources report widespread inundation and displacement",
+   "observed_band": "severe",
+   "observed_onset": "2026-09-24",
+   "observed_reason": "BAND_DECLARED",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS03",
+   "tx": "0xc70386f1efcd356f73cccc13fe3c74021794f6f9f5c897d0310639503e61422e",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS04": {
+   "args": [
+    "EV-000004"
+   ],
+   "at": "2026-09-26T17:40:17Z",
+   "corroborating_sources": [],
+   "declaration_id": "DE-000004",
+   "event_id": "EV-000004",
+   "expected_band": "NONE",
+   "expected_reason": "NO_BAND_MET",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "routine seasonal readings, no warning in force",
+   "observed_band": "NONE",
+   "observed_onset": "2026-09-24",
+   "observed_reason": "NO_BAND_MET",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS04",
+   "tx": "0xd4c368d8605c6b0d6bf00034c0da515ca2b17125a629d1ca3d1a3aa23aa189c7",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS05": {
+   "args": [
+    "EV-000005"
+   ],
+   "at": "2026-09-26T17:43:47Z",
+   "corroborating_sources": [
+    "M1",
+    "M2"
+   ],
+   "declaration_id": "DE-000005",
+   "event_id": "EV-000005",
+   "expected_band": "NONE",
+   "expected_reason": "CORROBORATION_SHORT",
+   "held": false,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "one source reports the evacuation and neither reports a gauge above the warning level, so nothing is corroborated enough to declare",
+   "observed_band": "declared",
+   "observed_onset": "2026-09-24",
+   "observed_reason": "BAND_DECLARED",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS05",
+   "tx": "0xc5f979206875824fc9908470038c2a9ea147bb136516561b0929f3af0241018f",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS06": {
+   "args": [
+    "EV-000006"
+   ],
+   "at": "2026-09-26T17:45:38Z",
+   "corroborating_sources": [],
+   "declaration_id": "DE-000006",
+   "event_id": "EV-000006",
+   "expected_band": "NONE",
+   "expected_reason": "HAZARD_MISMATCH",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "the watched sources report a heat advisory, not a flood",
+   "observed_band": "NONE",
+   "observed_onset": "",
+   "observed_reason": "HAZARD_MISMATCH",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS06",
+   "tx": "0x8b7d2965285871631fddf82b0bf64806e2e9d3ef04294623f3f7555113c5cd48",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS07": {
+   "args": [
+    "EV-000007"
+   ],
+   "at": "2026-09-26T17:47:23Z",
+   "corroborating_sources": [],
+   "declaration_id": "DE-000007",
+   "event_id": "EV-000007",
+   "expected_band": "NONE",
+   "expected_reason": "SIGNAL_UNDATED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "the bulletins report the flood but give no date for its onset",
+   "observed_band": "NONE",
+   "observed_onset": "",
+   "observed_reason": "SIGNAL_UNDATED",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS07",
+   "tx": "0xad48cc32db274fa161a2e1336267bf6d2acf99d826abd2e5b605a9f1a3374a66",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "charter:AS01": {
+   "args": [
+    "{\"assessment_window\": 1200, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2135 characters)"
+   ],
+   "at": "2026-09-26T17:21:40Z",
+   "charter_id": "CH-000001",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS01",
+   "tx": "0xe88bbe19cb5c64664d81118b3754b25f658fabe86445d625a6adb0d5eacdada9",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS02": {
+   "args": [
+    "{\"assessment_window\": 1200, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2151 characters)"
+   ],
+   "at": "2026-09-26T17:22:22Z",
+   "charter_id": "CH-000002",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS02",
+   "tx": "0x11d5ff311147b47c7ec8362a156b0fb7d3e5710bf86f67baa68c06e9ce9b81e0",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS03": {
+   "args": [
+    "{\"assessment_window\": 1200, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2151 characters)"
+   ],
+   "at": "2026-09-26T17:23:03Z",
+   "charter_id": "CH-000003",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS03",
+   "tx": "0x18666461466dd340c0f68c3dd3d733291013d27d32dc724f4aa9396617ced5af",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS04": {
+   "args": [
+    "{\"assessment_window\": 1200, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2143 characters)"
+   ],
+   "at": "2026-09-26T17:23:43Z",
+   "charter_id": "CH-000004",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS04",
+   "tx": "0xec74d1db44b4851dc6e09cb14c83700bf27e73090eac72b3299b74f915fe5d3e",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "idle",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS05": {
+   "args": [
+    "{\"assessment_window\": 1200, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"declared\", \"conditions\": \"A flood warning is in force and a gauge has passed its danger level, or... (1433 characters)"
+   ],
+   "at": "2026-09-26T17:24:24Z",
+   "charter_id": "CH-000005",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS05",
+   "tx": "0xc34655003c52b9cc42c1dac28005f4fa3c7a18427531bcf27d16907f6a0d59a9",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS06": {
+   "args": [
+    "{\"assessment_window\": 1200, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2150 characters)"
+   ],
+   "at": "2026-09-26T17:25:04Z",
+   "charter_id": "CH-000006",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS06",
+   "tx": "0x34673f8b820376e60a896bed05b5ebdbc6d1ba9f62a173cf7e3af4ec1c6963de",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS07": {
+   "args": [
+    "{\"assessment_window\": 1200, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2144 characters)"
+   ],
+   "at": "2026-09-26T17:25:46Z",
+   "charter_id": "CH-000007",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS07",
+   "tx": "0x0fbf610572f05e1c1e469ab4f1289c4e11774cd96306050768fcf1772019753d",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS08": {
+   "args": [
+    "{\"assessment_window\": 1200, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2149 characters)"
+   ],
+   "at": "2026-09-26T17:26:25Z",
+   "charter_id": "CH-000008",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS08",
+   "tx": "0x21f8c9e3aa6aa36732024c161f964533029ba7da57242d640e872ef4a9f64896",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS09": {
+   "args": [
+    "{\"assessment_window\": 1200, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2167 characters)"
+   ],
+   "at": "2026-09-26T17:27:05Z",
+   "charter_id": "CH-000009",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS09",
+   "tx": "0x4237082826c000c420a40170e867209505946e2572cbd42407c5a99c402b033b",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS10": {
+   "args": [
+    "{\"assessment_window\": 1200, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (1395 characters)"
+   ],
+   "at": "2026-09-26T17:27:45Z",
+   "charter_id": "CH-000010",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS10",
+   "tx": "0xf74ca0648a4103832da25c4ec87db8b19c8995e102697f089c2f772584d875b4",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "idle"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS11": {
+   "args": [
+    "{\"assessment_window\": 1200, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2150 characters)"
+   ],
+   "at": "2026-09-26T17:28:32Z",
+   "charter_id": "CH-000011",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS11",
+   "tx": "0xb9cf168b1eef56bf0cc2d96a8711b1faf8483e99513cf18661caad096e280940",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS12": {
+   "args": [
+    "{\"assessment_window\": 1200, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2152 characters)"
+   ],
+   "at": "2026-09-26T17:29:12Z",
+   "charter_id": "CH-000012",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS12",
+   "tx": "0xe6c73c92c3f8586ed346554e94461801b8e5bb64869699962e7d73928dbbe613",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS13": {
+   "args": [
+    "{\"assessment_window\": 1200, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2155 characters)"
+   ],
+   "at": "2026-09-26T17:29:52Z",
+   "charter_id": "CH-000013",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS13",
+   "tx": "0x985522fbec9159bc30944e341dd680b8fb06da25c944623512f2159ad1d24c20",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS14": {
+   "args": [
+    "{\"assessment_window\": 1200, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2130 characters)"
+   ],
+   "at": "2026-09-26T17:30:33Z",
+   "charter_id": "CH-000014",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS14",
+   "tx": "0x91ef5cce99e113db75210ee60181c8d2d97621c1e6e770b82220e01354e27277",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS15": {
+   "args": [
+    "{\"assessment_window\": 1200, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2149 characters)"
+   ],
+   "at": "2026-09-26T17:31:19Z",
+   "charter_id": "CH-000015",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS15",
+   "tx": "0x776434f1888a452b2317013a1845dfd8e103097e6a140772956aeda1d7a311dc",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS16": {
+   "args": [
+    "{\"assessment_window\": 1200, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2401 characters)"
+   ],
+   "at": "2026-09-26T17:32:04Z",
+   "charter_id": "CH-000016",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS16",
+   "tx": "0x1751de6ba191b425cac0d3c8ab555bd491558f52df5fa756e2eb7604d27f494d",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "owner"
+  },
+  "faucet": {
+   "amount_atto": "40000000000000000000",
+   "at": "2026-09-26T17:21:00Z",
+   "funded": true,
+   "kind": "faucet",
+   "step": "faucet",
+   "wallet": "owner"
+  },
+  "fund:request_charter": {
+   "args": [
+    "CH-000001"
+   ],
+   "at": "2026-09-26T17:32:43Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "fund_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "fund:request_charter",
+   "tx": "0x5af5729b499a95f276ebb4c771f587c6dfb4ee022518be3ca370414afc5d9daf",
+   "value_atto": "12000000000000000000",
+   "votes": [
+    "idle",
+    "agree",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "open:AS01": {
+   "args": [
+    "CH-000001",
+    "02417980e775e92dadf5ff02544cc9caf61b4cdb2c1e4df8321ca0d9e98697fb",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T17:34:13Z",
+   "event_id": "EV-000001",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS01",
+   "tx": "0x17abfd3952da5c237973f76d3b4499516a562f9106606b5c50f6cef2461b3a40",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "alice"
+  },
+  "open:AS02": {
+   "args": [
+    "CH-000002",
+    "9ef7cc2431d52d047aea3b6abf040c537d9fa6adac82edeff9b61809ae2f5425",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T17:35:46Z",
+   "event_id": "EV-000002",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS02",
+   "tx": "0x3650e66b7c65a743617c7b53e9afdee68b12ee2180b9e26456236e5e38a5a55e",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "alice"
+  },
+  "open:AS03": {
+   "args": [
+    "CH-000003",
+    "bc83e2e3571479002f00af2ce9eaadc1745aeb98842c231f0f4bfdd3a33d5957",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T17:37:32Z",
+   "event_id": "EV-000003",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS03",
+   "tx": "0x38f9dcd3364dd3d7aaa4a8f45dbc9dca3778778316bad111a74349d7b3621012",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "alice"
+  },
+  "open:AS04": {
+   "args": [
+    "CH-000004",
+    "ad4eeedd37b0c66619cf13a5efc9d2572604b2ff79e7309bfc3ff32f24fe9df5",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T17:39:24Z",
+   "event_id": "EV-000004",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS04",
+   "tx": "0x363ad81953958b85e137ed965a767c13063101dfc15e63a490ac892644787a95",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "alice"
+  },
+  "open:AS05": {
+   "args": [
+    "CH-000005",
+    "64f5f33f3f4978911779aeaaaebc09c197c9e7d5da6d6365c7c05c637c0ccbdc",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T17:41:04Z",
+   "event_id": "EV-000005",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS05",
+   "tx": "0xbcc8cf44e117a9a4c002db3751de260ebcdadcd4aae20fced07f2e7d4430876f",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "alice"
+  },
+  "open:AS06": {
+   "args": [
+    "CH-000006",
+    "5273cb44b8c6d5bcde8a549b3e782857e3a2c9b7d416f61c864a9a4c083d6f5b",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T17:44:34Z",
+   "event_id": "EV-000006",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS06",
+   "tx": "0x120976d4e5d09210dabae0ada2760526b6151c232f57daab3442d085a2eda730",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "alice"
+  },
+  "open:AS07": {
+   "args": [
+    "CH-000007",
+    "1adf439f1a6c179a6abb46ad94cedb2e4868be893a3ab5c2eacb4ca180c315d2",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T17:46:21Z",
+   "event_id": "EV-000007",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS07",
+   "tx": "0xbb070ca9691aa9330f89488ee0aec441acf3514e9753b0cf801fed1453cfe418",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "alice"
+  },
+  "open:AS08": {
+   "args": [
+    "CH-000008",
+    "9d78e39c5e5bce6dd14aa3203514ededd01316865bdd84a3b1a05fb6bad0d250",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T17:48:04Z",
+   "event_id": "EV-000008",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS08",
+   "tx": "0x3880e71c395e1ea2668784f6fbfeeb8e293176e0b44ae3eb72fd38558fd2b022",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "alice"
+  }
+ },
+ "summary": {
+  "missed": [
+   "assess:AS05"
+  ],
+  "outcomes_checked": 7,
+  "outcomes_held": 6,
+  "refusals": 0,
+  "steps": 33,
+  "transactions": 32
+ }
+}

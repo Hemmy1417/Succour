@@ -1,0 +1,41 @@
+18:33:31 contract 0xB04C0D6C185b68b0AFd7645E28D9bBEE420a3301 phase assessments
+18:33:31   steward funded: True
+18:33:31 phase assessments
+18:33:33   open:AS01: open_event as alice
+18:34:11     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:34:13   assess:AS01: assess as bob
+18:35:02     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+18:35:04     AS01: declared/BAND_DECLARED HELD
+18:35:06   open:AS02: open_event as alice
+18:35:44     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+18:35:46   assess:AS02: assess as bob
+18:36:49     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
+18:36:50     AS02: watch/BAND_DECLARED HELD
+18:36:52   open:AS03: open_event as alice
+18:37:31     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:37:32   assess:AS03: assess as bob
+18:38:40     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+18:38:41     AS03: severe/BAND_DECLARED HELD
+18:38:43   open:AS04: open_event as alice
+18:39:22     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+18:39:24   assess:AS04: assess as bob
+18:40:15     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+18:40:17     AS04: NONE/NO_BAND_MET HELD
+18:40:19   open:AS05: open_event as alice
+18:41:02     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+18:41:04   assess:AS05: assess as bob
+18:43:45     FINALIZED/SUCCESS votes agree,agree,agree,idle,idle
+18:43:47     AS05: declared/BAND_DECLARED MISSED
+18:43:49   open:AS06: open_event as alice
+18:44:33     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+18:44:34   assess:AS06: assess as bob
+18:45:37     FINALIZED/SUCCESS votes agree,agree,agree,idle,idle
+18:45:38     AS06: NONE/HAZARD_MISMATCH HELD
+18:45:40   open:AS07: open_event as alice
+18:46:19     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:46:21   assess:AS07: assess as bob
+18:47:21     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
+18:47:23     AS07: NONE/SIGNAL_UNDATED HELD
+18:47:25   open:AS08: open_event as alice
+18:48:03     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
+18:48:04   assess:AS08: assess as bob

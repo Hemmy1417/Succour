@@ -625,3 +625,70 @@ def test_a_leader_that_failed_where_the_validator_succeeded_is_refused(court, di
     s.declared(court, direct_vm, direct_bob, charter_id, charter_hash,
                subjects=_watch_said())
     assert s.replay(direct_vm, error=Exception("[EXPECTED] something went wrong")) is False
+
+
+def test_a_body_that_does_not_decode_is_invalid_content(court, direct_vm, direct_alice,
+                                                        direct_bob):
+    charter_id, charter_hash = _charter_with_one_watch_band(court, direct_vm, direct_alice)
+    s.serve_all(direct_vm, {s.M1_URL: {"body": b"\xff\xfe\x00\x81 not text at all",
+                                       "status": 200,
+                                       "content_type": "text/html; charset=utf-8"}})
+    _event_id, declaration_id = s.declared(court, direct_vm, direct_bob, charter_id,
+                                           charter_hash, subjects={})
+    receipt = court.get_declaration(declaration_id)["declaration"]
+    assert receipt["sources"][0]["status"] == "INVALID_CONTENT"
+    assert receipt["reason_code"] == "SOURCES_UNAVAILABLE"
+    assert receipt["sources"][0]["content_digest"] == ""
+
+
+def test_a_page_with_nothing_a_reader_can_see_is_invalid_content(court, direct_vm,
+                                                                 direct_alice, direct_bob):
+    charter_id, charter_hash = _charter_with_one_watch_band(court, direct_vm, direct_alice)
+    hidden = ("<html><head><style>p{color:red}</style>"
+              "<script>var a = \"" + s.WATCH_LINE + "\";</script></head><body>"
+              "<script>document.write(\"nothing\")</script></body></html>")
+    s.serve_all(direct_vm, {s.M1_URL: hidden})
+    _event_id, declaration_id = s.declared(court, direct_vm, direct_bob, charter_id,
+                                           charter_hash, subjects={})
+    receipt = court.get_declaration(declaration_id)["declaration"]
+    assert receipt["sources"][0]["status"] == "INVALID_CONTENT"
+
+
+def test_an_empty_body_is_invalid_content(court, direct_vm, direct_alice, direct_bob):
+    charter_id, charter_hash = _charter_with_one_watch_band(court, direct_vm, direct_alice)
+    s.serve_all(direct_vm, {s.M1_URL: {"body": "", "status": 200,
+                                       "content_type": "text/html; charset=utf-8"}})
+    _event_id, declaration_id = s.declared(court, direct_vm, direct_bob, charter_id,
+                                           charter_hash, subjects={})
+    receipt = court.get_declaration(declaration_id)["declaration"]
+    assert receipt["sources"][0]["status"] == "INVALID_CONTENT"
+
+
+def test_a_spliced_quote_is_refused_by_the_gate_even_though_it_grounds(court, direct_vm,
+                                                                      direct_alice,
+                                                                      direct_bob):
+    """Grounding walks an ellipsis-separated quote part by part, so a splice of
+    two real passages does ground. The gate refuses it anyway: parts taken from
+    distant places can say what the source does not."""
+    charter_id, charter_hash = _charter_with_one_watch_band(court, direct_vm, direct_alice)
+    s.serve_all(direct_vm)
+    s.declared(court, direct_vm, direct_bob, charter_id, charter_hash,
+               subjects=_watch_said())
+    spliced = "River gauges across ... the warning level this morning"
+    assert s.leader_payload(direct_vm)  # the round ran
+    payload = s.leader_payload(direct_vm)
+    s.finding_in(payload, "BAND_WATCH")["quotes"] = [
+        {"evidence_id": "M1", "text": spliced}]
+    assert s.replay(direct_vm, payload) is False
+
+
+def test_a_finding_that_is_not_dated_may_not_carry_a_date(court, direct_vm, direct_alice,
+                                                          direct_bob):
+    charter_id, charter_hash = _charter_with_one_watch_band(court, direct_vm, direct_alice)
+    s.serve_all(direct_vm)
+    s.declared(court, direct_vm, direct_bob, charter_id, charter_hash,
+               subjects=_watch_said())
+    for subject in ("BAND_WATCH", "HAZARD_MATCH"):
+        payload = s.leader_payload(direct_vm)
+        s.finding_in(payload, subject)["date"] = "2026-09-24"
+        assert s.replay(direct_vm, payload) is False, subject

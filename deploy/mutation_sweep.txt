@@ -1,0 +1,32 @@
+95 mutations, 0 anchor problems
+accept-control: unmodified copy must pass ...
+control green; 95 mutations over 3 job(s)
+
+  [1/95] killed  : a 404 is a generic failure
+  [2/95] killed  : a redirect is read as a retrieved source
+  [3/95] killed  : a forbidden source is a generic failure
+  [4/95] killed  : a server error is a generic failure
+  [5/95] killed  : a binary content type is read
+  [6/95] SURVIVED: an undecodable body is read
+  [7/95] killed  : scripts and styles count as text
+  [8/95] SURVIVED: a page with no visible text is read
+  [9/95] killed  : an oversized source is not marked partial
+  [10/95] killed  : a round with no readable source is judged anyway
+  [11/95] killed  : text in the visible body is not scanned
+  [12/95] killed  : markup and attributes are not scanned
+  [13/95] killed  : a source addressing the adjudicator is judged anyway
+  [14/95] killed  : the title is not scanned
+  [15/95] killed  : a poisoned source only blocks its own reading
+  [16/95] killed  : a band met needs no quote
+  [17/95] killed  : a stated date need not appear in its quote
+  [18/95] killed  : a date's month is not checked
+  [19/95] killed  : a date's day is not checked
+  [20/95] SURVIVED: a finding that is not dated may carry a date
+  [21/95] killed  : a spliced quote is accepted when the panel answers
+  [22/95] killed  : a quote need not ground in the text this node retrieved
+  [23/95] SURVIVED: a spliced quote passes the gate
+  [24/95] killed  : the corroboration floor does not hold
+  [25/95] SURVIVED: a quote may cite a source the round did not read
+  [26/95] killed  : the bands are read mildest first, so the mildest band wins
+  [27/95] killed  : a band that fell short is not recorded
+  [28/95] SURVIVED: corroboration counts quotes, not distinct sources

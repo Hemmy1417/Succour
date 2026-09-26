@@ -52,8 +52,8 @@ def log(text: str):
 # -- the transcript ------------------------------------------------------------
 
 class Transcript:
-    def __init__(self, address: str, raw_base: str):
-        self.path = TRANSCRIPT
+    def __init__(self, address: str, raw_base: str, path=None):
+        self.path = path or TRANSCRIPT
         if self.path.exists():
             self.data = json.loads(self.path.read_text(encoding="utf-8"))
         else:
@@ -569,6 +569,8 @@ def main():
                         help="commit-pinned base URL for fixtures/, ending in a slash")
     parser.add_argument("--phase", default="full",
                         choices=("full",) + PHASES)
+    parser.add_argument("--transcript", default=None,
+                        help="where to record the run; the default is the run of record")
     parser.add_argument("--no-faucet", action="store_true",
                         help="skip funding the demo wallets; treasury steps then record "
                              "TREASURY_SHORT outcomes")
@@ -577,7 +579,11 @@ def main():
         sys.exit("--raw-base must end with a slash")
 
     charters, cases = load_catalogue(args.raw_base)
-    transcript = Transcript(args.address, args.raw_base)
+    path = pathlib.Path(args.transcript) if args.transcript else None
+    if path is not None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        globals()["LOG"] = path.with_suffix(".log")
+    transcript = Transcript(args.address, args.raw_base, path)
     chain = Chain(args.address, transcript)
     log("contract " + args.address + " phase " + args.phase)
 

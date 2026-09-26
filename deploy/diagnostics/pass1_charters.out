@@ -1,0 +1,56 @@
+18:20:59 contract 0xB04C0D6C185b68b0AFd7645E28D9bBEE420a3301 phase charters
+18:21:00   steward funded: True
+18:21:00 phase charters
+18:21:00   charter:AS01: create_charter as owner
+18:21:39     FINALIZED/SUCCESS votes idle,agree,agree,idle,agree
+18:21:40     AS01 -> CH-000001
+18:21:40   charter:AS02: create_charter as owner
+18:22:20     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:22:22     AS02 -> CH-000002
+18:22:22   charter:AS03: create_charter as owner
+18:23:01     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:23:03     AS03 -> CH-000003
+18:23:03   charter:AS04: create_charter as owner
+18:23:41     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
+18:23:43     AS04 -> CH-000004
+18:23:43   charter:AS05: create_charter as owner
+18:24:22     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:24:24     AS05 -> CH-000005
+18:24:24   charter:AS06: create_charter as owner
+18:25:02     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+18:25:04     AS06 -> CH-000006
+18:25:04   charter:AS07: create_charter as owner
+18:25:44     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:25:46     AS07 -> CH-000007
+18:25:46   charter:AS08: create_charter as owner
+18:26:24     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:26:25     AS08 -> CH-000008
+18:26:25   charter:AS09: create_charter as owner
+18:27:03     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+18:27:05     AS09 -> CH-000009
+18:27:05   charter:AS10: create_charter as owner
+18:27:43     FINALIZED/SUCCESS votes agree,agree,agree,idle,idle
+18:27:45     AS10 -> CH-000010
+18:27:45   charter:AS11: create_charter as owner
+18:28:30     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:28:32     AS11 -> CH-000011
+18:28:32   charter:AS12: create_charter as owner
+18:29:10     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+18:29:12     AS12 -> CH-000012
+18:29:12   charter:AS13: create_charter as owner
+18:29:50     FINALIZED/SUCCESS votes idle,agree,agree,idle,agree
+18:29:52     AS13 -> CH-000013
+18:29:52   charter:AS14: create_charter as owner
+18:30:31     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+18:30:33     AS14 -> CH-000014
+18:30:33   charter:AS15: create_charter as owner
+    rpc transient on eth_getTransactionCount (1/8): eth_getTransactionCount returned invalid JSON: Expecting value: line 1 column 1 (char 0). ; retry in 5s
+18:31:17     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:31:19     AS15 -> CH-000015
+18:31:19   charter:AS16: create_charter as owner
+    rpc transient on eth_getTransactionByHash (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+18:32:03     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
+18:32:04     AS16 -> CH-000016
+18:32:04   fund:request_charter: fund_charter as owner with 12000000000000000000 atto
+18:32:43     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+18:32:43 summary {"steps": 18, "transactions": 17, "outcomes_checked": 0, "outcomes_held": 0, "missed": [], "refusals": 0}
