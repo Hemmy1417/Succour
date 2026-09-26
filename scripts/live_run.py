@@ -118,8 +118,10 @@ class Chain:
              expect: dict = None, kind: str = "write") -> dict:
         if self.transcript.has(step):
             entry = self.transcript.get(step)
-            log("  skip " + step + " (recorded " + entry.get("status", "?") + ")")
-            return entry
+            if entry.get("leader_execution") == "SUCCESS" or entry.get("kind") == "faucet":
+                log("  skip " + step + " (recorded " + entry.get("status", "?") + ")")
+                return entry
+            log("  retry " + step + " (recorded " + str(entry.get("error"))[:80] + ")")
         client = self.clients[wallet]
         log("  " + step + ": " + method + " as " + wallet
             + ("" if value == 0 else " with " + str(value) + " atto"))
@@ -140,6 +142,16 @@ class Chain:
         log("    " + entry["status"] + "/" + entry["leader_execution"]
             + " votes " + ",".join(entry["votes"]))
         return entry
+
+    def created(self, entry: dict, step: str, method: str, args) -> dict:
+        """Read back the id a successful write created. A write that reverted
+        has created nothing, so the phase stops rather than guessing."""
+        if entry.get("leader_execution") != "SUCCESS":
+            raise SystemExit("  " + step + " did not execute: " + str(entry.get("error")))
+        page = self.read(method, args)
+        if not page["ids"]:
+            raise SystemExit("  " + step + " executed but created nothing")
+        return page
 
     def refuse(self, step: str, wallet: str, method: str, args=None, value: int = 0,
                because: str = "") -> dict:
@@ -266,13 +278,24 @@ def phase_charters(chain: Chain, charters: dict, cases: dict, funded: bool):
         step = "charter:" + name
         entry = chain.send(step, "owner", "create_charter", [charters[name]])
         if "charter_id" not in entry:
-            entry["charter_id"] = chain.read("list_charters", [0, 50])["ids"][-1]
+            page = chain.created(entry, step, "list_charters", [0, 50])
+            entry["charter_id"] = page["ids"][-1]
             chain.transcript.put(step, entry)
         log("    " + name + " -> " + entry["charter_id"])
     if funded:
         target = charter_id(chain, cases["request_event"])
         chain.send("fund:request_charter", "owner", "fund_charter", [target],
                    value=12 * GEN)
+
+
+OPENERS = ("alice", "bob", "carol", "stranger", "owner")
+
+
+def opener_for(case: str) -> str:
+    """Spread the events over the demo wallets: a wallet holds at most ten open
+    events, and the catalogue has more than ten."""
+    digits = "".join(ch for ch in case if ch.isdigit())
+    return OPENERS[(int(digits) if digits else 0) % len(OPENERS)]
 
 
 def charter_id(chain: Chain, case: str) -> str:
@@ -289,10 +312,11 @@ def phase_assessments(chain: Chain, charters: dict, cases: dict):
         cid = charter_id(chain, name)
         chash = charter_hash(chain, name)
         open_step = "open:" + name
-        entry = chain.send(open_step, "alice", "open_event",
+        entry = chain.send(open_step, opener_for(name), "open_event",
                            [cid, chash, case["situation"], case["area"]])
         if "event_id" not in entry:
-            entry["event_id"] = chain.read("list_events", [cid, 0, 50])["ids"][-1]
+            page = chain.created(entry, open_step, "list_events", [cid, 0, 50])
+            entry["event_id"] = page["ids"][-1]
             chain.transcript.put(open_step, entry)
         event_id = entry["event_id"]
         step = "assess:" + name
@@ -337,11 +361,15 @@ def event_of(chain: Chain, case: str) -> str:
 def phase_requests(chain: Chain, charters: dict, cases: dict, raw_base: str,
                    funded: bool):
     host = cases["request_event"]
-    # a second reading of an event that stands, on the same watched sources
-    reassessed = "AS03"
-    if not chain.transcript.has("reassess:AS03"):
-        chain.send("reassess:AS03", "carol", "reassess", [event_of(chain, reassessed)])
-        entry = chain.transcript.get("reassess:AS03")
+    # a second reading of an event that stands, on the same watched sources. The
+    # last case assessed is the one whose window is still open by now.
+    reassessed = cases["assessments"][-1]["case"]
+    if not chain.transcript.has("assess:" + reassessed):
+        log("  skip reassess: " + reassessed + " was never assessed here")
+    elif not chain.transcript.has("reassess:" + reassessed):
+        chain.send("reassess:" + reassessed, "carol", "reassess",
+                   [event_of(chain, reassessed)])
+        entry = chain.transcript.get("reassess:" + reassessed)
         receipt = chain.read("get_latest_declaration", [event_of(chain, reassessed)])
         declaration = receipt["declaration"]
         entry["declaration_id"] = declaration["declaration_id"]
@@ -349,13 +377,14 @@ def phase_requests(chain: Chain, charters: dict, cases: dict, raw_base: str,
         entry["observed_reason"] = declaration["reason_code"]
         entry["supersedes"] = declaration["supersedes"]
         entry["round"] = declaration["round"]
-        entry["expected_band"] = "severe"
-        entry["expected_reason"] = "BAND_DECLARED"
-        entry["held"] = (declaration["declared_band"] == "severe"
+        first = chain.transcript.get("assess:" + reassessed)
+        entry["expected_band"] = first["observed_band"]
+        entry["expected_reason"] = first["observed_reason"]
+        entry["held"] = (declaration["declared_band"] == first["observed_band"]
                          and declaration["round"] == 2
                          and declaration["supersedes"] != "")
         entry["note"] = "a second reading of the same sources, superseding the first"
-        chain.transcript.put("reassess:AS03", entry)
+        chain.transcript.put("reassess:" + reassessed, entry)
     event_id = event_of(chain, host)
     chash = charter_hash(chain, host)
     for case in cases["requests"]:
@@ -366,7 +395,8 @@ def phase_requests(chain: Chain, charters: dict, cases: dict, raw_base: str,
                            [event_id, chash, case["category"], case["need"],
                             case["area_note"], url, case["stability"]])
         if "request_id" not in entry:
-            entry["request_id"] = chain.read("list_requests", [event_id, 0, 50])["ids"][-1]
+            page = chain.created(entry, file_step, "list_requests", [event_id, 0, 50])
+            entry["request_id"] = page["ids"][-1]
             chain.transcript.put(file_step, entry)
         request_id = entry["request_id"]
         step = "adjudicate:" + name
@@ -388,7 +418,8 @@ def phase_requests(chain: Chain, charters: dict, cases: dict, raw_base: str,
                         "emergency shelter tonight.",
                         "Riverside Row, lower town of Eastfield", url, "STABLE"])
     if "request_id" not in entry:
-        entry["request_id"] = chain.read("list_requests", [ts_event, 0, 50])["ids"][-1]
+        page = chain.created(entry, "file:TS01", "list_requests", [ts_event, 0, 50])
+        entry["request_id"] = page["ids"][-1]
         chain.transcript.put("file:TS01", entry)
     ts_request = entry["request_id"]
     if not chain.transcript.has("adjudicate:TS01"):
@@ -477,7 +508,9 @@ def phase_settle(chain: Chain, cases: dict):
         settled["held"] = after["status"] == "SETTLED"
         chain.transcript.put(step, settled)
 
-    for case in ("AS01", "AS02", "AS03"):
+    for case in [c["case"] for c in cases["assessments"]]:
+        if not chain.transcript.has("assess:" + case):
+            continue
         event_id = event_of(chain, case)
         status = chain.read("get_event", [event_id])
         if status["status"] != "ASSESSED":

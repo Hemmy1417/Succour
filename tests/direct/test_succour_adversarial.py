@@ -692,3 +692,100 @@ def test_a_finding_that_is_not_dated_may_not_carry_a_date(court, direct_vm, dire
         payload = s.leader_payload(direct_vm)
         s.finding_in(payload, subject)["date"] = "2026-09-24"
         assert s.replay(direct_vm, payload) is False, subject
+
+
+def test_two_quotes_from_one_source_are_one_source(court, direct_vm, direct_alice,
+                                                   direct_bob):
+    """Corroboration is the number of distinct sources a band's finding rests
+    on. Quoting two different passages of the same bulletin is one source, and
+    a charter that demands two does not get them."""
+    bands = [s.band("declared", "Declared",
+                    "A flood warning is in force and a gauge has passed its danger level.",
+                    2, [s.relief("SHELTER", 2 * s.GEN, 4)])]
+    charter_id = s.published(court, direct_vm, direct_alice, bands=bands)
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    s.serve_all(direct_vm)
+    said = {"HAZARD_MATCH": s.said("MATCHES", [("M1", s.HAZARD_LINE)]),
+            "ONSET": s.said("DATED", [("M1", s.ONSET_LINE)], date=s.ONSET_DATE),
+            "BAND_DECLARED": s.said("MET", [("M1", s.DECLARED_LINE),
+                                            ("M1", s.WATCH_LINE)])}
+    _event_id, declaration_id = s.declared(court, direct_vm, direct_bob, charter_id,
+                                           charter_hash, subjects=said)
+    receipt = court.get_declaration(declaration_id)["declaration"]
+    assert len(s.finding_in(receipt, "BAND_DECLARED")["quotes"]) == 2
+    assert receipt["corroborating_sources"] == []
+    assert receipt["reason_code"] == "CORROBORATION_SHORT"
+    assert receipt["short_band"] == "declared"
+
+
+def test_a_charter_with_freshness_off_reads_an_old_onset(court, direct_vm, direct_alice,
+                                                        direct_bob):
+    """max_age_seconds 0 turns ageing off, for a hazard whose onset is months
+    back. The 90-day window that decides whether this is the same event at all
+    still holds."""
+    charter_id, charter_hash = _charter_with_one_watch_band(court, direct_vm, direct_alice,
+                                                           max_age_seconds=0)
+    s.serve_all(direct_vm, {s.M1_URL: s.bulletin("1 August 2026")})
+    said = _watch_said()
+    said["ONSET"] = s.said("DATED", [("M1", s.onset_line("1 August 2026"))],
+                           date="2026-08-01")
+    _event_id, declaration_id = s.declared(court, direct_vm, direct_bob, charter_id,
+                                           charter_hash, subjects=said)
+    receipt = court.get_declaration(declaration_id)["declaration"]
+    assert receipt["declared_band"] == "watch"
+    assert receipt["onset_outcome"] == "CURRENT" and receipt["onset"] == "2026-08-01"
+
+
+def test_evidence_that_went_stale_before_adjudication_is_inconclusive(court, direct_vm,
+                                                                     direct_alice,
+                                                                     direct_bob,
+                                                                     direct_charlie):
+    charter_id = s.published(court, direct_vm, direct_alice, request_window=20 * 86400,
+                             max_age_seconds=10 * 86400)
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    s.funded(court, direct_vm, direct_alice, charter_id, 10 * s.GEN)
+    s.serve_all(direct_vm)
+    event_id, _d = s.declared(court, direct_vm, direct_bob, charter_id, charter_hash)
+    request_id = s.filed(court, direct_vm, direct_charlie, event_id, charter_hash)
+    direct_vm.warp("2026-10-08T12:00:00Z")
+    s.panel(direct_vm, s.request_said(), header="relief")
+    ruling = court.get_adjudication(court.adjudicate(request_id))["adjudication"]
+    assert ruling["outcome"] == "INCONCLUSIVE"
+    assert ruling["reason_code"] == "EVIDENCE_STALE"
+    assert ruling["evidence_outcome"] == "STALE"
+    assert ruling["authorised_atto"] == "0"
+
+
+def test_a_truncated_reading_is_not_the_same_reading(court, direct_vm, direct_alice,
+                                                    direct_bob):
+    """What was retrieved is compared even where it cannot change the band. A
+    leader that read a truncated page and a validator that read the whole one
+    are not looking at the same source, and for a DYNAMIC source the digests
+    are not there to notice it."""
+    monitors = [{"source_id": "M1", "url": s.M1_URL, "stability": "DYNAMIC",
+                 "description": "A live bulletin feed"}]
+    bands = [s.band("watch", "Watch", "A flood warning is in force.", 1,
+                    [s.relief("SHELTER", s.GEN, 5)])]
+    charter_id = s.published(court, direct_vm, direct_alice, monitors=monitors, bands=bands)
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    filler = " ".join(["The basin remains under observation."] * 4000)
+    s.serve_all(direct_vm, {s.M1_URL: s.page(
+        "Lower Marrow flood bulletin",
+        [s.HAZARD_LINE, s.ONSET_LINE, s.WATCH_LINE, filler])})
+    s.declared(court, direct_vm, direct_bob, charter_id, charter_hash,
+               subjects=_watch_said())
+    direct_vm.clear_mocks()
+    s.serve_all(direct_vm)
+    s.panel(direct_vm, _watch_said())
+    assert s.replay(direct_vm) is False
+
+
+def test_a_deterministic_failure_is_not_ratified_by_a_transient_one(court, direct_vm,
+                                                                   direct_alice,
+                                                                   direct_bob):
+    charter_id, charter_hash = _charter_with_one_watch_band(court, direct_vm, direct_alice)
+    s.serve_all(direct_vm)
+    s.declared(court, direct_vm, direct_bob, charter_id, charter_hash,
+               subjects=_watch_said())
+    direct_vm._llm_mocks.clear()
+    assert s.replay(direct_vm, error=Exception("[EXPECTED] the charter forbids it")) is False

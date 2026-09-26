@@ -1,6 +1,6 @@
 {
  "AS01": {
-  "assessment_window": 1200,
+  "assessment_window": 1800,
   "authority_domains": [
    "raw.githubusercontent.com"
   ],
@@ -79,7 +79,7 @@
   "request_window": 300
  },
  "AS02": {
-  "assessment_window": 1200,
+  "assessment_window": 1800,
   "authority_domains": [
    "raw.githubusercontent.com"
   ],
@@ -158,7 +158,7 @@
   "request_window": 300
  },
  "AS03": {
-  "assessment_window": 1200,
+  "assessment_window": 1800,
   "authority_domains": [
    "raw.githubusercontent.com"
   ],
@@ -237,7 +237,7 @@
   "request_window": 300
  },
  "AS04": {
-  "assessment_window": 1200,
+  "assessment_window": 1800,
   "authority_domains": [
    "raw.githubusercontent.com"
   ],
@@ -316,7 +316,7 @@
   "request_window": 300
  },
  "AS05": {
-  "assessment_window": 1200,
+  "assessment_window": 1800,
   "authority_domains": [
    "raw.githubusercontent.com"
   ],
@@ -359,7 +359,7 @@
   "request_window": 300
  },
  "AS06": {
-  "assessment_window": 1200,
+  "assessment_window": 1800,
   "authority_domains": [
    "raw.githubusercontent.com"
   ],
@@ -438,7 +438,7 @@
   "request_window": 300
  },
  "AS07": {
-  "assessment_window": 1200,
+  "assessment_window": 1800,
   "authority_domains": [
    "raw.githubusercontent.com"
   ],
@@ -517,7 +517,7 @@
   "request_window": 300
  },
  "AS08": {
-  "assessment_window": 1200,
+  "assessment_window": 1800,
   "authority_domains": [
    "raw.githubusercontent.com"
   ],
@@ -596,7 +596,7 @@
   "request_window": 300
  },
  "AS09": {
-  "assessment_window": 1200,
+  "assessment_window": 1800,
   "authority_domains": [
    "raw.githubusercontent.com"
   ],
@@ -675,7 +675,7 @@
   "request_window": 300
  },
  "AS10": {
-  "assessment_window": 1200,
+  "assessment_window": 1800,
   "authority_domains": [
    "raw.githubusercontent.com"
   ],
@@ -718,7 +718,7 @@
   "request_window": 300
  },
  "AS11": {
-  "assessment_window": 1200,
+  "assessment_window": 1800,
   "authority_domains": [
    "raw.githubusercontent.com"
   ],
@@ -797,7 +797,7 @@
   "request_window": 300
  },
  "AS12": {
-  "assessment_window": 1200,
+  "assessment_window": 1800,
   "authority_domains": [
    "raw.githubusercontent.com"
   ],
@@ -876,7 +876,7 @@
   "request_window": 300
  },
  "AS13": {
-  "assessment_window": 1200,
+  "assessment_window": 1800,
   "authority_domains": [
    "raw.githubusercontent.com"
   ],
@@ -955,7 +955,7 @@
   "request_window": 300
  },
  "AS14": {
-  "assessment_window": 1200,
+  "assessment_window": 1800,
   "authority_domains": [
    "raw.githubusercontent.com"
   ],
@@ -1034,7 +1034,7 @@
   "request_window": 300
  },
  "AS15": {
-  "assessment_window": 1200,
+  "assessment_window": 1800,
   "authority_domains": [
    "raw.githubusercontent.com"
   ],
@@ -1113,7 +1113,7 @@
   "request_window": 300
  },
  "AS16": {
-  "assessment_window": 1200,
+  "assessment_window": 1800,
   "authority_domains": [
    "raw.githubusercontent.com"
   ],

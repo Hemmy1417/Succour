@@ -98,8 +98,12 @@ MUTATIONS = [
     m("a quote need not ground in the text this node retrieved",
       "    return _grounds_in_order(_word_tokens(source), quote[\"text\"])\n",
       "    return True\n"),
-    m("a quote may cite a source the round did not read",
-      '    if quote["evidence_id"] not in eligible:'),
+    # Dropping the eligibility check leaves `texts.get(evidence_id)` to return
+    # None for a source the round did not read, which refuses the quote the same
+    # way - an equivalent mutant. The check still earns its place: on the second
+    # gate pass over the ratified payload there are no texts to look in, and it
+    # is the only thing standing between a stored receipt and a quote citing a
+    # source nobody retrieved.
     # -- the band -------------------------------------------------------------------------
     m("the corroboration floor does not hold",
       '        if len(cited) >= band["min_corroboration"]:',
@@ -152,35 +156,43 @@ MUTATIONS = [
       '    if outcome == STALE:\n        return (INCONCLUSIVE, "EVIDENCE_STALE", outcome, dated)',
       '    if False:\n        return (INCONCLUSIVE, "EVIDENCE_STALE", outcome, dated)'),
     # -- what validators compare -----------------------------------------------------------
-    m("the panel state and code reason are not compared",
-      '    if own["panel_state"] != theirs["panel_state"] \\\n'
-      '            or own["panel_reason"] != theirs["panel_reason"]:',
-      "    if False:"),
-    m("the markers are not compared", '    if own["markers"] != theirs["markers"]:'),
-    m("a stable source's bytes are not compared",
-      '        if _stability_of(ctx, source_id) == "STABLE":\n'
-      '            keys = keys + ["byte_count", "content_digest", "raw_sha256", "title",\n'
-      '                           "content_type"]\n', ""),
+    # The panel state, the code reason and the markers are each a pure function
+    # of the source records, and a digest is compared twice over - in what was
+    # retrieved and in the consequence. Mutating one of them alone is caught by
+    # another, so the sweep mutates the layer instead.
+    m("what was retrieved is not compared at all",
+      "def _evidence_difference(ctx: dict, own: dict, theirs: dict) -> str:\n",
+      "def _evidence_difference(ctx: dict, own: dict, theirs: dict) -> str:\n"
+      '    return ""\n'),
     m("the consequence is not compared",
       "    for key in sorted(mine.keys()):\n        if mine[key] != theirs[key]:\n"
       "            return key + \" mine=\" + repr(mine[key]) + \" theirs=\" + repr(theirs[key])\n",
       "    for key in sorted(mine.keys()):\n        if False:\n"
       "            return key + \" mine=\" + repr(mine[key]) + \" theirs=\" + repr(theirs[key])\n"),
-    m("the digests of stable sources are not part of the consequence",
-      '        if s["status"] in READABLE and _stability_of(ctx, s["source_id"]) == "STABLE":'),
+    # A digest is compared twice over - in what was retrieved and in the
+    # consequence - and stored in the receipt on the same condition, so the
+    # sweep mutates the one thing all three rest on.
+    m("every source is treated as DYNAMIC, so its bytes are compared nowhere",
+      "def _stability_of(ctx: dict, source_id: str) -> str:\n"
+      '    if ctx["kind"] != KIND_ASSESS:\n'
+      '        return ctx["stability"]\n',
+      "def _stability_of(ctx: dict, source_id: str) -> str:\n"
+      "    if True:\n"
+      '        return "DYNAMIC"\n'),
     m("the leader's payload is taken on trust",
       "        parsed = _parse_payload(leader_res.calldata, ctx, own_texts)\n",
       "        parsed = _parse_payload(leader_res.calldata, ctx, None)\n"),
-    m("a model failure is ratified like any other",
-      "    if leader_text.startswith(ERROR_LLM):\n        return False\n", ""),
+    # Nothing in this contract raises a model failure - an unusable answer is a
+    # panel state, not an error - so the guard that refuses to ratify one can
+    # only ever see a leader from another version. It stays, and no test pins it.
     m("a transient failure ratifies a different failure",
       "        if leader_text.startswith(ERROR_TRANSIENT):\n"
       "            return own_text.startswith(ERROR_TRANSIENT)\n"
       "        return own_text == leader_text\n",
       "        return True\n"),
-    m("the ratified payload is stored without the gate again",
-      "        payload = _parse_payload(ratified, ctx)\n        if payload is None:\n",
-      "        payload = _parse_payload(ratified, ctx)\n        if False:\n"),
+    # Direct Mode hands the leader's own payload back as the ratified one, and it
+    # has already passed the gate, so the second pass cannot be pinned offline.
+    # It guards the on-chain path, where the ratified text comes from consensus.
     # -- the charter -----------------------------------------------------------------------
     m("min_corroboration may exceed the watched sources",
       '        if not _int_in(entry["min_corroboration"], 1, monitors):'),
@@ -256,10 +268,13 @@ MUTATIONS = [
       "        amount = int(request.reserved_atto)\n        if amount > 0:",
       "        amount = int(request.reserved_atto)\n        if True:"),
     m("a settled grant frees the source it rested on",
-      "        else:\n            del self.evidence_claims[self._evidence_key(str(request.event_id),\n"
-      "                                                        str(request.source_url))]\n",
-      "        if True:\n            del self.evidence_claims[self._evidence_key(str(request.event_id),\n"
-      "                                                        str(request.source_url))]\n"),
+      "            self._credit(str(request.filer), amount)\n"
+      "        else:\n            self._free_claim(request)\n",
+      "            self._credit(str(request.filer), amount)\n"
+      "        if True:\n            self._free_claim(request)\n"),
+    m("a lapsed request keeps the source it cited",
+      "        request.status = RQ_LAPSED\n        self._free_claim(request)\n",
+      "        request.status = RQ_LAPSED\n"),
     m("withdrawing does not clear the ledger first",
       "        self.credits[wallet] = u256(0)\n"
       "        self.credits_total_atto = u256(int(self.credits_total_atto) - amount)\n", ""),

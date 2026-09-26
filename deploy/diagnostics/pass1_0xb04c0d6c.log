@@ -93,3 +93,133 @@
 18:47:25   open:AS08: open_event as alice
 18:48:03     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
 18:48:04   assess:AS08: assess as bob
+18:49:00     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+18:49:01     AS08: NONE/SIGNAL_STALE HELD
+18:49:03   open:AS09: open_event as alice
+18:49:42     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:49:44   assess:AS09: assess as bob
+18:50:30     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+18:50:31     AS09: NONE/SOURCES_UNAVAILABLE HELD
+18:50:33   open:AS10: open_event as alice
+18:51:19     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:51:20   assess:AS10: assess as bob
+18:52:17     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
+18:52:19     AS10: watch/BAND_DECLARED HELD
+18:52:21   open:AS11: open_event as alice
+18:52:59     FINALIZED/ERROR votes idle,agree,agree,idle,agree
+19:05:34 contract 0xB04C0D6C185b68b0AFd7645E28D9bBEE420a3301 phase assessments
+19:05:34   steward funded: True
+19:05:34 phase assessments
+19:05:36   skip open:AS01 (recorded FINALIZED)
+19:05:36   skip assess:AS01 (recorded)
+19:05:38   skip open:AS02 (recorded FINALIZED)
+19:05:38   skip assess:AS02 (recorded)
+19:05:40   skip open:AS03 (recorded FINALIZED)
+19:05:40   skip assess:AS03 (recorded)
+19:05:42   skip open:AS04 (recorded FINALIZED)
+19:05:42   skip assess:AS04 (recorded)
+19:05:44   skip open:AS05 (recorded FINALIZED)
+19:05:44   skip assess:AS05 (recorded)
+19:05:45   skip open:AS06 (recorded FINALIZED)
+19:05:45   skip assess:AS06 (recorded)
+19:05:47   skip open:AS07 (recorded FINALIZED)
+19:05:47   skip assess:AS07 (recorded)
+19:05:49   skip open:AS08 (recorded FINALIZED)
+19:05:49   skip assess:AS08 (recorded)
+19:05:51   skip open:AS09 (recorded FINALIZED)
+19:05:51   skip assess:AS09 (recorded)
+19:05:52   skip open:AS10 (recorded FINALIZED)
+19:05:52   skip assess:AS10 (recorded)
+19:05:54   retry open:AS11 (recorded {"status": "rollback", "payload": "[EXPECTED] close or expire one of your open e)
+19:05:54   open:AS11: open_event as bob
+19:06:34     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:06:35   assess:AS11: assess as bob
+19:07:20     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+19:07:22     AS11: NONE/SOURCE_ADDRESSES_ADJUDICATOR HELD
+19:07:24   open:AS12: open_event as carol
+19:08:03     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:08:04   assess:AS12: assess as bob
+19:08:48     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+19:08:50     AS12: NONE/SOURCE_ADDRESSES_ADJUDICATOR HELD
+19:08:52   open:AS13: open_event as stranger
+19:09:31     FINALIZED/SUCCESS votes agree,idle,agree,agree,agree
+19:09:32   assess:AS13: assess as bob
+19:10:17     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+19:10:19     AS13: NONE/SOURCE_ADDRESSES_ADJUDICATOR HELD
+19:10:23   open:AS14: open_event as owner
+19:11:04     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:11:05   assess:AS14: assess as bob
+19:12:12     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:12:14     AS14: declared/BAND_DECLARED HELD
+19:12:16   open:AS15: open_event as alice
+19:13:00     FINALIZED/ERROR votes agree,agree,idle,agree,agree
+19:22:14 contract 0xB04C0D6C185b68b0AFd7645E28D9bBEE420a3301 phase requests
+19:22:14   steward funded: True
+19:22:14 phase requests
+19:22:14   skip reassess: AS16 was never assessed here
+19:22:15   file:RQ01: file_request as alice
+19:22:55     FINALIZED/SUCCESS votes idle,agree,agree,idle,agree
+19:22:57   adjudicate:RQ01: adjudicate as owner
+19:23:47     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
+19:23:49     RQ01: QUALIFIES/QUALIFIED/RESERVED HELD
+19:23:49   file:RQ02: file_request as bob
+19:24:30     FINALIZED/SUCCESS votes agree,agree,agree,idle,agree
+19:24:32   adjudicate:RQ02: adjudicate as owner
+19:25:24     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:25:26     RQ02: DOES_NOT_QUALIFY/OUT_OF_AREA/NOT_AUTHORISED HELD
+19:25:26   file:RQ03: file_request as bob
+19:26:06     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+19:26:08   adjudicate:RQ03: adjudicate as owner
+19:27:05     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
+19:27:07     RQ03: DOES_NOT_QUALIFY/NEED_CONTRADICTED/NOT_AUTHORISED HELD
+19:27:07   file:RQ04: file_request as carol
+19:27:53     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+19:27:54   adjudicate:RQ04: adjudicate as owner
+19:28:57     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
+19:28:59     RQ04: DOES_NOT_QUALIFY/NEED_ABSENT/NOT_AUTHORISED HELD
+19:28:59   file:RQ05: file_request as carol
+19:29:38     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:29:40   adjudicate:RQ05: adjudicate as owner
+19:30:31     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+19:30:33     RQ05: DOES_NOT_QUALIFY/NOT_LINKED/NOT_AUTHORISED HELD
+19:30:33   file:RQ06: file_request as alice
+19:31:12     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:31:13   adjudicate:RQ06: adjudicate as owner
+19:32:11     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+19:32:13     RQ06: DOES_NOT_QUALIFY/NOT_LINKED/NOT_AUTHORISED MISSED
+19:32:13   file:RQ07: file_request as bob
+19:32:53     FINALIZED/SUCCESS votes agree,agree,idle,agree,agree
+19:32:55   adjudicate:RQ07: adjudicate as owner
+19:33:58     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+19:34:00     RQ07: INCONCLUSIVE/EVIDENCE_UNDATED/NOT_AUTHORISED HELD
+19:34:00   file:RQ08: file_request as carol
+19:34:39     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:34:41   adjudicate:RQ08: adjudicate as owner
+19:35:26     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+19:35:28     RQ08: INCONCLUSIVE/EVIDENCE_UNAVAILABLE/NOT_AUTHORISED HELD
+19:35:28   file:RQ09: file_request as alice
+19:36:08     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+19:36:10   adjudicate:RQ09: adjudicate as owner
+19:36:56     FINALIZED/SUCCESS votes idle,agree,agree,idle,agree
+19:36:58     RQ09: INCONCLUSIVE/SOURCE_ADDRESSES_ADJUDICATOR/NOT_AUTHORISED HELD
+19:36:58   file:RQ10: file_request as bob
+19:37:38     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+19:37:40   adjudicate:RQ10: adjudicate as owner
+19:38:36     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+19:38:38     RQ10: QUALIFIES/QUALIFIED/RESERVED HELD
+19:38:38   file:RQ11: file_request as carol
+19:39:18     FINALIZED/SUCCESS votes idle,agree,agree,agree,agree
+19:39:20   adjudicate:RQ11: adjudicate as owner
+19:40:23     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+19:40:24     RQ11: QUALIFIES/QUALIFIED/RESERVED HELD
+19:40:26   file:TS01: file_request as alice
+19:41:06     FINALIZED/SUCCESS votes agree,agree,agree,idle,idle
+19:41:07   adjudicate:TS01: adjudicate as owner
+19:42:11     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:42:13     TS01: QUALIFIES/QUALIFIED/TREASURY_SHORT HELD
+19:42:13   fund:TS01: fund_charter as owner with 3000000000000000000 atto
+19:42:54     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:42:54   recheck:TS01: recheck_request as alice
+19:43:47     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+19:43:49     TS01:v2: QUALIFIES/QUALIFIED/RESERVED HELD
+19:43:49 summary {"steps": 73, "transactions": 72, "outcomes_checked": 27, "outcomes_held": 25, "missed": ["adjudicate:RQ06", "assess:AS05"], "refusals": 0}

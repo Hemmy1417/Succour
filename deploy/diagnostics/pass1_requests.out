@@ -1,0 +1,72 @@
+19:22:14 contract 0xB04C0D6C185b68b0AFd7645E28D9bBEE420a3301 phase requests
+19:22:14   steward funded: True
+19:22:14 phase requests
+19:22:14   skip reassess: AS16 was never assessed here
+19:22:15   file:RQ01: file_request as alice
+19:22:55     FINALIZED/SUCCESS votes idle,agree,agree,idle,agree
+19:22:57   adjudicate:RQ01: adjudicate as owner
+19:23:47     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
+19:23:49     RQ01: QUALIFIES/QUALIFIED/RESERVED HELD
+19:23:49   file:RQ02: file_request as bob
+19:24:30     FINALIZED/SUCCESS votes agree,agree,agree,idle,agree
+19:24:32   adjudicate:RQ02: adjudicate as owner
+19:25:24     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:25:26     RQ02: DOES_NOT_QUALIFY/OUT_OF_AREA/NOT_AUTHORISED HELD
+19:25:26   file:RQ03: file_request as bob
+19:26:06     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+19:26:08   adjudicate:RQ03: adjudicate as owner
+19:27:05     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
+19:27:07     RQ03: DOES_NOT_QUALIFY/NEED_CONTRADICTED/NOT_AUTHORISED HELD
+19:27:07   file:RQ04: file_request as carol
+19:27:53     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+19:27:54   adjudicate:RQ04: adjudicate as owner
+    rpc transient on eth_getTransactionByHash (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+19:28:57     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
+19:28:59     RQ04: DOES_NOT_QUALIFY/NEED_ABSENT/NOT_AUTHORISED HELD
+19:28:59   file:RQ05: file_request as carol
+19:29:38     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:29:40   adjudicate:RQ05: adjudicate as owner
+19:30:31     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+19:30:33     RQ05: DOES_NOT_QUALIFY/NOT_LINKED/NOT_AUTHORISED HELD
+19:30:33   file:RQ06: file_request as alice
+    rpc transient on eth_getTransactionByHash (1/8): Request to https://studio.genlayer.com/api failed: ('Connection aborted.', RemoteDisconnec; retry in 5s
+19:31:12     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:31:13   adjudicate:RQ06: adjudicate as owner
+19:32:11     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+19:32:13     RQ06: DOES_NOT_QUALIFY/NOT_LINKED/NOT_AUTHORISED MISSED
+19:32:13   file:RQ07: file_request as bob
+19:32:53     FINALIZED/SUCCESS votes agree,agree,idle,agree,agree
+19:32:55   adjudicate:RQ07: adjudicate as owner
+19:33:58     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+19:34:00     RQ07: INCONCLUSIVE/EVIDENCE_UNDATED/NOT_AUTHORISED HELD
+19:34:00   file:RQ08: file_request as carol
+19:34:39     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:34:41   adjudicate:RQ08: adjudicate as owner
+19:35:26     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+19:35:28     RQ08: INCONCLUSIVE/EVIDENCE_UNAVAILABLE/NOT_AUTHORISED HELD
+19:35:28   file:RQ09: file_request as alice
+19:36:08     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+19:36:10   adjudicate:RQ09: adjudicate as owner
+19:36:56     FINALIZED/SUCCESS votes idle,agree,agree,idle,agree
+19:36:58     RQ09: INCONCLUSIVE/SOURCE_ADDRESSES_ADJUDICATOR/NOT_AUTHORISED HELD
+19:36:58   file:RQ10: file_request as bob
+19:37:38     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+19:37:40   adjudicate:RQ10: adjudicate as owner
+19:38:36     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+19:38:38     RQ10: QUALIFIES/QUALIFIED/RESERVED HELD
+19:38:38   file:RQ11: file_request as carol
+19:39:18     FINALIZED/SUCCESS votes idle,agree,agree,agree,agree
+19:39:20   adjudicate:RQ11: adjudicate as owner
+19:40:23     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+19:40:24     RQ11: QUALIFIES/QUALIFIED/RESERVED HELD
+19:40:26   file:TS01: file_request as alice
+19:41:06     FINALIZED/SUCCESS votes agree,agree,agree,idle,idle
+19:41:07   adjudicate:TS01: adjudicate as owner
+19:42:11     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:42:13     TS01: QUALIFIES/QUALIFIED/TREASURY_SHORT HELD
+19:42:13   fund:TS01: fund_charter as owner with 3000000000000000000 atto
+19:42:54     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:42:54   recheck:TS01: recheck_request as alice
+19:43:47     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+19:43:49     TS01:v2: QUALIFIES/QUALIFIED/RESERVED HELD
+19:43:49 summary {"steps": 73, "transactions": 72, "outcomes_checked": 27, "outcomes_held": 25, "missed": ["adjudicate:RQ06", "assess:AS05"], "refusals": 0}

@@ -1,0 +1,46 @@
+19:05:34 contract 0xB04C0D6C185b68b0AFd7645E28D9bBEE420a3301 phase assessments
+19:05:34   steward funded: True
+19:05:34 phase assessments
+19:05:36   skip open:AS01 (recorded FINALIZED)
+19:05:36   skip assess:AS01 (recorded)
+19:05:38   skip open:AS02 (recorded FINALIZED)
+19:05:38   skip assess:AS02 (recorded)
+19:05:40   skip open:AS03 (recorded FINALIZED)
+19:05:40   skip assess:AS03 (recorded)
+19:05:42   skip open:AS04 (recorded FINALIZED)
+19:05:42   skip assess:AS04 (recorded)
+19:05:44   skip open:AS05 (recorded FINALIZED)
+19:05:44   skip assess:AS05 (recorded)
+19:05:45   skip open:AS06 (recorded FINALIZED)
+19:05:45   skip assess:AS06 (recorded)
+19:05:47   skip open:AS07 (recorded FINALIZED)
+19:05:47   skip assess:AS07 (recorded)
+19:05:49   skip open:AS08 (recorded FINALIZED)
+19:05:49   skip assess:AS08 (recorded)
+19:05:51   skip open:AS09 (recorded FINALIZED)
+19:05:51   skip assess:AS09 (recorded)
+19:05:52   skip open:AS10 (recorded FINALIZED)
+19:05:52   skip assess:AS10 (recorded)
+19:05:54   retry open:AS11 (recorded {"status": "rollback", "payload": "[EXPECTED] close or expire one of your open e)
+19:05:54   open:AS11: open_event as bob
+19:06:34     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:06:35   assess:AS11: assess as bob
+19:07:20     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+19:07:22     AS11: NONE/SOURCE_ADDRESSES_ADJUDICATOR HELD
+19:07:24   open:AS12: open_event as carol
+19:08:03     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:08:04   assess:AS12: assess as bob
+19:08:48     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+19:08:50     AS12: NONE/SOURCE_ADDRESSES_ADJUDICATOR HELD
+19:08:52   open:AS13: open_event as stranger
+19:09:31     FINALIZED/SUCCESS votes agree,idle,agree,agree,agree
+19:09:32   assess:AS13: assess as bob
+19:10:17     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+19:10:19     AS13: NONE/SOURCE_ADDRESSES_ADJUDICATOR HELD
+19:10:23   open:AS14: open_event as owner
+19:11:04     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:11:05   assess:AS14: assess as bob
+19:12:12     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:12:14     AS14: declared/BAND_DECLARED HELD
+19:12:16   open:AS15: open_event as alice
+19:13:00     FINALIZED/ERROR votes agree,agree,idle,agree,agree

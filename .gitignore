@@ -20,4 +20,4 @@ venv/
 artifacts/
 
 # stderr of long runs; the run logs and transcripts under deploy/ are evidence and are committed
-deploy/*.err
+deploy/**/*.err

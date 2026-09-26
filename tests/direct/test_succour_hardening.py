@@ -705,3 +705,54 @@ def test_a_request_keeps_its_grant_slot_across_a_recheck(court, direct_vm, direc
     direct_vm.sender = direct_charlie
     ruling = court.get_adjudication(court.recheck_request(request_id))["adjudication"]
     assert ruling["reason_code"] == "QUALIFIED" and ruling["funding"] == "RESERVED"
+
+
+def test_a_request_cannot_settle_inside_its_recheck_window(court, direct_vm, direct_alice,
+                                                           direct_bob, direct_charlie):
+    charter_id = s.published(court, direct_vm, direct_alice)
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    s.funded(court, direct_vm, direct_alice, charter_id, 10 * s.GEN)
+    s.serve_all(direct_vm)
+    event_id, _d = s.declared(court, direct_vm, direct_bob, charter_id, charter_hash)
+    request_id = s.filed(court, direct_vm, direct_charlie, event_id, charter_hash)
+    s.panel(direct_vm, s.request_said(), header="relief")
+    court.adjudicate(request_id)
+    with direct_vm.expect_revert("the recheck window closes at"):
+        court.finalize_request(request_id)
+    assert court.get_charter(charter_id)["reserved_atto"] == str(2 * s.GEN)
+    direct_vm.warp(LATER)
+    assert court.finalize_request(request_id) == str(2 * s.GEN)
+
+
+def test_an_address_literal_is_not_a_source(court, direct_vm, direct_alice, direct_bob,
+                                            mod):
+    """A requester's evidence may sit on any admitted host, which is exactly why
+    admission has to refuse the things that are not hosts."""
+    for url in ("https://192.168.0.1/report.html", "https://10.0.0.7:443/a/b",
+                "https://[::1]/report.html", "https://203.0.113.9/x"):
+        error, _canonical = mod._url_parts(url)
+        assert "IP literal" in error or "not an IP literal" in error, url
+    charter_id = s.published(court, direct_vm, direct_alice)
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    s.serve_all(direct_vm)
+    event_id, _d = s.declared(court, direct_vm, direct_bob, charter_id, charter_hash)
+    direct_vm.sender = direct_bob
+    with direct_vm.expect_revert("IP literal"):
+        court.file_request(event_id, charter_hash, "SHELTER", "A need", "Eastfield",
+                           "https://192.168.0.1/report.html", "STABLE")
+
+
+def test_a_source_must_be_a_named_host_on_https(court, direct_vm, mod):
+    cases = (("http://reports.example.org/a", "must use https"),
+             ("https://reports.example.org", "needs a host and a path"),
+             ("https://user:pass@reports.example.org/a", "credentials"),
+             ("https://reports.example.org:8443/a", "port"),
+             ("https://reports.example.org/a#b", "fragment"),
+             ("https://reports.example.org/../a", "dot-segments"),
+             ("https://reports.example.org/a%2f/b", "encode separators"),
+             ("https://localhost/a", "localhost"),
+             ("https://service.internal/a", "internal name"),
+             ("https://reports/a", "fully qualified"))
+    for url, expected in cases:
+        error, _canonical = mod._url_parts(url)
+        assert expected in error, (url, error)

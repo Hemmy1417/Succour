@@ -122,8 +122,8 @@ offline gate:
 |---|---|
 | `genvm-lint check contracts/succour.py --json` | lint ok, 35 methods (20 view, 15 write) |
 | `ruff check .` | clean |
-| `python scripts/generate_fixtures.py --check` | 42 fixture files regenerate byte for byte |
-| `python -m pytest tests/direct -q` | 205 passed |
+| `python scripts/generate_fixtures.py --check` | 43 fixture files regenerate byte for byte |
+| `python -m pytest tests/direct -q` | 225 passed |
 <!-- VERIFIED:END -->
 
 ## Running it

@@ -39,3 +39,19 @@
 18:47:25   open:AS08: open_event as alice
 18:48:03     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
 18:48:04   assess:AS08: assess as bob
+18:49:00     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+18:49:01     AS08: NONE/SIGNAL_STALE HELD
+18:49:03   open:AS09: open_event as alice
+18:49:42     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:49:44   assess:AS09: assess as bob
+18:50:30     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+18:50:31     AS09: NONE/SOURCES_UNAVAILABLE HELD
+18:50:33   open:AS10: open_event as alice
+    rpc transient on eth_sendRawTransaction (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+18:51:19     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:51:20   assess:AS10: assess as bob
+18:52:17     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
+18:52:19     AS10: watch/BAND_DECLARED HELD
+18:52:21   open:AS11: open_event as alice
+    rpc transient on eth_getTransactionReceipt (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+18:52:59     FINALIZED/ERROR votes idle,agree,agree,idle,agree

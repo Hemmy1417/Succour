@@ -727,3 +727,76 @@ def test_unknown_records_answer_not_found(court):
     assert court.get_event_history("EV-999999")["found"] is False
     assert court.get_request_history("RQ-999999")["found"] is False
     assert court.get_actions("RQ-999999", s.NOW)["found"] is False
+
+
+# -- three watched sources, and a DYNAMIC declared source ----------------------
+
+def test_a_charter_may_watch_three_sources_and_need_two(court, direct_vm, direct_alice,
+                                                        direct_bob):
+    monitors = [{"source_id": "M1", "url": s.M1_URL, "stability": "STABLE",
+                 "description": "The provincial flood bulletin"},
+                {"source_id": "M2", "url": s.M2_URL, "stability": "STABLE",
+                 "description": "The published gauge readings"},
+                {"source_id": "M3", "url": s.M3_URL, "stability": "STABLE",
+                 "description": "The district situation report"}]
+    bands = [s.band("declared", "Declared", "A flood warning is in force.", 2,
+                    [s.relief("SHELTER", 2 * s.GEN, 4)])]
+    charter_id = s.published(court, direct_vm, direct_alice, monitors=monitors, bands=bands)
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    s.serve_all(direct_vm)
+    said = {"HAZARD_MATCH": s.said("MATCHES", [("M1", s.HAZARD_LINE)]),
+            "ONSET": s.said("DATED", [("M1", s.ONSET_LINE)], date=s.ONSET_DATE),
+            "BAND_DECLARED": s.said("MET", [("M1", s.HAZARD_LINE),
+                                            ("M3", s.FIELD_LINE)])}
+    _event_id, declaration_id = s.declared(court, direct_vm, direct_bob, charter_id,
+                                           charter_hash, subjects=said)
+    receipt = court.get_declaration(declaration_id)["declaration"]
+    assert receipt["declared_band"] == "declared"
+    assert receipt["corroborating_sources"] == ["M1", "M3"]
+    assert [x["source_id"] for x in receipt["sources"]] == ["M1", "M2", "M3"]
+
+
+def test_a_request_may_declare_its_evidence_dynamic(court, direct_vm, direct_alice,
+                                                    direct_bob, direct_charlie):
+    charter_id = s.published(court, direct_vm, direct_alice)
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    s.funded(court, direct_vm, direct_alice, charter_id, 10 * s.GEN)
+    s.serve_all(direct_vm)
+    event_id, _d = s.declared(court, direct_vm, direct_bob, charter_id, charter_hash)
+    request_id = s.filed(court, direct_vm, direct_charlie, event_id, charter_hash,
+                         stability="DYNAMIC")
+    s.panel(direct_vm, s.request_said(), header="relief")
+    ruling = court.get_adjudication(court.adjudicate(request_id))["adjudication"]
+    assert ruling["outcome"] == "QUALIFIES"
+    record = ruling["sources"][0]
+    assert record["compared"] is False and "content_digest" not in record
+
+
+def test_a_reassessment_records_the_onset_it_read(court, direct_vm, direct_alice,
+                                                 direct_bob):
+    charter_id = s.published(court, direct_vm, direct_alice)
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    s.serve_all(direct_vm, {s.M1_URL: s.page(
+        "Lower Marrow flood bulletin",
+        [s.HAZARD_LINE, s.onset_line(), s.onset_line("23 September 2026"), s.WATCH_LINE,
+         s.DECLARED_LINE])})
+    event_id, _first = s.declared(court, direct_vm, direct_bob, charter_id, charter_hash)
+    assert court.get_event(event_id)["onset"] == "2026-09-24"
+    said = s.assessment_said(onset="2026-09-23", onset_words="23 September 2026")
+    s.panel(direct_vm, said)
+    court.reassess(event_id)
+    assert court.get_event(event_id)["onset"] == "2026-09-23"
+    rounds = court.get_event_history(event_id)["rounds"]
+    assert [r["onset"] for r in rounds] == ["2026-09-24", "2026-09-23"]
+
+
+def test_an_expired_event_frees_the_openers_slot(court, direct_vm, direct_alice,
+                                                direct_bob):
+    charter_id = s.published(court, direct_vm, direct_alice)
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    direct_vm.sender = direct_bob
+    event_id = court.open_event(charter_id, charter_hash, "Flooding reported", "Eastfield")
+    direct_vm.warp(LATER)
+    court.expire_event(event_id)
+    assert court.open_event(charter_id, charter_hash, "A further report",
+                           "Eastfield") == "EV-000002"
