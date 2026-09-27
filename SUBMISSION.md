@@ -58,9 +58,9 @@ Deployed on Studio, source byte-identical to the repository, thirty-five
 methods. A live run drove the catalogue with real transactions: sixteen
 assessments, a reassessment, twelve relief requests, thirteen settlements, four
 grants paid, three withdrawals - every outcome as recorded, all nine refusals
-refused. The watched sources came from three independent origins, each pinned to
-one commit. Read afterwards, the treasury's pools and credits equal the balance.
-Offline: 233 tests, and a mutation sweep pinning every guard it lists.
+refused. The watched sources came from three independent origins, one commit.
+Afterwards the treasury's pools and credits equal the balance. Offline: 233
+tests and a sweep pinning every guard it lists.
 <!-- VERIFY:END -->
 
 ## Evidence rows
