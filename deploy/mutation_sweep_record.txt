@@ -1,0 +1,189 @@
+91 mutations, 0 anchor problems
+accept-control: unmodified copy must pass ...
+control green; 91 mutations over 3 job(s)
+
+  [1/91] killed  : a 404 is a generic failure
+  [2/91] killed  : a redirect is read as a retrieved source
+  [3/91] killed  : a forbidden source is a generic failure
+  [4/91] killed  : a server error is a generic failure
+  [5/91] killed  : a binary content type is read
+  [6/91] killed  : an undecodable body is read
+  [7/91] killed  : scripts and styles count as text
+  [8/91] killed  : a page with no visible text is read
+  [9/91] killed  : an oversized source is not marked partial
+  [10/91] killed  : a round with no readable source is judged anyway
+  [11/91] killed  : text in the visible body is not scanned
+  [12/91] killed  : a source addressing the adjudicator is judged anyway
+  [13/91] killed  : markup and attributes are not scanned
+  [14/91] killed  : the title is not scanned
+  [15/91] killed  : a poisoned source only blocks its own reading
+  [16/91] killed  : a band met needs no quote
+  [17/91] killed  : a stated date need not appear in its quote
+  [18/91] killed  : a date's month is not checked
+  [19/91] killed  : a date's day is not checked
+  [20/91] killed  : a finding that is not dated may carry a date
+  [21/91] killed  : a spliced quote is accepted when the panel answers
+  [22/91] killed  : a quote need not ground in the text this node retrieved
+  [23/91] killed  : a spliced quote passes the gate
+  [24/91] killed  : the corroboration floor does not hold
+  [25/91] killed  : the bands are read mildest first, so the mildest band wins
+  [26/91] killed  : a band that fell short is not recorded
+  [27/91] killed  : corroboration counts quotes, not distinct sources
+  [28/91] killed  : a code reason is overridden by the panel's reading
+  [29/91] killed  : an unusable panel answer declares a band anyway
+  [30/91] killed  : the wrong hazard declares a band
+  [31/91] killed  : an undated onset declares a band
+  [32/91] killed  : an unclear hazard declares a band
+  [33/91] killed  : an onset from months back is treated as this event
+  [34/91] killed  : a stale signal declares a band
+  [35/91] killed  : the freshness window is ignored
+  [36/91] killed  : a date in the future vouches for freshness
+  [37/91] killed  : a need outside the declared area qualifies
+  [38/91] killed  : an unclear area qualifies
+  [39/91] killed  : freshness is aged even when the charter turned it off
+  [40/91] killed  : a contradicted need qualifies
+  [41/91] killed  : an absent need qualifies
+  [42/91] killed  : an unclear need qualifies
+  [43/91] killed  : a need not linked to this event qualifies
+  [44/91] killed  : an unclear link qualifies
+  [45/91] killed  : undated evidence qualifies
+  [46/91] killed  : evidence from before the onset qualifies
+  [47/91] killed  : stale evidence qualifies
+  [48/91] killed  : what was retrieved is not compared at all
+  [49/91] killed  : the consequence is not compared
+  [50/91] killed  : every source is treated as DYNAMIC, so its bytes are compared nowhere
+  [51/91] killed  : the leader's payload is taken on trust
+  [52/91] killed  : a transient failure ratifies a different failure
+  [53/91] killed  : min_corroboration may exceed the watched sources
+  [54/91] killed  : a monitor may sit outside the charter's authority domains
+  [55/91] killed  : the monitors need not be numbered in order
+  [56/91] killed  : a band id may shadow a built-in subject
+  [57/91] killed  : charter text may address the adjudicator
+  [58/91] killed  : a charter may promise more than one grant of its budget
+  [59/91] killed  : freshness may be turned off with any small number
+  [60/91] killed  : an amount may be sent as a number
+  [61/91] killed  : an event may be reassessed twice
+  [62/91] killed  : an event may be assessed twice
+  [63/91] killed  : an IP literal is a host
+  [64/91] killed  : an event may be assessed after its window
+  [65/91] killed  : an event may be finalized inside its window
+  [66/91] killed  : a request may be filed against an event with no declaration
+  [67/91] killed  : a request may ask for a category the band does not promise
+  [68/91] killed  : a second request may cite a source another request holds
+  [69/91] killed  : a request may be adjudicated after its window
+  [70/91] killed  : a request may be rechecked twice
+  [71/91] killed  : a request may be settled inside its recheck window
+  [72/91] killed  : a band withdrawn under a filed request is adjudicated anyway
+  [73/91] killed  : a charter reserves more than its treasury holds
+  [74/91] killed  : the per-band grant cap does not hold
+  [75/91] killed  : the per-wallet grant cap does not hold
+  [76/91] killed  : a superseded authorisation keeps its reservation
+  [77/91] killed  : settling pays a request that did not qualify
+  [78/91] killed  : a settled grant frees the source it rested on
+  [79/91] killed  : a released reservation keeps its grant slot
+  [80/91] killed  : a lapsed request keeps the source it cited
+  [81/91] killed  : withdrawing does not clear the ledger first
+  [82/91] killed  : anyone may fund a charter
+  [83/91] killed  : a refused deposit is raised away instead of returned
+  [84/91] killed  : anyone may reclaim a charter's treasury
+  [85/91] killed  : a reserved grant may be reclaimed
+  [86/91] killed  : a retired charter still takes funds
+  [87/91] killed  : an event may be opened against a retired charter
+  [88/91] killed  : the charter hash an event commits to is not checked
+  [89/91] killed  : a receipt stores a dynamic source's digest
+  [90/91] killed  : the open-event limit does not hold
+  [91/91] killed  : the open-request limit does not hold
+
+killed:   a redirect is read as a retrieved source
+killed:   a 404 is a generic failure
+killed:   a forbidden source is a generic failure
+killed:   a server error is a generic failure
+killed:   a binary content type is read
+killed:   an undecodable body is read
+killed:   a page with no visible text is read
+killed:   scripts and styles count as text
+killed:   an oversized source is not marked partial
+killed:   a round with no readable source is judged anyway
+killed:   a source addressing the adjudicator is judged anyway
+killed:   text in the visible body is not scanned
+killed:   markup and attributes are not scanned
+killed:   the title is not scanned
+killed:   a poisoned source only blocks its own reading
+killed:   a band met needs no quote
+killed:   a stated date need not appear in its quote
+killed:   a date's month is not checked
+killed:   a date's day is not checked
+killed:   a finding that is not dated may carry a date
+killed:   a spliced quote is accepted when the panel answers
+killed:   a spliced quote passes the gate
+killed:   a quote need not ground in the text this node retrieved
+killed:   the corroboration floor does not hold
+killed:   corroboration counts quotes, not distinct sources
+killed:   the bands are read mildest first, so the mildest band wins
+killed:   a band that fell short is not recorded
+killed:   a code reason is overridden by the panel's reading
+killed:   an unusable panel answer declares a band anyway
+killed:   the wrong hazard declares a band
+killed:   an unclear hazard declares a band
+killed:   an undated onset declares a band
+killed:   an onset from months back is treated as this event
+killed:   a stale signal declares a band
+killed:   a date in the future vouches for freshness
+killed:   the freshness window is ignored
+killed:   freshness is aged even when the charter turned it off
+killed:   a need outside the declared area qualifies
+killed:   an unclear area qualifies
+killed:   a contradicted need qualifies
+killed:   an absent need qualifies
+killed:   an unclear need qualifies
+killed:   a need not linked to this event qualifies
+killed:   an unclear link qualifies
+killed:   undated evidence qualifies
+killed:   evidence from before the onset qualifies
+killed:   stale evidence qualifies
+killed:   what was retrieved is not compared at all
+killed:   the consequence is not compared
+killed:   every source is treated as DYNAMIC, so its bytes are compared nowhere
+killed:   the leader's payload is taken on trust
+killed:   a transient failure ratifies a different failure
+killed:   min_corroboration may exceed the watched sources
+killed:   a monitor may sit outside the charter's authority domains
+killed:   the monitors need not be numbered in order
+killed:   a band id may shadow a built-in subject
+killed:   charter text may address the adjudicator
+killed:   a charter may promise more than one grant of its budget
+killed:   freshness may be turned off with any small number
+killed:   an amount may be sent as a number
+killed:   an IP literal is a host
+killed:   an event may be assessed twice
+killed:   an event may be reassessed twice
+killed:   an event may be assessed after its window
+killed:   an event may be finalized inside its window
+killed:   a request may be filed against an event with no declaration
+killed:   a request may ask for a category the band does not promise
+killed:   a second request may cite a source another request holds
+killed:   a request may be adjudicated after its window
+killed:   a request may be rechecked twice
+killed:   a request may be settled inside its recheck window
+killed:   a band withdrawn under a filed request is adjudicated anyway
+killed:   the per-band grant cap does not hold
+killed:   the per-wallet grant cap does not hold
+killed:   a charter reserves more than its treasury holds
+killed:   a superseded authorisation keeps its reservation
+killed:   a released reservation keeps its grant slot
+killed:   settling pays a request that did not qualify
+killed:   a settled grant frees the source it rested on
+killed:   a lapsed request keeps the source it cited
+killed:   withdrawing does not clear the ledger first
+killed:   anyone may fund a charter
+killed:   a refused deposit is raised away instead of returned
+killed:   anyone may reclaim a charter's treasury
+killed:   a reserved grant may be reclaimed
+killed:   a retired charter still takes funds
+killed:   an event may be opened against a retired charter
+killed:   the charter hash an event commits to is not checked
+killed:   the open-event limit does not hold
+killed:   the open-request limit does not hold
+killed:   a receipt stores a dynamic source's digest
+
+mutations: 91 killed, 0 survived, 0 anchor missing

@@ -115,15 +115,30 @@ status. Details, and why each line is where it is:
 ## Verified
 
 <!-- VERIFIED:START -->
-Filled from the live run of record. Until then, what has been verified is the
-offline gate:
-
 | Check | Result |
 |---|---|
+| deployment of record, StudioNet chain 61999 | FINALIZED, leader SUCCESS, votes AGREE, AGREE, AGREE, AGREE, AGREE |
+| deployed source against this repository | byte-identical, 35 schema methods |
+| live run of record | 121 transactions, no rejected round, **73 of 73 outcomes held**, 9 of 9 refusals refused |
+| the books, read from the chain after the run | pools plus credits equal the contract's balance |
+| `python -m pytest tests/direct -q` | 225 passed |
+| `python scripts/mutation_check.py` | 91 mutations, **91 killed, 0 survived** |
+| `python -m pytest tests/integration -q` | 6 passed, 1 skipped (the opt-in live write) |
+| `python scripts/generate_fixtures.py --check` | 43 fixture files regenerate byte for byte |
 | `genvm-lint check contracts/succour.py --json` | lint ok, 35 methods (20 view, 15 write) |
 | `ruff check .` | clean |
-| `python scripts/generate_fixtures.py --check` | 43 fixture files regenerate byte for byte |
-| `python -m pytest tests/direct -q` | 225 passed |
+
+Every band, every relief outcome and every refusal in the catalogue was reached
+by real transactions against the deployment of record: sixteen assessments, a
+reassessment, twelve relief requests, thirteen settlements, four grants paid and
+three withdrawals. What each case was and what it answered:
+[`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md#live-run).
+
+One outcome in the catalogue is a reading the panel makes differently from the
+way it was first written down, and the case now says so rather than being
+rewritten to hide it: a survey taken before the event does not tie a need to it,
+and the panel refuses it on the link before the date floor is reached
+([`docs/CONSENSUS.md`](docs/CONSENSUS.md#live-findings)).
 <!-- VERIFIED:END -->
 
 ## Running it

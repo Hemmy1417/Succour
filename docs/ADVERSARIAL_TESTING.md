@@ -102,7 +102,17 @@ arithmetic, every branch of the relief decision, what validators compare, the
 charter parser, the state machine, the caps and the ledger.
 
 <!-- SWEEP:START -->
-Results are filled from the sweep of record.
+**The sweep of record: 91 mutations, 91 killed, 0 survived, 0 anchors missing**
+(`deploy/mutation_sweep_record.txt`), with the accept-control green.
+
+An earlier sweep left seventeen survivors. Every one of them is now either
+pinned by a test written for it - a body that does not decode, a page with
+nothing a reader can see, a stray date at the gate, a splice that grounds
+because grounding walks ellipsis-separated parts, two quotes from one source
+counting as one source, freshness switched off, evidence that went stale between
+filing and adjudication, a truncated reading, an address literal in a URL,
+settling inside the recheck window, a deterministic failure meeting a transient
+one - or is named below as one no test can kill, with the reason.
 <!-- SWEEP:END -->
 
 ## What the sweep deliberately leaves alone

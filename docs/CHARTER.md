@@ -30,9 +30,9 @@ validator must read identical bytes, `DYNAMIC` when the page changes under them.
 A band is `{band_id, label, conditions, min_corroboration, relief}`:
 
 - `band_id` is lowercase letters, digits and underscores, and may not shadow a
-  built-in subject (`onset`, `area`, `need`, `link`, `evidence_date`,
-  `hazard_match`) - the panel's keys are case-folded, so such an id would share
-  a slot with a subject;
+  built-in subject - `HAZARD_MATCH`, `ONSET`, `AREA`, `NEED`, `LINK` or
+  `EVIDENCE_DATE` - in any case: the panel's keys are case-folded, so such an id
+  would share a slot with a subject;
 - `conditions` is up to 400 characters of prose, and is what the panel is asked
   to read;
 - `min_corroboration` is 1 to the number of monitors: how many distinct watched

@@ -13,21 +13,21 @@ event.
 ## Description (1000 characters)
 
 Relief is slow because people must first establish that an event happened and
-how bad it is, then that a particular request belongs to that event. SUCCOUR
-makes both a matter of record.
+how bad it is, then that a request belongs to that event. SUCCOUR makes both a
+matter of record.
 
 A charter is published while nothing is happening: the sources the organisation
 watches, what each severity band requires in words, how many sources must
-corroborate it, and what relief each band promises for each category. An event
-is then assessed in one consensus round: validators retrieve every watched
-source, read whether the hazard, the place and each band's conditions are met,
-and code derives the band, counting corroboration from the sources the quotes
-actually ground in. Relief requests are filed against the band that stands and
-judged on four things: is the need inside the declared area, is it established,
-is it tied to this event, and what date does the evidence carry.
+corroborate it, and what relief each band promises per category. An event is
+then assessed in one consensus round: validators retrieve every watched source,
+read whether the hazard, the place and each band's conditions are met, and code
+derives the band, counting corroboration from the sources the quotes actually
+ground in. Relief requests are filed against the band that stands and judged on
+four things: is the need inside the declared area, is it established, is it tied
+to this event, and what date does the evidence carry.
 
-The model never sets an amount. The charter fixed it in advance; a qualifying
-request reserves it, and settlement pays it from a pull ledger.
+The model never sets an amount: the charter fixed it in advance, a qualifying
+request reserves it, and settlement pays from a pull ledger.
 
 ## How to use it (seven steps, each with its heading)
 
@@ -54,7 +54,12 @@ request reserves it, and settlement pays it from a pull ledger.
 ## Verification outcome (500 characters)
 
 <!-- VERIFY:START -->
-Filled from the live run of record.
+Deployed on Studio, source byte-identical to the repository, thirty-five
+methods. A live run drove the catalogue with real transactions: sixteen
+assessments, a reassessment, twelve relief requests, thirteen settlements, four
+grants paid, three withdrawals - every outcome as recorded, all nine refusals
+refused. Read afterwards, the treasury's pools and credits equal the balance.
+Offline: 225 tests, and a mutation sweep pinning every guard it lists.
 <!-- VERIFY:END -->
 
 ## Evidence rows

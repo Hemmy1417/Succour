@@ -1,0 +1,3480 @@
+{
+ "address": "0xBddAFAbb7Cc99FbAb694e0eF3e393D984A376B44",
+ "finished_at": "2026-09-26T20:32:53Z",
+ "order": [
+  "faucet",
+  "charter:AS01",
+  "charter:AS02",
+  "charter:AS03",
+  "charter:AS04",
+  "charter:AS05",
+  "charter:AS06",
+  "charter:AS07",
+  "charter:AS08",
+  "charter:AS09",
+  "charter:AS10",
+  "charter:AS11",
+  "charter:AS12",
+  "charter:AS13",
+  "charter:AS14",
+  "charter:AS15",
+  "charter:AS16",
+  "fund:request_charter",
+  "open:AS01",
+  "assess:AS01",
+  "open:AS02",
+  "assess:AS02",
+  "open:AS03",
+  "assess:AS03",
+  "open:AS04",
+  "assess:AS04",
+  "open:AS05",
+  "assess:AS05",
+  "open:AS06",
+  "assess:AS06",
+  "open:AS07",
+  "assess:AS07",
+  "open:AS08",
+  "assess:AS08",
+  "open:AS09",
+  "assess:AS09",
+  "open:AS10",
+  "assess:AS10",
+  "open:AS11",
+  "assess:AS11",
+  "open:AS12",
+  "assess:AS12",
+  "open:AS13",
+  "assess:AS13",
+  "open:AS14",
+  "assess:AS14",
+  "open:AS15",
+  "assess:AS15",
+  "open:AS16",
+  "assess:AS16",
+  "reassess:AS16",
+  "file:RQ01",
+  "adjudicate:RQ01",
+  "file:RQ02",
+  "adjudicate:RQ02",
+  "file:RQ03",
+  "adjudicate:RQ03",
+  "file:RQ04",
+  "adjudicate:RQ04",
+  "file:RQ05",
+  "adjudicate:RQ05",
+  "file:RQ06",
+  "adjudicate:RQ06",
+  "file:RQ12",
+  "adjudicate:RQ12",
+  "file:RQ07",
+  "adjudicate:RQ07",
+  "file:RQ08",
+  "adjudicate:RQ08",
+  "file:RQ09",
+  "adjudicate:RQ09",
+  "file:RQ10",
+  "adjudicate:RQ10",
+  "file:RQ11",
+  "adjudicate:RQ11",
+  "file:TS01",
+  "adjudicate:TS01",
+  "fund:TS01",
+  "recheck:TS01",
+  "settle:RQ-000001",
+  "settle:RQ-000002",
+  "settle:RQ-000003",
+  "settle:RQ-000004",
+  "settle:RQ-000005",
+  "settle:RQ-000006",
+  "settle:RQ-000008",
+  "settle:RQ-000009",
+  "settle:RQ-000010",
+  "settle:RQ-000011",
+  "settle:RQ-000012",
+  "settle:RQ-000007",
+  "settle:RQ-000013",
+  "finalize_event:AS01",
+  "finalize_event:AS02",
+  "finalize_event:AS03",
+  "finalize_event:AS04",
+  "finalize_event:AS05",
+  "finalize_event:AS06",
+  "finalize_event:AS07",
+  "finalize_event:AS08",
+  "finalize_event:AS09",
+  "finalize_event:AS10",
+  "finalize_event:AS11",
+  "finalize_event:AS12",
+  "finalize_event:AS13",
+  "finalize_event:AS14",
+  "finalize_event:AS15",
+  "finalize_event:AS16",
+  "withdraw:alice",
+  "withdraw:bob",
+  "withdraw:carol",
+  "refuse:wrong_hash",
+  "refuse:unknown_charter",
+  "refuse:not_steward_retire",
+  "refuse:category_not_promised",
+  "refuse:no_band",
+  "refuse:duplicate_source",
+  "refuse:plain_http",
+  "refuse:withdraw_empty",
+  "refuse:reclaim_active",
+  "fund:not_steward",
+  "withdraw:alice_returned"
+ ],
+ "raw_base": "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/",
+ "started_at": "2026-09-26T18:50:56Z",
+ "steps": {
+  "adjudicate:RQ01": {
+   "adjudication_id": "AD-000001",
+   "args": [
+    "RQ-000001"
+   ],
+   "at": "2026-09-26T19:37:06Z",
+   "authorised_atto": "2000000000000000000",
+   "decided_by": "PANEL",
+   "expected_funding": "RESERVED",
+   "expected_outcome": "QUALIFIES",
+   "expected_reason": "QUALIFIED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "adjudicate",
+   "note": "the evidence places the need inside the area, establishes it and ties it to this event",
+   "observed_funding": "RESERVED",
+   "observed_outcome": "QUALIFIES",
+   "observed_reason": "QUALIFIED",
+   "panel_state": "ASSESSED",
+   "request_id": "RQ-000001",
+   "rounds": 1,
+   "settle": true,
+   "status": "FINALIZED",
+   "step": "adjudicate:RQ01",
+   "tx": "0x58f95fc317ad29a89975b4d5aef2e65d60ff3979134cfdebffdb43b67835ec7f",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "idle"
+   ],
+   "wallet": "owner"
+  },
+  "adjudicate:RQ02": {
+   "adjudication_id": "AD-000002",
+   "args": [
+    "RQ-000002"
+   ],
+   "at": "2026-09-26T19:38:46Z",
+   "authorised_atto": "0",
+   "decided_by": "PANEL",
+   "expected_funding": "NOT_AUTHORISED",
+   "expected_outcome": "DOES_NOT_QUALIFY",
+   "expected_reason": "OUT_OF_AREA",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "adjudicate",
+   "note": "the evidence places the need two hundred kilometres outside the basin",
+   "observed_funding": "NOT_AUTHORISED",
+   "observed_outcome": "DOES_NOT_QUALIFY",
+   "observed_reason": "OUT_OF_AREA",
+   "panel_state": "ASSESSED",
+   "request_id": "RQ-000002",
+   "rounds": 1,
+   "settle": true,
+   "status": "FINALIZED",
+   "step": "adjudicate:RQ02",
+   "tx": "0x698b17cf150e266e046fdc7cd795134b902567038781348c546dc9c214d0d798",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "adjudicate:RQ03": {
+   "adjudication_id": "AD-000003",
+   "args": [
+    "RQ-000003"
+   ],
+   "at": "2026-09-26T19:40:22Z",
+   "authorised_atto": "0",
+   "decided_by": "PANEL",
+   "expected_funding": "NOT_AUTHORISED",
+   "expected_outcome": "DOES_NOT_QUALIFY",
+   "expected_reason": "NEED_CONTRADICTED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "adjudicate",
+   "note": "the evidence says the shelter is open and below capacity",
+   "observed_funding": "NOT_AUTHORISED",
+   "observed_outcome": "DOES_NOT_QUALIFY",
+   "observed_reason": "NEED_CONTRADICTED",
+   "panel_state": "ASSESSED",
+   "request_id": "RQ-000003",
+   "rounds": 1,
+   "settle": false,
+   "status": "FINALIZED",
+   "step": "adjudicate:RQ03",
+   "tx": "0xea5c7d6a21f6173a53a2ed8123961d604d53965f513548e1daf5a709d4f9bd11",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "adjudicate:RQ04": {
+   "adjudication_id": "AD-000004",
+   "args": [
+    "RQ-000004"
+   ],
+   "at": "2026-09-26T19:42:27Z",
+   "authorised_atto": "0",
+   "decided_by": "PANEL",
+   "expected_funding": "NOT_AUTHORISED",
+   "expected_outcome": "DOES_NOT_QUALIFY",
+   "expected_reason": "NEED_ABSENT",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "adjudicate",
+   "note": "a road survey does not establish a shelter need",
+   "observed_funding": "NOT_AUTHORISED",
+   "observed_outcome": "DOES_NOT_QUALIFY",
+   "observed_reason": "NEED_ABSENT",
+   "panel_state": "ASSESSED",
+   "request_id": "RQ-000004",
+   "rounds": 1,
+   "settle": false,
+   "status": "FINALIZED",
+   "step": "adjudicate:RQ04",
+   "tx": "0xe5b3576db4fe20a5e1c55df9429e3dbd5e453c31d569cd4fdb26faa8a141e33a",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "owner"
+  },
+  "adjudicate:RQ05": {
+   "adjudication_id": "AD-000005",
+   "args": [
+    "RQ-000005"
+   ],
+   "at": "2026-09-26T19:43:54Z",
+   "authorised_atto": "0",
+   "decided_by": "PANEL",
+   "expected_funding": "NOT_AUTHORISED",
+   "expected_outcome": "DOES_NOT_QUALIFY",
+   "expected_reason": "NOT_LINKED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "adjudicate",
+   "note": "the evidence ties the damage to a fire in 2025",
+   "observed_funding": "NOT_AUTHORISED",
+   "observed_outcome": "DOES_NOT_QUALIFY",
+   "observed_reason": "NOT_LINKED",
+   "panel_state": "ASSESSED",
+   "request_id": "RQ-000005",
+   "rounds": 1,
+   "settle": false,
+   "status": "FINALIZED",
+   "step": "adjudicate:RQ05",
+   "tx": "0x19a346670ddb7ec4e44099ac3b0045c23c7d17cd130f049d5f64310765ab6ed4",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "owner"
+  },
+  "adjudicate:RQ06": {
+   "adjudication_id": "AD-000006",
+   "args": [
+    "RQ-000006"
+   ],
+   "at": "2026-09-26T19:45:31Z",
+   "authorised_atto": "0",
+   "decided_by": "PANEL",
+   "expected_funding": "NOT_AUTHORISED",
+   "expected_outcome": "DOES_NOT_QUALIFY",
+   "expected_reason": "NOT_LINKED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "adjudicate",
+   "note": "a pre-season survey of the same households: it shows the need but ties it to nothing, and the panel refuses it on the link before the date floor is reached",
+   "observed_funding": "NOT_AUTHORISED",
+   "observed_outcome": "DOES_NOT_QUALIFY",
+   "observed_reason": "NOT_LINKED",
+   "panel_state": "ASSESSED",
+   "request_id": "RQ-000006",
+   "rounds": 1,
+   "settle": false,
+   "status": "FINALIZED",
+   "step": "adjudicate:RQ06",
+   "tx": "0x381f8e6f5ca21479998f74d7f3b99b123031aa63129f30e45c15da93c0d6e8c4",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "idle",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "adjudicate:RQ07": {
+   "adjudication_id": "AD-000008",
+   "args": [
+    "RQ-000008"
+   ],
+   "at": "2026-09-26T19:51:20Z",
+   "authorised_atto": "0",
+   "decided_by": "PANEL",
+   "expected_funding": "NOT_AUTHORISED",
+   "expected_outcome": "INCONCLUSIVE",
+   "expected_reason": "EVIDENCE_UNDATED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "adjudicate",
+   "note": "the evidence carries no date for what it shows",
+   "observed_funding": "NOT_AUTHORISED",
+   "observed_outcome": "INCONCLUSIVE",
+   "observed_reason": "EVIDENCE_UNDATED",
+   "panel_state": "ASSESSED",
+   "request_id": "RQ-000008",
+   "rounds": 1,
+   "settle": false,
+   "status": "FINALIZED",
+   "step": "adjudicate:RQ07",
+   "tx": "0x414aa122851992a5a0519f2d1f4af3f847b4083ee6fdadf922efa2c04f7149bd",
+   "value_atto": "0",
+   "votes": [
+    "timeout",
+    "agree",
+    "agree",
+    "timeout",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "adjudicate:RQ08": {
+   "adjudication_id": "AD-000009",
+   "args": [
+    "RQ-000009"
+   ],
+   "at": "2026-09-26T19:52:45Z",
+   "authorised_atto": "0",
+   "decided_by": "PANEL",
+   "expected_funding": "NOT_AUTHORISED",
+   "expected_outcome": "INCONCLUSIVE",
+   "expected_reason": "EVIDENCE_UNAVAILABLE",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "adjudicate",
+   "note": "the declared evidence is not published at that URL",
+   "observed_funding": "NOT_AUTHORISED",
+   "observed_outcome": "INCONCLUSIVE",
+   "observed_reason": "EVIDENCE_UNAVAILABLE",
+   "panel_state": "SKIPPED",
+   "request_id": "RQ-000009",
+   "rounds": 1,
+   "settle": false,
+   "status": "FINALIZED",
+   "step": "adjudicate:RQ08",
+   "tx": "0x9468e837f703904ca1a449f04070bc1f3ec30d44ae3b96ba30e0742de0e505c0",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "adjudicate:RQ09": {
+   "adjudication_id": "AD-000010",
+   "args": [
+    "RQ-000010"
+   ],
+   "at": "2026-09-26T19:54:14Z",
+   "authorised_atto": "0",
+   "decided_by": "PANEL",
+   "expected_funding": "NOT_AUTHORISED",
+   "expected_outcome": "INCONCLUSIVE",
+   "expected_reason": "SOURCE_ADDRESSES_ADJUDICATOR",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [
+    "E1:BODY"
+   ],
+   "method": "adjudicate",
+   "note": "the evidence carries a line addressed to whoever adjudicates",
+   "observed_funding": "NOT_AUTHORISED",
+   "observed_outcome": "INCONCLUSIVE",
+   "observed_reason": "SOURCE_ADDRESSES_ADJUDICATOR",
+   "panel_state": "SKIPPED",
+   "request_id": "RQ-000010",
+   "rounds": 1,
+   "settle": false,
+   "status": "FINALIZED",
+   "step": "adjudicate:RQ09",
+   "tx": "0x70871fb31ecb7f0374489029e467bef587af47606b3ebc6cd8faef084564e76e",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "owner"
+  },
+  "adjudicate:RQ10": {
+   "adjudication_id": "AD-000011",
+   "args": [
+    "RQ-000011"
+   ],
+   "at": "2026-09-26T19:55:49Z",
+   "authorised_atto": "1000000000000000000",
+   "decided_by": "PANEL",
+   "expected_funding": "RESERVED",
+   "expected_outcome": "QUALIFIES",
+   "expected_reason": "QUALIFIED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "adjudicate",
+   "note": "a second category the declared band promises, at its own amount",
+   "observed_funding": "RESERVED",
+   "observed_outcome": "QUALIFIES",
+   "observed_reason": "QUALIFIED",
+   "panel_state": "ASSESSED",
+   "request_id": "RQ-000011",
+   "rounds": 1,
+   "settle": true,
+   "status": "FINALIZED",
+   "step": "adjudicate:RQ10",
+   "tx": "0x1a67d0b2fb657ecf09e28ef51a40abd333f823bf8f71f420d3a89baf55fffc9f",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "owner"
+  },
+  "adjudicate:RQ11": {
+   "adjudication_id": "AD-000012",
+   "args": [
+    "RQ-000012"
+   ],
+   "at": "2026-09-26T19:57:50Z",
+   "authorised_atto": "2000000000000000000",
+   "decided_by": "PANEL",
+   "expected_funding": "RESERVED",
+   "expected_outcome": "QUALIFIES",
+   "expected_reason": "QUALIFIED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "adjudicate",
+   "note": "evidence the filer declares DYNAMIC: its bytes are not compared, its quotes still are",
+   "observed_funding": "RESERVED",
+   "observed_outcome": "QUALIFIES",
+   "observed_reason": "QUALIFIED",
+   "panel_state": "ASSESSED",
+   "request_id": "RQ-000012",
+   "rounds": 1,
+   "settle": true,
+   "status": "FINALIZED",
+   "step": "adjudicate:RQ11",
+   "tx": "0x7c7180f4d19b8f5bd726d7c1169d1e6d09054c63a3c5e5744b8f4d73fb477e3b",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "adjudicate:RQ12": {
+   "adjudication_id": "AD-000007",
+   "args": [
+    "RQ-000007"
+   ],
+   "at": "2026-09-26T19:47:41Z",
+   "authorised_atto": "0",
+   "decided_by": "PANEL",
+   "expected_funding": "NOT_AUTHORISED",
+   "expected_outcome": "DOES_NOT_QUALIFY",
+   "expected_reason": "EVIDENCE_PREDATES_ONSET",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "adjudicate",
+   "note": "a survey that blames this event and is dated before it began; code measures the date against the onset the declaration recorded",
+   "observed_funding": "NOT_AUTHORISED",
+   "observed_outcome": "DOES_NOT_QUALIFY",
+   "observed_reason": "EVIDENCE_PREDATES_ONSET",
+   "panel_state": "ASSESSED",
+   "request_id": "RQ-000007",
+   "rounds": 1,
+   "settle": false,
+   "status": "FINALIZED",
+   "step": "adjudicate:RQ12",
+   "tx": "0x3a079f64536f0e33e4c9534239cfe67ff67e1271ba783e251368d233fd3f56df",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "adjudicate:TS01": {
+   "adjudication_id": "AD-000013",
+   "args": [
+    "RQ-000013"
+   ],
+   "at": "2026-09-26T19:59:31Z",
+   "authorised_atto": "0",
+   "decided_by": "PANEL",
+   "expected_funding": "TREASURY_SHORT",
+   "expected_outcome": "QUALIFIES",
+   "expected_reason": "QUALIFIED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "adjudicate",
+   "note": "the charter's treasury holds nothing, so nothing is authorised",
+   "observed_funding": "TREASURY_SHORT",
+   "observed_outcome": "QUALIFIES",
+   "observed_reason": "QUALIFIED",
+   "panel_state": "ASSESSED",
+   "request_id": "RQ-000013",
+   "rounds": 1,
+   "settle": false,
+   "status": "FINALIZED",
+   "step": "adjudicate:TS01",
+   "tx": "0xa9222b7bc6cae7f2bbd0b0dde35f55bb73819546c4b439a442cf3f8794b34ae6",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "assess:AS01": {
+   "args": [
+    "EV-000001"
+   ],
+   "at": "2026-09-26T19:05:33Z",
+   "corroborating_sources": [
+    "M1",
+    "M2"
+   ],
+   "declaration_id": "DE-000001",
+   "event_id": "EV-000001",
+   "expected_band": "declared",
+   "expected_reason": "BAND_DECLARED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "both watched sources report the warning, the onset and a gauge past danger",
+   "observed_band": "declared",
+   "observed_onset": "2026-09-24",
+   "observed_reason": "BAND_DECLARED",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS01",
+   "tx": "0x0ab16f5b7a96b09fcd987fdbbc5cab71d361b3fcd4832e95cd6037b76860c0c4",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS02": {
+   "args": [
+    "EV-000002"
+   ],
+   "at": "2026-09-26T19:07:36Z",
+   "corroborating_sources": [
+    "M1",
+    "M2"
+   ],
+   "declaration_id": "DE-000002",
+   "event_id": "EV-000002",
+   "expected_band": "watch",
+   "expected_reason": "BAND_DECLARED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "only the bulletin reports the evacuation, so the declared band falls short of its two sources and the watch band, which needs one, is declared",
+   "observed_band": "watch",
+   "observed_onset": "2026-09-24",
+   "observed_reason": "BAND_DECLARED",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS02",
+   "tx": "0x415dd93475b44f0639502442ee16c67b3dcf0875ba39bbfe91c7e87f102bd7b6",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS03": {
+   "args": [
+    "EV-000003"
+   ],
+   "at": "2026-09-26T19:09:26Z",
+   "corroborating_sources": [
+    "M1",
+    "M2"
+   ],
+   "declaration_id": "DE-000003",
+   "event_id": "EV-000003",
+   "expected_band": "severe",
+   "expected_reason": "BAND_DECLARED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "both sources report widespread inundation and displacement",
+   "observed_band": "severe",
+   "observed_onset": "2026-09-24",
+   "observed_reason": "BAND_DECLARED",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS03",
+   "tx": "0x06011645f9fd25d3be644187406b3f34e6a6b81172fd36e79b01cb7e2771b2b7",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS04": {
+   "args": [
+    "EV-000004"
+   ],
+   "at": "2026-09-26T19:11:27Z",
+   "corroborating_sources": [],
+   "declaration_id": "DE-000004",
+   "event_id": "EV-000004",
+   "expected_band": "NONE",
+   "expected_reason": "NO_BAND_MET",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "routine seasonal readings, no warning in force",
+   "observed_band": "NONE",
+   "observed_onset": "2026-09-24",
+   "observed_reason": "NO_BAND_MET",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS04",
+   "tx": "0x0b81c1d5ddb72020618200431884d93e5af272b625ed96e631974eefa05ae5c5",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS05": {
+   "args": [
+    "EV-000005"
+   ],
+   "at": "2026-09-26T19:13:06Z",
+   "corroborating_sources": [],
+   "declaration_id": "DE-000005",
+   "event_id": "EV-000005",
+   "expected_band": "NONE",
+   "expected_reason": "CORROBORATION_SHORT",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "only the bulletin bears on the band's conditions at all - the second watched source is a road closure notice - so the band is met by one source where the charter demands two",
+   "observed_band": "NONE",
+   "observed_onset": "2026-09-24",
+   "observed_reason": "CORROBORATION_SHORT",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS05",
+   "tx": "0xadb885c1ebe39a1296824a25707eaf7f3c13a8fe1e0deba8529511873cc732ff",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS06": {
+   "args": [
+    "EV-000006"
+   ],
+   "at": "2026-09-26T19:14:48Z",
+   "corroborating_sources": [],
+   "declaration_id": "DE-000006",
+   "event_id": "EV-000006",
+   "expected_band": "NONE",
+   "expected_reason": "HAZARD_MISMATCH",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "the watched sources report a heat advisory, not a flood",
+   "observed_band": "NONE",
+   "observed_onset": "",
+   "observed_reason": "HAZARD_MISMATCH",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS06",
+   "tx": "0xd2ffdcb514056e46d350de6cb497c7257957dcedc2ffbb72b1df1aad8f1b2e74",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS07": {
+   "args": [
+    "EV-000007"
+   ],
+   "at": "2026-09-26T19:16:46Z",
+   "corroborating_sources": [],
+   "declaration_id": "DE-000007",
+   "event_id": "EV-000007",
+   "expected_band": "NONE",
+   "expected_reason": "SIGNAL_UNDATED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "the bulletins report the flood but give no date for its onset",
+   "observed_band": "NONE",
+   "observed_onset": "",
+   "observed_reason": "SIGNAL_UNDATED",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS07",
+   "tx": "0x9ef1563edeb1c10cc9388f26f9eeba095de960fa798878e1f8e67638a962d5db",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS08": {
+   "args": [
+    "EV-000008"
+   ],
+   "at": "2026-09-26T19:18:39Z",
+   "corroborating_sources": [],
+   "declaration_id": "DE-000008",
+   "event_id": "EV-000008",
+   "expected_band": "NONE",
+   "expected_reason": "SIGNAL_STALE",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "the onset the sources give is older than the charter's freshness window",
+   "observed_band": "NONE",
+   "observed_onset": "2026-08-02",
+   "observed_reason": "SIGNAL_STALE",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS08",
+   "tx": "0x5c0caf28a2b7843c09249941c76c48890389bfa7dac802b1cdd2c69357b107cd",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS09": {
+   "args": [
+    "EV-000009"
+   ],
+   "at": "2026-09-26T19:20:08Z",
+   "corroborating_sources": [],
+   "declaration_id": "DE-000009",
+   "event_id": "EV-000009",
+   "expected_band": "NONE",
+   "expected_reason": "SOURCES_UNAVAILABLE",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "neither watched source is published at the URL the charter names",
+   "observed_band": "NONE",
+   "observed_onset": "",
+   "observed_reason": "SOURCES_UNAVAILABLE",
+   "panel_state": "SKIPPED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS09",
+   "tx": "0xdadf00ee321252682379acf78cb8429577461a44bcc0a26106c227963389d110",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS10": {
+   "args": [
+    "EV-000010"
+   ],
+   "at": "2026-09-26T19:21:58Z",
+   "corroborating_sources": [
+    "M1"
+   ],
+   "declaration_id": "DE-000010",
+   "event_id": "EV-000010",
+   "expected_band": "watch",
+   "expected_reason": "BAND_DECLARED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "one watched source is missing and the other carries the warning; the watch band needs one source",
+   "observed_band": "watch",
+   "observed_onset": "2026-09-24",
+   "observed_reason": "BAND_DECLARED",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS10",
+   "tx": "0x32f8999d0518f681c6254cd51b87c4ebd653db32cd8e29ba494da7d301770bc5",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS11": {
+   "args": [
+    "EV-000011"
+   ],
+   "at": "2026-09-26T19:23:33Z",
+   "corroborating_sources": [],
+   "declaration_id": "DE-000011",
+   "event_id": "EV-000011",
+   "expected_band": "NONE",
+   "expected_reason": "SOURCE_ADDRESSES_ADJUDICATOR",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [
+    "M1:BODY"
+   ],
+   "method": "assess",
+   "note": "a watched page carries a line addressed to whoever adjudicates",
+   "observed_band": "NONE",
+   "observed_onset": "",
+   "observed_reason": "SOURCE_ADDRESSES_ADJUDICATOR",
+   "panel_state": "SKIPPED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS11",
+   "tx": "0x094e21e46b9fe9244f54cabb0c21780dde3186a75fa4f33db26f6385f7f96c58",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS12": {
+   "args": [
+    "EV-000012"
+   ],
+   "at": "2026-09-26T19:24:59Z",
+   "corroborating_sources": [],
+   "declaration_id": "DE-000012",
+   "event_id": "EV-000012",
+   "expected_band": "NONE",
+   "expected_reason": "SOURCE_ADDRESSES_ADJUDICATOR",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [
+    "M1:BODY",
+    "M1:TITLE",
+    "M2:META"
+   ],
+   "method": "assess",
+   "note": "the instruction is in a title and in markup a reader never sees",
+   "observed_band": "NONE",
+   "observed_onset": "",
+   "observed_reason": "SOURCE_ADDRESSES_ADJUDICATOR",
+   "panel_state": "SKIPPED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS12",
+   "tx": "0x69ca7aa04b7e241e1afd3bcd2040a5aea7606a3d5dc44df8018c650f6a2a20ad",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS13": {
+   "args": [
+    "EV-000013"
+   ],
+   "at": "2026-09-26T19:26:27Z",
+   "corroborating_sources": [],
+   "declaration_id": "DE-000013",
+   "event_id": "EV-000013",
+   "expected_band": "NONE",
+   "expected_reason": "SOURCE_ADDRESSES_ADJUDICATOR",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [
+    "M1:BODY"
+   ],
+   "method": "assess",
+   "note": "the instruction hides a soft hyphen inside the word the scan looks for",
+   "observed_band": "NONE",
+   "observed_onset": "",
+   "observed_reason": "SOURCE_ADDRESSES_ADJUDICATOR",
+   "panel_state": "SKIPPED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS13",
+   "tx": "0x539e9b9429636fd4bd4843af9a662d13cddd6517f46a0e722c112e1c7804c6fe",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS14": {
+   "args": [
+    "EV-000014"
+   ],
+   "at": "2026-09-26T19:28:02Z",
+   "corroborating_sources": [
+    "M1",
+    "M2"
+   ],
+   "declaration_id": "DE-000014",
+   "event_id": "EV-000014",
+   "expected_band": "declared",
+   "expected_reason": "BAND_DECLARED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "one source is a live feed the charter declares DYNAMIC, so its bytes are not compared; the quotes still ground in every validator's own retrieval",
+   "observed_band": "declared",
+   "observed_onset": "2026-09-24",
+   "observed_reason": "BAND_DECLARED",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS14",
+   "tx": "0xb8a5e6309c81ab5d4a162116d0dd26d67e5f5c8ce1917a4f04718f0e86800f76",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS15": {
+   "args": [
+    "EV-000015"
+   ],
+   "at": "2026-09-26T19:30:34Z",
+   "corroborating_sources": [],
+   "declaration_id": "DE-000015",
+   "event_id": "EV-000015",
+   "expected_band": "NONE",
+   "expected_reason": "SIGNAL_UNDATED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "the onset the sources give is in the future, which cannot vouch for an event that has happened",
+   "observed_band": "NONE",
+   "observed_onset": "2026-12-24",
+   "observed_reason": "SIGNAL_UNDATED",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS15",
+   "tx": "0x2d5082b9ee4e6ec4ab8cde0a09ef6961dec29675bc4cb45e7f4088f43f70e8ad",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "assess:AS16": {
+   "args": [
+    "EV-000016"
+   ],
+   "at": "2026-09-26T19:34:25Z",
+   "corroborating_sources": [
+    "M1",
+    "M2"
+   ],
+   "declaration_id": "DE-000016",
+   "event_id": "EV-000016",
+   "expected_band": "declared",
+   "expected_reason": "BAND_DECLARED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "assess",
+   "note": "three watched sources, two of which report the gauge past danger",
+   "observed_band": "declared",
+   "observed_onset": "2026-09-24",
+   "observed_reason": "BAND_DECLARED",
+   "panel_state": "ASSESSED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "assess:AS16",
+   "tx": "0x3e306668e4bec47e58981d2247150e741d5646506112a757209d03801771318e",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "charter:AS01": {
+   "args": [
+    "{\"assessment_window\": 1800, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2135 characters)"
+   ],
+   "at": "2026-09-26T18:51:41Z",
+   "charter_id": "CH-000001",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS01",
+   "tx": "0xe52052c2d1ed83de277a580436954288b240469b6ce9550d159e5cc362045d56",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS02": {
+   "args": [
+    "{\"assessment_window\": 1800, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2151 characters)"
+   ],
+   "at": "2026-09-26T18:52:23Z",
+   "charter_id": "CH-000002",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS02",
+   "tx": "0x5e880a311f309a1927a17063624032a223d0b6f4d34a6089377e84482ef1cc45",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS03": {
+   "args": [
+    "{\"assessment_window\": 1800, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2151 characters)"
+   ],
+   "at": "2026-09-26T18:53:12Z",
+   "charter_id": "CH-000003",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS03",
+   "tx": "0x9fe90040651b01bf2ac09bdd75f97079ce3f30e968c2c25d357992dced77f4c2",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS04": {
+   "args": [
+    "{\"assessment_window\": 1800, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2143 characters)"
+   ],
+   "at": "2026-09-26T18:53:53Z",
+   "charter_id": "CH-000004",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS04",
+   "tx": "0x531d709c2861d75e32618427fc54ba450c030d005faed59d5271ea1c000b24f3",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS05": {
+   "args": [
+    "{\"assessment_window\": 1800, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"declared\", \"conditions\": \"A flood warning is in force and a gauge has passed its danger level, or... (1433 characters)"
+   ],
+   "at": "2026-09-26T18:54:36Z",
+   "charter_id": "CH-000005",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS05",
+   "tx": "0xb1177656e706ed94c4658124d9f5d3faa7ae80e99ab8c35cb8551233058ff80e",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS06": {
+   "args": [
+    "{\"assessment_window\": 1800, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2150 characters)"
+   ],
+   "at": "2026-09-26T18:55:24Z",
+   "charter_id": "CH-000006",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS06",
+   "tx": "0x296a1e13b9a36fd927727e3d6136ee46f0670fa9e585dc9446d742e24780cb58",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS07": {
+   "args": [
+    "{\"assessment_window\": 1800, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2144 characters)"
+   ],
+   "at": "2026-09-26T18:56:07Z",
+   "charter_id": "CH-000007",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS07",
+   "tx": "0xcf9fe7d9228e3a2831ca9cf04193b19a0771ba5a3c9a87948bcd932d4b45434b",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS08": {
+   "args": [
+    "{\"assessment_window\": 1800, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2149 characters)"
+   ],
+   "at": "2026-09-26T18:56:51Z",
+   "charter_id": "CH-000008",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS08",
+   "tx": "0x8fb5ad3e90a5b7ac084f1b810e5b7bbb7302c84fde535ec554938b508c010117",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS09": {
+   "args": [
+    "{\"assessment_window\": 1800, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2167 characters)"
+   ],
+   "at": "2026-09-26T18:57:40Z",
+   "charter_id": "CH-000009",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS09",
+   "tx": "0xf173cf6efeb6247592e006125c4339f3bc84f19e04fb9012bd3ff7de6a08a8a4",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS10": {
+   "args": [
+    "{\"assessment_window\": 1800, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (1395 characters)"
+   ],
+   "at": "2026-09-26T18:58:20Z",
+   "charter_id": "CH-000010",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS10",
+   "tx": "0xdbd3c9983cb9d55f6450229c01dafe191292b22aa53e29d2129ab47731f1bc6c",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS11": {
+   "args": [
+    "{\"assessment_window\": 1800, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2150 characters)"
+   ],
+   "at": "2026-09-26T18:59:02Z",
+   "charter_id": "CH-000011",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS11",
+   "tx": "0x72915712fedc15b4ba03834f83b66e86b61dcbb28fbe14adda6e8a3251b6ae4b",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS12": {
+   "args": [
+    "{\"assessment_window\": 1800, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2152 characters)"
+   ],
+   "at": "2026-09-26T18:59:44Z",
+   "charter_id": "CH-000012",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS12",
+   "tx": "0xdc4a194f3b0e460a166a05060dce43e747e0207da427fb487494326312149da4",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS13": {
+   "args": [
+    "{\"assessment_window\": 1800, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2155 characters)"
+   ],
+   "at": "2026-09-26T19:00:29Z",
+   "charter_id": "CH-000013",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS13",
+   "tx": "0x96c03882983e58b5303f4219e40238d574e49d531de1900aae72e12ab4ecc472",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS14": {
+   "args": [
+    "{\"assessment_window\": 1800, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2130 characters)"
+   ],
+   "at": "2026-09-26T19:01:12Z",
+   "charter_id": "CH-000014",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS14",
+   "tx": "0x6e2a268147e745f4066c5c8a3ede3d344c2f9abc6abcc7bb4b1c21246fea1b2c",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "idle",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS15": {
+   "args": [
+    "{\"assessment_window\": 1800, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2149 characters)"
+   ],
+   "at": "2026-09-26T19:01:55Z",
+   "charter_id": "CH-000015",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS15",
+   "tx": "0x9afd34ef3dd0879618c35d2e069ecaf2a883234ebcff48beacb0e1c61a480183",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "charter:AS16": {
+   "args": [
+    "{\"assessment_window\": 1800, \"authority_domains\": [\"raw.githubusercontent.com\"], \"bands\": [{\"band_id\": \"watch\", \"conditions\": \"A flood warning is in force for the region, or river gauges stand above th... (2401 characters)"
+   ],
+   "at": "2026-09-26T19:02:44Z",
+   "charter_id": "CH-000016",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "charter:AS16",
+   "tx": "0xd96213dd63d6fd49da106fc5bb5b289b39616c4b1515de9621c1c1eb4d0f4468",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "faucet": {
+   "amount_atto": "40000000000000000000",
+   "at": "2026-09-26T18:51:00Z",
+   "funded": true,
+   "kind": "faucet",
+   "step": "faucet",
+   "wallet": "owner"
+  },
+  "file:RQ01": {
+   "args": [
+    "EV-000001",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "SHELTER",
+    "Seventy-two displaced households at Riverside Row need emergency shelter tonight.",
+    "Riverside Row, lower town of Eastfield",
+    "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/sources/evidence/riverside-row.html",
+    "STABLE"
+   ],
+   "at": "2026-09-26T19:36:13Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "file_request",
+   "request_id": "RQ-000001",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "file:RQ01",
+   "tx": "0x3d731c9fe4a478d8945af1f2f21c9661e57d93cfec9094ad6b340ef652c10e72",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "idle"
+   ],
+   "wallet": "alice"
+  },
+  "file:RQ02": {
+   "args": [
+    "EV-000001",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "SHELTER",
+    "Displaced households at Highcastle need emergency shelter.",
+    "Highcastle, Upper Tarn valley",
+    "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/sources/evidence/highcastle.html",
+    "STABLE"
+   ],
+   "at": "2026-09-26T19:37:47Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "file_request",
+   "request_id": "RQ-000002",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "file:RQ02",
+   "tx": "0x8203fb29fa86b946d525c189b4818e42af8bfbd2b8c3ac13dfbbc28e2813de7a",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "file:RQ03": {
+   "args": [
+    "EV-000001",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "SHELTER",
+    "Households at the municipal shelter site need emergency shelter.",
+    "Municipal shelter, lower town of Eastfield",
+    "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/sources/evidence/shelter-open.html",
+    "STABLE"
+   ],
+   "at": "2026-09-26T19:39:27Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "file_request",
+   "request_id": "RQ-000003",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "file:RQ03",
+   "tx": "0x4e5d8e6f5bf23330e5d1f95937348639be12ee56581ac43993698d9ca08ee760",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "file:RQ04": {
+   "args": [
+    "EV-000001",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "SHELTER",
+    "Households on the riverside road need emergency shelter.",
+    "Riverside road, lower town of Eastfield",
+    "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/sources/evidence/road-survey.html",
+    "STABLE"
+   ],
+   "at": "2026-09-26T19:41:03Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "file_request",
+   "request_id": "RQ-000004",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "file:RQ04",
+   "tx": "0x1425e275c0abd7c2e8942e31728263292a75285b5a2c045faa5ef057acd0860a",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "idle"
+   ],
+   "wallet": "carol"
+  },
+  "file:RQ05": {
+   "args": [
+    "EV-000001",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "SHELTER",
+    "Households at Millgate need emergency shelter.",
+    "Millgate, lower town of Eastfield",
+    "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/sources/evidence/roof-fire.html",
+    "STABLE"
+   ],
+   "at": "2026-09-26T19:43:05Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "file_request",
+   "request_id": "RQ-000005",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "file:RQ05",
+   "tx": "0x866da337b396f7f20a9f547fd8cc3b0156dbae4d53063d60bd2481b58587ffa1",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "idle",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "carol"
+  },
+  "file:RQ06": {
+   "args": [
+    "EV-000001",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "SHELTER",
+    "Households at Riverside Row need emergency shelter.",
+    "Riverside Row, lower town of Eastfield",
+    "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/sources/evidence/early-survey.html",
+    "STABLE"
+   ],
+   "at": "2026-09-26T19:44:35Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "file_request",
+   "request_id": "RQ-000006",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "file:RQ06",
+   "tx": "0xdf3a96232a23fc46845e030a2a4514dd93059df36908ee81d580faecc19d6288",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "alice"
+  },
+  "file:RQ07": {
+   "args": [
+    "EV-000001",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "SHELTER",
+    "Households at Millgate need emergency shelter.",
+    "Millgate, lower town of Eastfield",
+    "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/sources/evidence/undated-survey.html",
+    "STABLE"
+   ],
+   "at": "2026-09-26T19:48:51Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "file_request",
+   "request_id": "RQ-000008",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "file:RQ07",
+   "tx": "0xf1cbdfee9feed6219d20959926c0efc05cda9e6b5def3f123e555edb6f08d48c",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "file:RQ08": {
+   "args": [
+    "EV-000001",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "SHELTER",
+    "Households at Weirside need emergency shelter.",
+    "Weirside, lower town of Eastfield",
+    "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/sources/evidence/missing-survey.html",
+    "STABLE"
+   ],
+   "at": "2026-09-26T19:52:02Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "file_request",
+   "request_id": "RQ-000009",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "file:RQ08",
+   "tx": "0xc6cfa29ca94f3308a060d89d25749566bfaa9b6d492dcfad13f0f5e93a8402c7",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "carol"
+  },
+  "file:RQ09": {
+   "args": [
+    "EV-000001",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "SHELTER",
+    "Households at Weirside need emergency shelter.",
+    "Weirside, lower town of Eastfield",
+    "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/sources/evidence/injected.html",
+    "STABLE"
+   ],
+   "at": "2026-09-26T19:53:26Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "file_request",
+   "request_id": "RQ-000010",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "file:RQ09",
+   "tx": "0x461dc54489ba8695eb25fbea78b90b10ff4f63c13f7eca80b8d4d1449a07729a",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "idle",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "alice"
+  },
+  "file:RQ10": {
+   "args": [
+    "EV-000001",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "MEDICAL",
+    "The district clinic needs dressings and rehydration salts for flood patients.",
+    "District clinic, lower town of Eastfield",
+    "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/sources/evidence/clinic.html",
+    "STABLE"
+   ],
+   "at": "2026-09-26T19:54:56Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "file_request",
+   "request_id": "RQ-000011",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "file:RQ10",
+   "tx": "0xff827fb33e9b86274257ac726b8fe8d9992c0ebb382d10512746af751e082c2b",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "file:RQ11": {
+   "args": [
+    "EV-000001",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "SHELTER",
+    "Households at Millgate need emergency shelter.",
+    "Millgate, lower town of Eastfield",
+    "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/sources/evidence/millgate.html",
+    "DYNAMIC"
+   ],
+   "at": "2026-09-26T19:56:34Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "file_request",
+   "request_id": "RQ-000012",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "file:RQ11",
+   "tx": "0xf6d89264bdd11127478f39a9517e8784b12ba793460cd11e69e8c63141735a1f",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "carol"
+  },
+  "file:RQ12": {
+   "args": [
+    "EV-000001",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "SHELTER",
+    "Households at Riverside Row need emergency shelter after the flooding.",
+    "Riverside Row, lower town of Eastfield",
+    "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/sources/evidence/back-dated-survey.html",
+    "STABLE"
+   ],
+   "at": "2026-09-26T19:46:17Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "file_request",
+   "request_id": "RQ-000007",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "file:RQ12",
+   "tx": "0xb34bf79370d422e38e70c65c54d27e8a843cb09c14bc173c535b4ca7efa820d6",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "alice"
+  },
+  "file:TS01": {
+   "args": [
+    "EV-000002",
+    "556ab49ea4e0bf3dd20d5b8d6631053696a83563fb09ee5d6fa806f62d43d3a4",
+    "SHELTER",
+    "Seventy-two displaced households at Riverside Row need emergency shelter tonight.",
+    "Riverside Row, lower town of Eastfield",
+    "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/sources/evidence/riverside-row.html",
+    "STABLE"
+   ],
+   "at": "2026-09-26T19:58:33Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "file_request",
+   "request_id": "RQ-000013",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "file:TS01",
+   "tx": "0xb5920839ba11907ededecff075517fad2c493fdc4822c5eea831c6b58bb5018a",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "alice"
+  },
+  "finalize_event:AS01": {
+   "args": [
+    "EV-000001"
+   ],
+   "at": "2026-09-26T20:11:39Z",
+   "event_status": "FINALIZED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "finalize_event:AS01",
+   "tx": "0x470de45b30de79e125b017706237e09e6a85877f198813abb72b9494ef6c838f",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "finalize_event:AS02": {
+   "args": [
+    "EV-000002"
+   ],
+   "at": "2026-09-26T20:12:23Z",
+   "event_status": "FINALIZED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "finalize_event:AS02",
+   "tx": "0xefbd1d64f4c02bb9195b9373b8eda4bca906bfbadcfa3718156e4a311428fc8c",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "finalize_event:AS03": {
+   "args": [
+    "EV-000003"
+   ],
+   "at": "2026-09-26T20:13:07Z",
+   "event_status": "FINALIZED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "finalize_event:AS03",
+   "tx": "0x59db4536a3149b7f96488b7365d0078bb6f176a63a85c40c41b5e0f9db652c86",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "finalize_event:AS04": {
+   "args": [
+    "EV-000004"
+   ],
+   "at": "2026-09-26T20:13:51Z",
+   "event_status": "FINALIZED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "finalize_event:AS04",
+   "tx": "0xb5aba0d5fbf20719dc2ed6b70c6ab3b4e6da5eda909b19494e6923958784c5f1",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "finalize_event:AS05": {
+   "args": [
+    "EV-000005"
+   ],
+   "at": "2026-09-26T20:14:35Z",
+   "event_status": "FINALIZED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "finalize_event:AS05",
+   "tx": "0x4407430fbdf5217dffa85d385b8a0cc8ffd50a00d9353e93bbd561ecc72d3d19",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "finalize_event:AS06": {
+   "args": [
+    "EV-000006"
+   ],
+   "at": "2026-09-26T20:15:19Z",
+   "event_status": "FINALIZED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "finalize_event:AS06",
+   "tx": "0x9067b2e3b1a5b1788ec4e6f1740e62b46619e33a74701e5fcd0b0fdf28dccf12",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "finalize_event:AS07": {
+   "args": [
+    "EV-000007"
+   ],
+   "at": "2026-09-26T20:16:05Z",
+   "event_status": "FINALIZED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "finalize_event:AS07",
+   "tx": "0x03579345bdace6a6b3818e88899622908f84dfc267e1e829512da965aae9d269",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "finalize_event:AS08": {
+   "args": [
+    "EV-000008"
+   ],
+   "at": "2026-09-26T20:16:49Z",
+   "event_status": "FINALIZED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "finalize_event:AS08",
+   "tx": "0x5301b9efe4c2896b52c20858814ae4da5bcc18ac291f017a575b6336072898f0",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "finalize_event:AS09": {
+   "args": [
+    "EV-000009"
+   ],
+   "at": "2026-09-26T20:17:33Z",
+   "event_status": "FINALIZED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "finalize_event:AS09",
+   "tx": "0x46eeef0a8e8c87ab4386033fcf196b30dbbab2fa604a3a9cfee23c61d07097c1",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "finalize_event:AS10": {
+   "args": [
+    "EV-000010"
+   ],
+   "at": "2026-09-26T20:18:17Z",
+   "event_status": "FINALIZED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "finalize_event:AS10",
+   "tx": "0xe422cf3b519c6b7e31dc8ff6bc11578d4efd73f869bf663dc6a0916ef2c66231",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "finalize_event:AS11": {
+   "args": [
+    "EV-000011"
+   ],
+   "at": "2026-09-26T20:19:01Z",
+   "event_status": "FINALIZED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "finalize_event:AS11",
+   "tx": "0xae4fe60625e913a9f807301198c25a0c8fb90b4a3ce1c06691758e08666bd701",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "finalize_event:AS12": {
+   "args": [
+    "EV-000012"
+   ],
+   "at": "2026-09-26T20:19:47Z",
+   "event_status": "FINALIZED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "finalize_event:AS12",
+   "tx": "0xf01dd469c987a9c6fe93aaf138dfb1da19a8fd81ba656f97ee7ac873609e3448",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "finalize_event:AS13": {
+   "args": [
+    "EV-000013"
+   ],
+   "at": "2026-09-26T20:20:38Z",
+   "event_status": "FINALIZED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "finalize_event:AS13",
+   "tx": "0x0129ef64edd8afa3bfae9a6ac648dc661fe3757626df0efdd8e6aed0781845ae",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "finalize_event:AS14": {
+   "args": [
+    "EV-000014"
+   ],
+   "at": "2026-09-26T20:21:23Z",
+   "event_status": "FINALIZED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "finalize_event:AS14",
+   "tx": "0xcc76a203ffd0d9f0c1f1b336ceccd3c9958d97678d527269308b9a60426ca3e6",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "finalize_event:AS15": {
+   "args": [
+    "EV-000015"
+   ],
+   "at": "2026-09-26T20:22:07Z",
+   "event_status": "FINALIZED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "finalize_event:AS15",
+   "tx": "0x7a2a7670fc21e294c4a2b5a5537e487de51b35ced90450ac33639652477e3e1f",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "finalize_event:AS16": {
+   "args": [
+    "EV-000016"
+   ],
+   "at": "2026-09-26T20:22:51Z",
+   "event_status": "FINALIZED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "finalize_event:AS16",
+   "tx": "0xdad08324c03d0223fe9a962ed9c3b20a77d1ab3df3a7009061151753a3da4deb",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "idle"
+   ],
+   "wallet": "bob"
+  },
+  "fund:TS01": {
+   "args": [
+    "CH-000002"
+   ],
+   "at": "2026-09-26T20:00:11Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "fund_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "fund:TS01",
+   "tx": "0xb02bbffeb4f8646feed26e686322ef4cd456df33a0eac9faae8bffaa2df4c860",
+   "value_atto": "3000000000000000000",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "owner"
+  },
+  "fund:not_steward": {
+   "args": [
+    "CH-000001"
+   ],
+   "at": "2026-09-26T20:32:10Z",
+   "because": "a deposit from anyone but the steward is credited back, never lost",
+   "held": true,
+   "kind": "returned",
+   "leader_execution": "SUCCESS",
+   "method": "fund_charter",
+   "returned": {
+    "amount_atto": "1000000000000000000",
+    "at": "2026-09-26T20:31:30Z",
+    "method": "fund_charter",
+    "reason": "only the charter's steward funds its treasury",
+    "wallet": "0x435c203db4129cbcfa0756e23029e9a4931d766a"
+   },
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "fund:not_steward",
+   "tx": "0xfc190297c8f888bdc29490a870b68f8b91060caf8c314a6d6dce4a9e9562380e",
+   "value_atto": "1000000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "alice"
+  },
+  "fund:request_charter": {
+   "args": [
+    "CH-000001"
+   ],
+   "at": "2026-09-26T19:03:25Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "fund_charter",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "fund:request_charter",
+   "tx": "0xe94ed506eb22a1e6870725e47e989704b322f5f539b7c98885c8df0095112e03",
+   "value_atto": "12000000000000000000",
+   "votes": [
+    "agree",
+    "idle",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "open:AS01": {
+   "args": [
+    "CH-000001",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T19:04:12Z",
+   "event_id": "EV-000001",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS01",
+   "tx": "0x0326f14b4d68667e8066155e42a897561b707d3819fef87bef9200eab5a20334",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "open:AS02": {
+   "args": [
+    "CH-000002",
+    "556ab49ea4e0bf3dd20d5b8d6631053696a83563fb09ee5d6fa806f62d43d3a4",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T19:06:18Z",
+   "event_id": "EV-000002",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS02",
+   "tx": "0x12646a3dc08d068b8bf5e705c6a3929c9eabe3944cac4585f4a51d4fa5a8f4d4",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "carol"
+  },
+  "open:AS03": {
+   "args": [
+    "CH-000003",
+    "291e4d06f45ddab092d0fe199f9d0ee1f231b254bc4e2a74e38bb3b993305950",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T19:08:25Z",
+   "event_id": "EV-000003",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS03",
+   "tx": "0x7fec2337441bc9ff8ff186d37ac87624be32da240ab01e59688929a7f91ef254",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "stranger"
+  },
+  "open:AS04": {
+   "args": [
+    "CH-000004",
+    "9100e70a8e9a2e8cd73f320bc3940d73482de162784e861750c6704aeda35520",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T19:10:11Z",
+   "event_id": "EV-000004",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS04",
+   "tx": "0xa5c6fae63ad06d9ba527caab229bcc00a0125f52a0c36b9dfbdee19438766265",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "open:AS05": {
+   "args": [
+    "CH-000005",
+    "4ae20b97a00d2c42a11b7a27b8b6c548d377695d9ed24a3c1162c29a50987e77",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T19:12:12Z",
+   "event_id": "EV-000005",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS05",
+   "tx": "0x399c549d608462950f0171c32c4e2129e675e9218d39676927c14e6182c16345",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "alice"
+  },
+  "open:AS06": {
+   "args": [
+    "CH-000006",
+    "972eda174ea2393d28a696446ac5d4a0ce1bd7dd9cbef083ec898121d91a941f",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T19:13:50Z",
+   "event_id": "EV-000006",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS06",
+   "tx": "0x212a292db42b6ceafc086b4995f2c583dfa197e83364361d78c728f46ebbf62e",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "open:AS07": {
+   "args": [
+    "CH-000007",
+    "df45e1aeec6894579fdd0fdc65cbaa7bcb06f23caca04232f049fe0585e23c48",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T19:15:34Z",
+   "event_id": "EV-000007",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS07",
+   "tx": "0x1ef4d14d894b997023dfcedefee55c769152ab2a6b442ceadee8c2f6f4e41d54",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "carol"
+  },
+  "open:AS08": {
+   "args": [
+    "CH-000008",
+    "1e73d4ea7fa5287fda15f5243818de9955b7dd73a7207bfba4660de668f7466d",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T19:17:30Z",
+   "event_id": "EV-000008",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS08",
+   "tx": "0xe1a51d2f78c7eb69c3b8c83dba8690e5784ce06b7542aa62d9d5acfe010a2164",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "stranger"
+  },
+  "open:AS09": {
+   "args": [
+    "CH-000009",
+    "0d9b2fccb5221c8e3bf6ad86b68157d2ad512a7d4425fd19273eec96f423e372",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T19:19:21Z",
+   "event_id": "EV-000009",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS09",
+   "tx": "0x86eef0b322c4e0c4193e8d826ee8da278ff5c7fb86220df3bd069c9d2ce72a74",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "open:AS10": {
+   "args": [
+    "CH-000010",
+    "5ab2a6c1f53ac23264cf24ff8b9dd7d10b8e9c715267e7000110b8493d9f9f08",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T19:20:50Z",
+   "event_id": "EV-000010",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS10",
+   "tx": "0xae3b29ca3b49d8b3cee82fbee969b1bfa7fecf18eda75fecaaaf51f8e83591c8",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "alice"
+  },
+  "open:AS11": {
+   "args": [
+    "CH-000011",
+    "b36b153b17768bd1b304255ca8aa172e22965e1a41030f4dc65093778d05e131",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T19:22:48Z",
+   "event_id": "EV-000011",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS11",
+   "tx": "0xadee100f948465f92750eaf4acb86305c3ec2d6e637f2b8c159a702eeee900b6",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "open:AS12": {
+   "args": [
+    "CH-000012",
+    "1617f8aba6133bbc917e1abf5fa3c9376500598acc020614bdf96998b65d03cf",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T19:24:17Z",
+   "event_id": "EV-000012",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS12",
+   "tx": "0x68386b4d53a97195220f7d18d7ce7f04971e5a7545ed867662bb39319c6c20d9",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "carol"
+  },
+  "open:AS13": {
+   "args": [
+    "CH-000013",
+    "12936a5c7fdfee5c94c2d0904fe7189edcd51bf47ab3fb6dcc11d4226974f6be",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T19:25:41Z",
+   "event_id": "EV-000013",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS13",
+   "tx": "0x35b049558d9b0eedfa9a08734912945600788d2124bd0493e4f18f5b02214156",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "stranger"
+  },
+  "open:AS14": {
+   "args": [
+    "CH-000014",
+    "0106d251fcd0a4138a5c04d63601fe88e2d3086afe3d24b47f9db936cf744b39",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T19:27:09Z",
+   "event_id": "EV-000014",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS14",
+   "tx": "0x7716048f729f53411a08af00d4287156bdbe0df44a0b57f813e79fd80edc84dc",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "idle",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "open:AS15": {
+   "args": [
+    "CH-000015",
+    "456c4c26159c931b444cdc5ef2e6090836af7e80c804ac4331c45d9114fcd385",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T19:28:47Z",
+   "event_id": "EV-000015",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS15",
+   "tx": "0x67bc67449ebfb4ef0f65576c63821d4d60f9b94b5b22deafaca8969f09bc9ef7",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "alice"
+  },
+  "open:AS16": {
+   "args": [
+    "CH-000016",
+    "b710070b6b610130cfcb709449cb250c154bc01dea893ebb8a34fb19c50d8b8e",
+    "Residents of the lower town of Eastfield report the river over its banks and houses flooded overnight.",
+    "The lower town of Eastfield, Lower Marrow river basin"
+   ],
+   "at": "2026-09-26T19:31:17Z",
+   "event_id": "EV-000016",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "open_event",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "open:AS16",
+   "tx": "0xdfcd78602301133b072b63e013a85aa8858a2f49624d5b907cf85619e290a0fc",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "reassess:AS16": {
+   "args": [
+    "EV-000016"
+   ],
+   "at": "2026-09-26T19:35:24Z",
+   "declaration_id": "DE-000017",
+   "expected_band": "declared",
+   "expected_reason": "BAND_DECLARED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "reassess",
+   "note": "a second reading of the same sources, superseding the first",
+   "observed_band": "declared",
+   "observed_reason": "BAND_DECLARED",
+   "round": 2,
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "reassess:AS16",
+   "supersedes": "DE-000016",
+   "tx": "0x7cbb47207bfe67d1ae11026de3a01ed46a3fa72e734c572eac4cc90b9df66397",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "carol"
+  },
+  "recheck:TS01": {
+   "adjudication_id": "AD-000014",
+   "args": [
+    "RQ-000013"
+   ],
+   "at": "2026-09-26T20:01:07Z",
+   "authorised_atto": "1000000000000000000",
+   "decided_by": "PANEL",
+   "expected_funding": "RESERVED",
+   "expected_outcome": "QUALIFIES",
+   "expected_reason": "QUALIFIED",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "recheck_request",
+   "note": "the same reading, now funded, reserves the charter's grant",
+   "observed_funding": "RESERVED",
+   "observed_outcome": "QUALIFIES",
+   "observed_reason": "QUALIFIED",
+   "panel_state": "ASSESSED",
+   "request_id": "RQ-000013",
+   "rounds": 1,
+   "settle": true,
+   "status": "FINALIZED",
+   "step": "recheck:TS01",
+   "tx": "0x55e8e8bdeb3755c8411f4d64a87e0c4b940a1467b498c3a90543340829bdcd6c",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "alice"
+  },
+  "refuse:category_not_promised": {
+   "args": [
+    "EV-000001",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "WATER",
+    "Households at Riverside Row need emergency shelter.",
+    "Riverside Row, lower town of Eastfield",
+    "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/sources/evidence/riverside-row.html?x=1",
+    "STABLE"
+   ],
+   "at": "2026-09-26T20:27:58Z",
+   "because": "the declared band promises no relief in that category",
+   "error": "{\"status\": \"rollback\", \"payload\": \"[EXPECTED] the declared band promises no relief in that category\"}",
+   "held": true,
+   "kind": "refusal",
+   "leader_execution": "ERROR",
+   "method": "file_request",
+   "status": "FINALIZED",
+   "step": "refuse:category_not_promised",
+   "tx": "0x172cb3e061e460806fdbd89a42c6f8eb402b357e2ef59aa6da1b61d9cdefefc4",
+   "wallet": "bob"
+  },
+  "refuse:duplicate_source": {
+   "args": [
+    "EV-000001",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "SHELTER",
+    "Households at Riverside Row need emergency shelter.",
+    "Riverside Row, lower town of Eastfield",
+    "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/sources/evidence/riverside-row.html",
+    "STABLE"
+   ],
+   "at": "2026-09-26T20:29:22Z",
+   "because": "that source already backs another request for this event",
+   "error": "{\"status\": \"rollback\", \"payload\": \"[EXPECTED] that source already backs request RQ-000001 for this event\"}",
+   "held": true,
+   "kind": "refusal",
+   "leader_execution": "ERROR",
+   "method": "file_request",
+   "status": "FINALIZED",
+   "step": "refuse:duplicate_source",
+   "tx": "0x76ee19c5b94df53f7d54318072f37fac90c668cc320cbf615bfa355ad33fabbe",
+   "wallet": "bob"
+  },
+  "refuse:no_band": {
+   "args": [
+    "EV-000004",
+    "9100e70a8e9a2e8cd73f320bc3940d73482de162784e861750c6704aeda35520",
+    "SHELTER",
+    "Households at Riverside Row need emergency shelter.",
+    "Riverside Row, lower town of Eastfield",
+    "https://raw.githubusercontent.com/Hemmy1417/Succour/4396a670a191ca0b93452f10bba2d828fd4a9966/fixtures/sources/evidence/riverside-row.html?x=2",
+    "STABLE"
+   ],
+   "at": "2026-09-26T20:28:41Z",
+   "because": "that event has no declaration to file against",
+   "error": "{\"status\": \"rollback\", \"payload\": \"[EXPECTED] no band was declared for this event\"}",
+   "held": true,
+   "kind": "refusal",
+   "leader_execution": "ERROR",
+   "method": "file_request",
+   "status": "FINALIZED",
+   "step": "refuse:no_band",
+   "tx": "0x65b026c1f9d540e71ff460558e37e4574c4e540d9ff66d2a473538301c3bbc01",
+   "wallet": "bob"
+  },
+  "refuse:not_steward_retire": {
+   "args": [
+    "CH-000001"
+   ],
+   "at": "2026-09-26T20:27:15Z",
+   "because": "only the steward retires a charter",
+   "error": "{\"status\": \"rollback\", \"payload\": \"[EXPECTED] only the charter's steward retires it\"}",
+   "held": true,
+   "kind": "refusal",
+   "leader_execution": "ERROR",
+   "method": "retire_charter",
+   "status": "FINALIZED",
+   "step": "refuse:not_steward_retire",
+   "tx": "0x1f242033858a267120b8eb24baee79db5d3783abadefb1e1d358804f21336ab6",
+   "wallet": "alice"
+  },
+  "refuse:plain_http": {
+   "args": [
+    "EV-000001",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "SHELTER",
+    "Households at Riverside Row need emergency shelter.",
+    "Riverside Row, lower town of Eastfield",
+    "http://raw.githubusercontent.com/x/y.html",
+    "STABLE"
+   ],
+   "at": "2026-09-26T20:30:04Z",
+   "because": "a source URL must use https",
+   "error": "{\"status\": \"rollback\", \"payload\": \"[EXPECTED] url must use https\"}",
+   "held": true,
+   "kind": "refusal",
+   "leader_execution": "ERROR",
+   "method": "file_request",
+   "status": "FINALIZED",
+   "step": "refuse:plain_http",
+   "tx": "0x418634b1bc38f1557b2369b0c464577e51f22dc497be6d4e4a5deb45b2ba83e0",
+   "wallet": "bob"
+  },
+  "refuse:reclaim_active": {
+   "args": [
+    "CH-000001"
+   ],
+   "at": "2026-09-26T20:31:25Z",
+   "because": "an active charter's treasury is not reclaimed",
+   "error": "{\"status\": \"rollback\", \"payload\": \"[EXPECTED] retire the charter first\"}",
+   "held": true,
+   "kind": "refusal",
+   "leader_execution": "ERROR",
+   "method": "reclaim_unreserved",
+   "status": "FINALIZED",
+   "step": "refuse:reclaim_active",
+   "tx": "0xfd125346dc46cab68505c6ea6641b9f4fe605198df6fcd436c355bb166762bad",
+   "wallet": "owner"
+  },
+  "refuse:unknown_charter": {
+   "args": [
+    "CH-999999",
+    "4bac64485fcab84f445274dedae2e9c7f748ddcee5e8856f827c591cb7da4a1c",
+    "Flooding reported",
+    "The lower town"
+   ],
+   "at": "2026-09-26T20:26:35Z",
+   "because": "no such charter",
+   "error": "{\"status\": \"rollback\", \"payload\": \"[EXPECTED] unknown charter_id\"}",
+   "held": true,
+   "kind": "refusal",
+   "leader_execution": "ERROR",
+   "method": "open_event",
+   "status": "FINALIZED",
+   "step": "refuse:unknown_charter",
+   "tx": "0x7b8f415500dfdcd5390edf8d22c59854fa95201b3eb81174901c712f602ce3ac",
+   "wallet": "bob"
+  },
+  "refuse:withdraw_empty": {
+   "args": [],
+   "at": "2026-09-26T20:30:45Z",
+   "because": "that wallet has nothing to withdraw",
+   "error": "{\"status\": \"rollback\", \"payload\": \"[EXPECTED] nothing to withdraw\"}",
+   "held": true,
+   "kind": "refusal",
+   "leader_execution": "ERROR",
+   "method": "withdraw",
+   "status": "FINALIZED",
+   "step": "refuse:withdraw_empty",
+   "tx": "0x9cefc5b13b3ab25326268cf7429a52de0b966f7d9961e2109b60fe12ce390bb1",
+   "wallet": "stranger"
+  },
+  "refuse:wrong_hash": {
+   "args": [
+    "CH-000001",
+    "0000000000000000000000000000000000000000000000000000000000000000",
+    "Flooding reported again",
+    "The lower town"
+   ],
+   "at": "2026-09-26T20:25:54Z",
+   "because": "the charter hash does not match the charter",
+   "error": "{\"status\": \"rollback\", \"payload\": \"[EXPECTED] charter_hash does not match the charter\"}",
+   "held": true,
+   "kind": "refusal",
+   "leader_execution": "ERROR",
+   "method": "open_event",
+   "status": "FINALIZED",
+   "step": "refuse:wrong_hash",
+   "tx": "0x6c2f24f362238604738027b68fb1181353b0601aa1e036240083c9e009553205",
+   "wallet": "bob"
+  },
+  "settle:RQ-000001": {
+   "args": [
+    "RQ-000001"
+   ],
+   "at": "2026-09-26T20:01:50Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_request",
+   "paid_atto": "2000000000000000000",
+   "request_status": "SETTLED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "settle:RQ-000001",
+   "tx": "0x0a379333f837df4270caa99d6e78110c667c8f00036043a3438d8f89e483bea6",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "settle:RQ-000002": {
+   "args": [
+    "RQ-000002"
+   ],
+   "at": "2026-09-26T20:02:34Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_request",
+   "paid_atto": "0",
+   "request_status": "SETTLED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "settle:RQ-000002",
+   "tx": "0x768ec803b6fc4da4a9529c932ac3e51544d15156275af1027693ebbeef4b66b2",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "owner"
+  },
+  "settle:RQ-000003": {
+   "args": [
+    "RQ-000003"
+   ],
+   "at": "2026-09-26T20:03:22Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_request",
+   "paid_atto": "0",
+   "request_status": "SETTLED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "settle:RQ-000003",
+   "tx": "0xd09a01c4532285ecf01817defc2b9a3f59851bd23f354fd6d3c7de22cedec305",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "settle:RQ-000004": {
+   "args": [
+    "RQ-000004"
+   ],
+   "at": "2026-09-26T20:04:05Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_request",
+   "paid_atto": "0",
+   "request_status": "SETTLED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "settle:RQ-000004",
+   "tx": "0x793cbeb729c3533684e2ce1bc8d5e27b6332818c9a60a0ffff10e8d62036ca95",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "settle:RQ-000005": {
+   "args": [
+    "RQ-000005"
+   ],
+   "at": "2026-09-26T20:04:49Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_request",
+   "paid_atto": "0",
+   "request_status": "SETTLED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "settle:RQ-000005",
+   "tx": "0x1af56ec664d0997a92bc7f26de9374e7329061fddc26a2d4109f2d5c45e22094",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "settle:RQ-000006": {
+   "args": [
+    "RQ-000006"
+   ],
+   "at": "2026-09-26T20:05:34Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_request",
+   "paid_atto": "0",
+   "request_status": "SETTLED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "settle:RQ-000006",
+   "tx": "0x657fb9a8fe5a2e860340bb6ad3e4bf338770d7f9a422646e7ab0b1aa3aaef26e",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "settle:RQ-000007": {
+   "args": [
+    "RQ-000007"
+   ],
+   "at": "2026-09-26T20:10:09Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_request",
+   "paid_atto": "0",
+   "request_status": "SETTLED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "settle:RQ-000007",
+   "tx": "0x3215e5d3cd82e1140b8c56a42efb149523aa54b493db91fa3dae430dff5b766b",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "settle:RQ-000008": {
+   "args": [
+    "RQ-000008"
+   ],
+   "at": "2026-09-26T20:06:17Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_request",
+   "paid_atto": "0",
+   "request_status": "SETTLED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "settle:RQ-000008",
+   "tx": "0x5520f2c8c795d9da06c41e3b5cd6053854a5bd132bd780ca7c1957ed8d1b2543",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "settle:RQ-000009": {
+   "args": [
+    "RQ-000009"
+   ],
+   "at": "2026-09-26T20:07:02Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_request",
+   "paid_atto": "0",
+   "request_status": "SETTLED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "settle:RQ-000009",
+   "tx": "0xc1db262fd2ecab6c10f2c1905643df563243c343f4f416ca8de8a857431f0cb8",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "settle:RQ-000010": {
+   "args": [
+    "RQ-000010"
+   ],
+   "at": "2026-09-26T20:07:46Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_request",
+   "paid_atto": "0",
+   "request_status": "SETTLED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "settle:RQ-000010",
+   "tx": "0x92d45fbe1a2cfddfd64fd957e8533eedb820c3f5be3bdc771e39a51bca9d80e5",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "owner"
+  },
+  "settle:RQ-000011": {
+   "args": [
+    "RQ-000011"
+   ],
+   "at": "2026-09-26T20:08:36Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_request",
+   "paid_atto": "1000000000000000000",
+   "request_status": "SETTLED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "settle:RQ-000011",
+   "tx": "0x288ae1220bbc4ec1224e62e80568727cc5c36d424eeec09f15346248000c54a7",
+   "value_atto": "0",
+   "votes": [
+    "idle",
+    "idle",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "settle:RQ-000012": {
+   "args": [
+    "RQ-000012"
+   ],
+   "at": "2026-09-26T20:09:26Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_request",
+   "paid_atto": "2000000000000000000",
+   "request_status": "SETTLED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "settle:RQ-000012",
+   "tx": "0x516c9b8a81747862c58141fa4f13a55bd384fc4bb39cc61e49858a1345305c4b",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "settle:RQ-000013": {
+   "args": [
+    "RQ-000013"
+   ],
+   "at": "2026-09-26T20:10:52Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "finalize_request",
+   "paid_atto": "1000000000000000000",
+   "request_status": "SETTLED",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "settle:RQ-000013",
+   "tx": "0xab3db84644b3f52c99d30ef4802f157b54e983762f20044888d8d2832fe48914",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "owner"
+  },
+  "withdraw:alice": {
+   "args": [],
+   "at": "2026-09-26T20:23:36Z",
+   "credit_after_atto": "0",
+   "credit_before_atto": "3000000000000000000",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "withdraw",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "withdraw:alice",
+   "tx": "0x1e9250263126757f2e6a0149904cd1af4ae89536d04dcdf9fbc9aa01672912d4",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "alice"
+  },
+  "withdraw:alice_returned": {
+   "args": [],
+   "at": "2026-09-26T20:32:53Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "withdraw",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "withdraw:alice_returned",
+   "tx": "0x574b76b3b98b2e6b7c2fdcf4f6f7878a95bb6aba95ab74b0fbfd48e376524151",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "alice"
+  },
+  "withdraw:bob": {
+   "args": [],
+   "at": "2026-09-26T20:24:21Z",
+   "credit_after_atto": "0",
+   "credit_before_atto": "1000000000000000000",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "withdraw",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "withdraw:bob",
+   "tx": "0x197943bf6e21eb4d74fb1eb4d9a865090254c931a316c56a7c84a9a9d2299902",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "bob"
+  },
+  "withdraw:carol": {
+   "args": [],
+   "at": "2026-09-26T20:25:09Z",
+   "credit_after_atto": "0",
+   "credit_before_atto": "2000000000000000000",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "withdraw",
+   "rounds": 1,
+   "status": "FINALIZED",
+   "step": "withdraw:carol",
+   "tx": "0xb48ca31f9c87e400f260c1fdc73221b3c856c556a77dc7d8ef7c882b31b17778",
+   "value_atto": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "carol"
+  }
+ },
+ "summary": {
+  "missed": [],
+  "outcomes_checked": 73,
+  "outcomes_held": 73,
+  "refusals": 9,
+  "steps": 122,
+  "transactions": 121
+ },
+ "treasury": {
+  "accounted_atto": "9000000000000000000",
+  "balance_atto": "9000000000000000000",
+  "credits_atto": "0",
+  "pools_atto": "9000000000000000000"
+ }
+}
