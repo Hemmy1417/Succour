@@ -108,9 +108,10 @@ MUTATIONS = [
     m("the corroboration floor does not hold",
       '        if len(_cited_origins(ctx, payload, subject)) >= band["min_corroboration"]:',
       "        if True:"),
-    m("corroboration counts quotes, not distinct sources",
-      '    return sorted(set(q["evidence_id"] for q in f["quotes"]))\n',
-      '    return [q["evidence_id"] for q in f["quotes"]]\n'),
+    # Superseded by counting origins: duplicates in the cited list of source ids
+    # no longer change the count a band clears, so letting them through is
+    # unobservable. "corroboration counts source labels, not distinct hosts"
+    # above is the mutation that now carries this guard.
     m("the bands are read mildest first, so the mildest band wins",
       '    for index in range(len(charter["bands"]) - 1, -1, -1):',
       '    for index in range(len(charter["bands"])):'),

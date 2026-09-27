@@ -118,12 +118,12 @@ status. Details, and why each line is where it is:
 <!-- VERIFIED:START -->
 | Check | Result |
 |---|---|
-| deployment of record, StudioNet chain 61999 | FINALIZED, leader SUCCESS, votes AGREE, AGREE, AGREE, AGREE, AGREE |
+| deployment of record, StudioNet chain 61999 | FINALIZED, leader SUCCESS, votes AGREE, AGREE, AGREE, IDLE, IDLE |
 | deployed source against this repository | byte-identical, 35 schema methods |
 | live run of record | 121 transactions, no rejected round, **73 of 73 outcomes held**, 9 of 9 refusals refused |
 | the books, read from the chain after the run | pools plus credits equal the contract's balance |
-| `python -m pytest tests/direct -q` | 225 passed |
-| `python scripts/mutation_check.py` | 91 mutations, **91 killed, 0 survived** |
+| `python -m pytest tests/direct -q` | 233 passed |
+| `python scripts/mutation_check.py` | 97 mutations, **97 killed, 0 survived** |
 | `python -m pytest tests/integration -q` | 6 passed, 1 skipped (the opt-in live write) |
 | `python scripts/generate_fixtures.py --check` | 43 fixture files regenerate byte for byte |
 | `genvm-lint check contracts/succour.py --json` | lint ok, 35 methods (20 view, 15 write) |
@@ -132,14 +132,15 @@ status. Details, and why each line is where it is:
 Every band, every relief outcome and every refusal in the catalogue was reached
 by real transactions against the deployment of record: sixteen assessments, a
 reassessment, twelve relief requests, thirteen settlements, four grants paid and
-three withdrawals. What each case was and what it answered:
+three withdrawals. The watched sources were served from three commit-pinned
+origins, so the corroboration the run proves is across independent hosts. What
+each case was and what it answered:
 [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md#live-run).
 
-One outcome in the catalogue is a reading the panel makes differently from the
-way it was first written down, and the case now says so rather than being
-rewritten to hide it: a survey taken before the event does not tie a need to it,
-and the panel refuses it on the link before the date floor is reached
-([`docs/CONSENSUS.md`](docs/CONSENSUS.md#live-findings)).
+The build was also read against the standards this portfolio has collected from
+reviewer letters; four were not met, three of them architecture, and the contract
+and the deployment of record were replaced rather than patched around. What was
+wrong and what it is now: [`DECISION.md`](DECISION.md#the-standards-audit-and-what-it-changed).
 <!-- VERIFIED:END -->
 
 ## Running it

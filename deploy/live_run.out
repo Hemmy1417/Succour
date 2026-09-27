@@ -1,308 +1,307 @@
-19:50:59 contract 0xBddAFAbb7Cc99FbAb694e0eF3e393D984A376B44 phase full
-19:51:00   steward funded: True
-19:51:00 phase charters
-19:51:00   charter:AS01: create_charter as owner
-19:51:39     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-19:51:41     AS01 -> CH-000001
-19:51:41   charter:AS02: create_charter as owner
-19:52:21     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
-19:52:23     AS02 -> CH-000002
-19:52:23   charter:AS03: create_charter as owner
-    rpc transient on eth_getTransactionByHash (1/8): eth_getTransactionByHash returned invalid JSON: Expecting value: line 1 column 1 (char 0).; retry in 5s
-19:53:10     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-19:53:12     AS03 -> CH-000003
-19:53:12   charter:AS04: create_charter as owner
-19:53:52     FINALIZED/SUCCESS votes agree,agree,agree,agree,idle
-19:53:53     AS04 -> CH-000004
-19:53:53   charter:AS05: create_charter as owner
-19:54:34     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-19:54:36     AS05 -> CH-000005
-19:54:36   charter:AS06: create_charter as owner
-19:55:22     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-19:55:24     AS06 -> CH-000006
-19:55:24   charter:AS07: create_charter as owner
-19:56:06     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
-19:56:07     AS07 -> CH-000007
-19:56:08   charter:AS08: create_charter as owner
-19:56:49     FINALIZED/SUCCESS votes agree,agree,idle,agree,agree
-19:56:51     AS08 -> CH-000008
-19:56:51   charter:AS09: create_charter as owner
-19:57:38     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-19:57:40     AS09 -> CH-000009
-19:57:40   charter:AS10: create_charter as owner
-    rpc transient on eth_getTransactionReceipt (1/8): eth_getTransactionReceipt returned invalid JSON: Expecting value: line 1 column 1 (char 0); retry in 5s
-19:58:18     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
-19:58:20     AS10 -> CH-000010
-19:58:20   charter:AS11: create_charter as owner
-19:59:00     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-19:59:02     AS11 -> CH-000011
-19:59:02   charter:AS12: create_charter as owner
-19:59:43     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
-19:59:44     AS12 -> CH-000012
-19:59:44   charter:AS13: create_charter as owner
-20:00:27     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
-20:00:29     AS13 -> CH-000013
-20:00:29   charter:AS14: create_charter as owner
-20:01:10     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
-20:01:12     AS14 -> CH-000014
-20:01:12   charter:AS15: create_charter as owner
-20:01:53     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-20:01:55     AS15 -> CH-000015
-20:01:55   charter:AS16: create_charter as owner
-20:02:42     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-20:02:44     AS16 -> CH-000016
-20:02:44   fund:request_charter: fund_charter as owner with 12000000000000000000 atto
-20:03:25     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
-20:03:25 phase assessments
-20:03:26   open:AS01: open_event as bob
-    rpc transient on eth_getTransactionByHash (1/8): eth_getTransactionByHash returned invalid JSON: Expecting value: line 1 column 1 (char 0).; retry in 5s
-20:04:10     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
-20:04:12   assess:AS01: assess as bob
-20:05:31     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
-20:05:33     AS01: declared/BAND_DECLARED HELD
-20:05:35   open:AS02: open_event as carol
-20:06:16     FINALIZED/SUCCESS votes agree,agree,agree,agree,idle
-20:06:18   assess:AS02: assess as bob
-20:07:34     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
-20:07:36     AS02: watch/BAND_DECLARED HELD
-20:07:38   open:AS03: open_event as stranger
-20:08:23     FINALIZED/SUCCESS votes idle,agree,agree,agree,agree
-20:08:25   assess:AS03: assess as bob
-    rpc transient on sim_getConsensusContract (1/8): sim_getConsensusContract returned invalid JSON: Expecting value: line 1 column 1 (char 0).; retry in 5s
-20:09:24     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
-20:09:26     AS03: severe/BAND_DECLARED HELD
-20:09:28   open:AS04: open_event as owner
-20:10:09     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
-20:10:11   assess:AS04: assess as bob
-20:11:25     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
-20:11:27     AS04: NONE/NO_BAND_MET HELD
-20:11:29   open:AS05: open_event as alice
-20:12:10     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
-20:12:12   assess:AS05: assess as bob
-20:13:04     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
-20:13:06     AS05: NONE/CORROBORATION_SHORT HELD
-20:13:08   open:AS06: open_event as bob
-20:13:48     FINALIZED/SUCCESS votes agree,agree,idle,agree,agree
-20:13:50   assess:AS06: assess as bob
-    rpc transient on eth_getTransactionCount (1/8): Request to https://studio.genlayer.com/api failed: ('Connection aborted.', RemoteDisconnec; retry in 5s
-20:14:46     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
-20:14:48     AS06: NONE/HAZARD_MISMATCH HELD
-20:14:50   open:AS07: open_event as carol
-20:15:32     FINALIZED/SUCCESS votes agree,agree,agree,agree,idle
-20:15:34   assess:AS07: assess as bob
-    rpc transient on eth_getTransactionByHash (1/8): eth_getTransactionByHash returned invalid JSON: Expecting value: line 1 column 1 (char 0).; retry in 5s
-20:16:45     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
-20:16:46     AS07: NONE/SIGNAL_UNDATED HELD
-20:16:48   open:AS08: open_event as stranger
-20:17:28     FINALIZED/SUCCESS votes agree,idle,agree,agree,agree
-20:17:30   assess:AS08: assess as bob
-20:18:37     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
-20:18:39     AS08: NONE/SIGNAL_STALE HELD
-20:18:40   open:AS09: open_event as owner
-20:19:19     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
-20:19:21   assess:AS09: assess as bob
-20:20:07     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
-20:20:08     AS09: NONE/SOURCES_UNAVAILABLE HELD
-20:20:10   open:AS10: open_event as alice
+18:19:54 contract 0xF35f77C2a6726855A5241e1F16c4f117F198242e phase full
+18:19:55   steward funded: True
+18:19:55 phase charters
+18:19:55   charter:AS01: create_charter as owner
+18:20:35     FINALIZED/SUCCESS votes agree,agree,agree,idle,idle
+18:20:37     AS01 -> CH-000001
+18:20:37   charter:AS02: create_charter as owner
+18:21:17     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+18:21:18     AS02 -> CH-000002
+18:21:18   charter:AS03: create_charter as owner
+18:21:58     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+18:22:00     AS03 -> CH-000003
+18:22:00   charter:AS04: create_charter as owner
+18:22:45     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+18:22:47     AS04 -> CH-000004
+18:22:47   charter:AS05: create_charter as owner
+18:23:26     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
+18:23:28     AS05 -> CH-000005
+18:23:28   charter:AS06: create_charter as owner
+18:24:08     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
+18:24:10     AS06 -> CH-000006
+18:24:10   charter:AS07: create_charter as owner
+18:24:48     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
+18:24:50     AS07 -> CH-000007
+18:24:50   charter:AS08: create_charter as owner
+18:25:29     FINALIZED/SUCCESS votes agree,agree,agree,agree,idle
+18:25:31     AS08 -> CH-000008
+18:25:31   charter:AS09: create_charter as owner
+18:26:15     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
+18:26:17     AS09 -> CH-000009
+18:26:17   charter:AS10: create_charter as owner
+18:26:56     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+18:26:58     AS10 -> CH-000010
+18:26:58   charter:AS11: create_charter as owner
+18:27:36     FINALIZED/SUCCESS votes idle,agree,agree,idle,agree
+18:27:38     AS11 -> CH-000011
+18:27:38   charter:AS12: create_charter as owner
+18:28:16     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:28:18     AS12 -> CH-000012
+18:28:18   charter:AS13: create_charter as owner
+18:28:56     FINALIZED/SUCCESS votes agree,agree,agree,agree,idle
+18:28:58     AS13 -> CH-000013
+18:28:58   charter:AS14: create_charter as owner
+18:29:36     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:29:38     AS14 -> CH-000014
+18:29:38   charter:AS15: create_charter as owner
+18:30:17     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
+18:30:19     AS15 -> CH-000015
+18:30:19   charter:AS16: create_charter as owner
+    rpc transient on eth_sendRawTransaction (1/8): eth_sendRawTransaction returned invalid JSON: Expecting value: line 1 column 1 (char 0). R; retry in 5s
+18:31:03     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
+18:31:05     AS16 -> CH-000016
+18:31:05   fund:request_charter: fund_charter as owner with 12000000000000000000 atto
+18:31:43     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+18:31:43 phase assessments
+18:31:45   open:AS01: open_event as bob
+18:32:29     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+18:32:31   assess:AS01: assess as bob
+18:33:37     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
+18:33:39     AS01: declared/BAND_DECLARED HELD
+18:33:40   open:AS02: open_event as carol
+18:34:25     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+18:34:27   assess:AS02: assess as bob
     rpc transient on eth_getTransactionByHash (1/8): Request to https://studio.genlayer.com/api failed: ('Connection aborted.', RemoteDisconnec; retry in 5s
-20:20:49     FINALIZED/SUCCESS votes idle,agree,agree,idle,agree
-20:20:50   assess:AS10: assess as bob
-20:21:57     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
-20:21:58     AS10: watch/BAND_DECLARED HELD
-20:22:00   open:AS11: open_event as bob
-20:22:45     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
-20:22:48   assess:AS11: assess as bob
-20:23:32     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
-20:23:33     AS11: NONE/SOURCE_ADDRESSES_ADJUDICATOR HELD
-20:23:35   open:AS12: open_event as carol
-20:24:15     FINALIZED/SUCCESS votes agree,agree,agree,agree,idle
-20:24:17   assess:AS12: assess as bob
-20:24:57     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
-20:24:59     AS12: NONE/SOURCE_ADDRESSES_ADJUDICATOR HELD
-20:25:00   open:AS13: open_event as stranger
-20:25:39     FINALIZED/SUCCESS votes agree,agree,agree,agree,idle
-20:25:41   assess:AS13: assess as bob
-20:26:25     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
-20:26:27     AS13: NONE/SOURCE_ADDRESSES_ADJUDICATOR HELD
-20:26:29   open:AS14: open_event as owner
-20:27:08     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
-20:27:09   assess:AS14: assess as bob
-20:28:00     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
-20:28:02     AS14: declared/BAND_DECLARED HELD
-20:28:04   open:AS15: open_event as alice
-20:28:45     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
-20:28:47   assess:AS15: assess as bob
-20:30:32     FINALIZED/SUCCESS votes agree,agree,agree,idle,idle
-20:30:34     AS15: NONE/SIGNAL_UNDATED HELD
-20:30:35   open:AS16: open_event as bob
-20:31:16     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-20:31:17   assess:AS16: assess as bob
-20:34:24     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
-20:34:25     AS16: declared/BAND_DECLARED HELD
-20:34:25 phase requests
-20:34:25   reassess:AS16: reassess as carol
-20:35:22     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
-20:35:26   file:RQ01: file_request as alice
-20:36:11     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
-20:36:13   adjudicate:RQ01: adjudicate as owner
-20:37:04     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
-20:37:06     RQ01: QUALIFIES/QUALIFIED/RESERVED HELD
-20:37:06   file:RQ02: file_request as bob
-20:37:46     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-20:37:47   adjudicate:RQ02: adjudicate as owner
-20:38:44     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
-20:38:46     RQ02: DOES_NOT_QUALIFY/OUT_OF_AREA/NOT_AUTHORISED HELD
-20:38:46   file:RQ03: file_request as bob
-20:39:26     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-20:39:27   adjudicate:RQ03: adjudicate as owner
-20:40:20     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
-20:40:22     RQ03: DOES_NOT_QUALIFY/NEED_CONTRADICTED/NOT_AUTHORISED HELD
-20:40:22   file:RQ04: file_request as carol
-20:41:01     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
-20:41:03   adjudicate:RQ04: adjudicate as owner
-20:42:25     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
-20:42:27     RQ04: DOES_NOT_QUALIFY/NEED_ABSENT/NOT_AUTHORISED HELD
-20:42:27   file:RQ05: file_request as carol
+18:36:41     FINALIZED/SUCCESS votes disagree,agree,agree,agree,idle
+18:36:43     AS02: watch/BAND_DECLARED HELD
+18:36:45   open:AS03: open_event as stranger
+18:37:24     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+18:37:25   assess:AS03: assess as bob
+18:39:12     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
+18:39:14     AS03: severe/BAND_DECLARED HELD
+18:39:16   open:AS04: open_event as owner
+18:39:55     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
+18:39:56   assess:AS04: assess as bob
+18:40:46     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
+18:40:48     AS04: NONE/NO_BAND_MET HELD
+18:40:50   open:AS05: open_event as alice
+18:41:31     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:41:32   assess:AS05: assess as bob
+18:42:41     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+18:42:42     AS05: NONE/CORROBORATION_SHORT HELD
+18:42:44   open:AS06: open_event as bob
+18:43:23     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+18:43:24   assess:AS06: assess as bob
+    rpc transient on eth_getTransactionByHash (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+18:44:19     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+18:44:21     AS06: NONE/HAZARD_MISMATCH HELD
+18:44:22   open:AS07: open_event as carol
+18:45:01     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+18:45:03   assess:AS07: assess as bob
+18:46:10     FINALIZED/SUCCESS votes agree,agree,agree,idle,idle
+18:46:12     AS07: NONE/SIGNAL_UNDATED HELD
+18:46:14   open:AS08: open_event as stranger
+18:46:53     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+18:46:54   assess:AS08: assess as bob
     rpc transient on eth_getTransactionByHash (1/8): eth_getTransactionByHash returned invalid JSON: Expecting value: line 1 column 1 (char 0).; retry in 5s
-20:43:04     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
-20:43:05   adjudicate:RQ05: adjudicate as owner
-20:43:52     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
-20:43:54     RQ05: DOES_NOT_QUALIFY/NOT_LINKED/NOT_AUTHORISED HELD
-20:43:54   file:RQ06: file_request as alice
-20:44:33     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
-20:44:35   adjudicate:RQ06: adjudicate as owner
-    rpc transient on eth_getTransactionByHash (1/8): eth_getTransactionByHash returned invalid JSON: Expecting value: line 1 column 1 (char 0).; retry in 5s
-20:45:28     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
-20:45:31     RQ06: DOES_NOT_QUALIFY/NOT_LINKED/NOT_AUTHORISED HELD
-20:45:31   file:RQ12: file_request as alice
-20:46:15     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-20:46:17   adjudicate:RQ12: adjudicate as owner
-20:47:38     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
-20:47:41     RQ12: DOES_NOT_QUALIFY/EVIDENCE_PREDATES_ONSET/NOT_AUTHORISED HELD
-20:47:41   file:RQ07: file_request as bob
-    rpc transient on eth_getTransactionCount (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
-20:48:49     FINALIZED/SUCCESS votes agree,agree,idle,agree,agree
-20:48:51   adjudicate:RQ07: adjudicate as owner
-20:51:18     FINALIZED/SUCCESS votes timeout,agree,agree,timeout,agree
-20:51:20     RQ07: INCONCLUSIVE/EVIDENCE_UNDATED/NOT_AUTHORISED HELD
-20:51:20   file:RQ08: file_request as carol
-20:52:00     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
-20:52:02   adjudicate:RQ08: adjudicate as owner
-20:52:43     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
-20:52:45     RQ08: INCONCLUSIVE/EVIDENCE_UNAVAILABLE/NOT_AUTHORISED HELD
-20:52:45   file:RQ09: file_request as alice
-20:53:25     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
-20:53:26   adjudicate:RQ09: adjudicate as owner
-20:54:12     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
-20:54:14     RQ09: INCONCLUSIVE/SOURCE_ADDRESSES_ADJUDICATOR/NOT_AUTHORISED HELD
-20:54:14   file:RQ10: file_request as bob
-20:54:54     FINALIZED/SUCCESS votes idle,agree,agree,agree,agree
-20:54:56   adjudicate:RQ10: adjudicate as owner
-20:55:47     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
-20:55:49     RQ10: QUALIFIES/QUALIFIED/RESERVED HELD
-20:55:49   file:RQ11: file_request as carol
-20:56:31     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
-20:56:34   adjudicate:RQ11: adjudicate as owner
-20:57:48     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
-20:57:50     RQ11: QUALIFIES/QUALIFIED/RESERVED HELD
-20:57:52   file:TS01: file_request as alice
-20:58:31     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
-20:58:33   adjudicate:TS01: adjudicate as owner
-20:59:29     FINALIZED/SUCCESS votes idle,agree,agree,idle,agree
-20:59:31     TS01: QUALIFIES/QUALIFIED/TREASURY_SHORT HELD
-20:59:31   fund:TS01: fund_charter as owner with 3000000000000000000 atto
-21:00:11     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
-21:00:11   recheck:TS01: recheck_request as alice
-21:01:05     FINALIZED/SUCCESS votes idle,agree,agree,idle,agree
-21:01:07     TS01:v2: QUALIFIES/QUALIFIED/RESERVED HELD
-21:01:07 phase settle
-21:01:09   settle:RQ-000001: finalize_request as owner
-21:01:48     FINALIZED/SUCCESS votes agree,idle,agree,agree,agree
-21:01:52   settle:RQ-000002: finalize_request as owner
-21:02:33     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
-21:02:36   settle:RQ-000003: finalize_request as owner
-21:03:20     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-21:03:23   settle:RQ-000004: finalize_request as owner
-21:04:03     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-21:04:07   settle:RQ-000005: finalize_request as owner
-21:04:47     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
-21:04:51   settle:RQ-000006: finalize_request as owner
-21:05:32     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-21:05:36   settle:RQ-000008: finalize_request as owner
-21:06:15     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
-21:06:19   settle:RQ-000009: finalize_request as owner
-21:07:00     FINALIZED/SUCCESS votes idle,agree,agree,idle,agree
-21:07:04   settle:RQ-000010: finalize_request as owner
-21:07:44     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
-21:07:48   settle:RQ-000011: finalize_request as owner
-21:08:34     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
-21:08:38   settle:RQ-000012: finalize_request as owner
-21:09:24     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-21:09:28   settle:RQ-000007: finalize_request as owner
-21:10:08     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
-21:10:11   settle:RQ-000013: finalize_request as owner
-21:10:51     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
-21:10:56   finalize_event:AS01: finalize_event as bob
-21:11:37     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
-21:11:40   finalize_event:AS02: finalize_event as bob
-21:12:21     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
-21:12:25   finalize_event:AS03: finalize_event as bob
-21:13:06     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-21:13:10   finalize_event:AS04: finalize_event as bob
-21:13:49     FINALIZED/SUCCESS votes idle,agree,agree,agree,agree
-21:13:53   finalize_event:AS05: finalize_event as bob
-21:14:34     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-21:14:37   finalize_event:AS06: finalize_event as bob
-21:15:17     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-21:15:21   finalize_event:AS07: finalize_event as bob
-21:16:03     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-21:16:07   finalize_event:AS08: finalize_event as bob
-21:16:47     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
-21:16:51   finalize_event:AS09: finalize_event as bob
-21:17:31     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-21:17:35   finalize_event:AS10: finalize_event as bob
-21:18:15     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-21:18:19   finalize_event:AS11: finalize_event as bob
-21:18:59     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-21:19:03   finalize_event:AS12: finalize_event as bob
-21:19:45     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-21:19:49   finalize_event:AS13: finalize_event as bob
-    rpc transient on eth_estimateGas (1/8): eth_estimateGas returned invalid JSON: Expecting value: line 1 column 1 (char 0). Response; retry in 5s
-21:20:36     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
-21:20:40   finalize_event:AS14: finalize_event as bob
-21:21:21     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-21:21:25   finalize_event:AS15: finalize_event as bob
-21:22:05     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-21:22:09   finalize_event:AS16: finalize_event as bob
-21:22:49     FINALIZED/SUCCESS votes agree,agree,agree,idle,idle
-21:22:53   withdraw:alice: withdraw as alice
-21:23:34     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
-21:23:38   withdraw:bob: withdraw as bob
-21:24:18     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
-21:24:22   withdraw:carol: withdraw as carol
-21:25:08     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
-21:25:11   treasury: pools 9000000000000000000, credits 0, balance 9000000000000000000
-21:25:11 phase refusals
-21:25:13   refuse:wrong_hash: expecting a refusal of open_event
-21:25:54     refused
-21:25:54   refuse:unknown_charter: expecting a refusal of open_event
-21:26:35     refused
-21:26:35   refuse:not_steward_retire: expecting a refusal of retire_charter
-21:27:15     refused
-21:27:15   refuse:category_not_promised: expecting a refusal of file_request
-21:27:58     refused
-21:28:00   refuse:no_band: expecting a refusal of file_request
-21:28:41     refused
-21:28:41   refuse:duplicate_source: expecting a refusal of file_request
-21:29:22     refused
-21:29:22   refuse:plain_http: expecting a refusal of file_request
-21:30:04     refused
-21:30:04   refuse:withdraw_empty: expecting a refusal of withdraw
-21:30:45     refused
-21:30:45   refuse:reclaim_active: expecting a refusal of reclaim_unreserved
-21:31:25     refused
-21:31:25   fund:not_steward: fund_charter as alice with 1000000000000000000 atto
-21:32:06     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
-21:32:12   withdraw:alice_returned: withdraw as alice
-21:32:53     FINALIZED/SUCCESS votes agree,idle,agree,agree,agree
-21:32:53 summary {"steps": 122, "transactions": 121, "outcomes_checked": 73, "outcomes_held": 73, "missed": [], "refusals": 9}
+18:48:15     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+18:48:17     AS08: NONE/SIGNAL_STALE HELD
+18:48:18   open:AS09: open_event as owner
+    rpc transient on eth_estimateGas (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+18:49:04     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:49:06   assess:AS09: assess as bob
+18:49:50     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+18:49:52     AS09: NONE/SOURCES_UNAVAILABLE HELD
+18:49:53   open:AS10: open_event as alice
+18:50:34     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+18:50:36   assess:AS10: assess as bob
+18:51:32     FINALIZED/SUCCESS votes agree,agree,agree,idle,idle
+18:51:33     AS10: watch/BAND_DECLARED HELD
+18:51:35   open:AS11: open_event as bob
+18:52:14     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+18:52:16   assess:AS11: assess as bob
+18:53:01     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+18:53:03     AS11: NONE/SOURCE_ADDRESSES_ADJUDICATOR HELD
+18:53:05   open:AS12: open_event as carol
+18:53:43     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+18:53:45   assess:AS12: assess as bob
+18:54:26     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
+18:54:28     AS12: NONE/SOURCE_ADDRESSES_ADJUDICATOR HELD
+    rpc transient on gen_call (1/8): Request to https://studio.genlayer.com/api failed: ('Connection aborted.', RemoteDisconnec; retry in 5s
+18:54:35   open:AS13: open_event as stranger
+18:55:20     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:55:22   assess:AS13: assess as bob
+18:56:06     FINALIZED/SUCCESS votes idle,agree,agree,idle,agree
+18:56:08     AS13: NONE/SOURCE_ADDRESSES_ADJUDICATOR HELD
+18:56:10   open:AS14: open_event as owner
+18:56:48     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+18:56:50   assess:AS14: assess as bob
+18:57:58     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
+18:57:59     AS14: declared/BAND_DECLARED HELD
+18:58:01   open:AS15: open_event as alice
+18:58:40     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+18:58:41   assess:AS15: assess as bob
+18:59:44     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
+18:59:46     AS15: NONE/SIGNAL_UNDATED HELD
+18:59:48   open:AS16: open_event as bob
+19:00:26     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:00:28   assess:AS16: assess as bob
+19:01:30     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:01:31     AS16: declared/BAND_DECLARED HELD
+19:01:31 phase requests
+19:01:31   reassess:AS16: reassess as carol
+19:02:34     FINALIZED/SUCCESS votes agree,idle,disagree,agree,agree
+19:02:37   file:RQ01: file_request as alice
+19:03:16     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:03:17   adjudicate:RQ01: adjudicate as owner
+19:04:21     FINALIZED/SUCCESS votes agree,agree,agree,idle,idle
+19:04:22     RQ01: QUALIFIES/QUALIFIED/RESERVED HELD
+19:04:22   file:RQ02: file_request as bob
+19:05:02     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
+19:05:04   adjudicate:RQ02: adjudicate as owner
+19:06:23     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+19:06:25     RQ02: DOES_NOT_QUALIFY/OUT_OF_AREA/NOT_AUTHORISED HELD
+19:06:25   file:RQ03: file_request as bob
+    rpc transient on eth_getTransactionByHash (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+19:07:04     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+19:07:06   adjudicate:RQ03: adjudicate as owner
+19:07:56     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
+19:07:58     RQ03: DOES_NOT_QUALIFY/NEED_CONTRADICTED/NOT_AUTHORISED HELD
+19:07:58   file:RQ04: file_request as carol
+19:08:37     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:08:39   adjudicate:RQ04: adjudicate as owner
+19:09:58     FINALIZED/SUCCESS votes agree,agree,idle,agree,disagree
+19:10:00     RQ04: DOES_NOT_QUALIFY/NEED_ABSENT/NOT_AUTHORISED HELD
+19:10:00   file:RQ05: file_request as carol
+19:10:40     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:10:42   adjudicate:RQ05: adjudicate as owner
+19:11:48     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
+19:11:50     RQ05: DOES_NOT_QUALIFY/NOT_LINKED/NOT_AUTHORISED HELD
+19:11:50   file:RQ06: file_request as alice
+19:12:28     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:12:30   adjudicate:RQ06: adjudicate as owner
+19:13:33     FINALIZED/SUCCESS votes agree,agree,agree,idle,idle
+19:13:35     RQ06: DOES_NOT_QUALIFY/NOT_LINKED/NOT_AUTHORISED HELD
+19:13:35   file:RQ12: file_request as alice
+19:14:14     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+19:14:15   adjudicate:RQ12: adjudicate as owner
+19:15:18     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
+19:15:20     RQ12: DOES_NOT_QUALIFY/EVIDENCE_PREDATES_ONSET/NOT_AUTHORISED HELD
+19:15:20   file:RQ07: file_request as bob
+19:16:00     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+19:16:02   adjudicate:RQ07: adjudicate as owner
+19:16:57     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:16:59     RQ07: INCONCLUSIVE/EVIDENCE_UNDATED/NOT_AUTHORISED HELD
+19:16:59   file:RQ08: file_request as carol
+    rpc transient on eth_getTransactionByHash (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+19:17:38     FINALIZED/SUCCESS votes agree,agree,idle,agree,agree
+19:17:39   adjudicate:RQ08: adjudicate as owner
+19:18:24     FINALIZED/SUCCESS votes idle,agree,agree,idle,agree
+19:18:26     RQ08: INCONCLUSIVE/EVIDENCE_UNAVAILABLE/NOT_AUTHORISED HELD
+19:18:26   file:RQ09: file_request as alice
+19:19:10     FINALIZED/SUCCESS votes agree,agree,agree,idle,agree
+19:19:12   adjudicate:RQ09: adjudicate as owner
+19:19:57     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+19:19:58     RQ09: INCONCLUSIVE/SOURCE_ADDRESSES_ADJUDICATOR/NOT_AUTHORISED HELD
+19:19:58   file:RQ10: file_request as bob
+19:20:38     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
+19:20:40   adjudicate:RQ10: adjudicate as owner
+19:21:31     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
+19:21:33     RQ10: QUALIFIES/QUALIFIED/RESERVED HELD
+19:21:33   file:RQ11: file_request as carol
+19:22:11     FINALIZED/SUCCESS votes agree,agree,idle,agree,agree
+19:22:13   adjudicate:RQ11: adjudicate as owner
+19:23:10     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+19:23:12     RQ11: QUALIFIES/QUALIFIED/RESERVED HELD
+19:23:13   file:TS01: file_request as alice
+19:23:57     FINALIZED/SUCCESS votes agree,agree,agree,agree,idle
+19:23:59   adjudicate:TS01: adjudicate as owner
+19:24:50     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:24:51     TS01: QUALIFIES/QUALIFIED/TREASURY_SHORT HELD
+19:24:51   fund:TS01: fund_charter as owner with 3000000000000000000 atto
+19:25:35     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:25:35   recheck:TS01: recheck_request as alice
+19:26:20     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
+19:26:21     TS01:v2: QUALIFIES/QUALIFIED/RESERVED HELD
+19:26:21 phase settle
+19:26:25   settle:RQ-000001: finalize_request as owner
+19:27:04     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
+19:27:07   settle:RQ-000002: finalize_request as owner
+19:27:45     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
+19:27:49   settle:RQ-000003: finalize_request as owner
+19:28:27     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:28:30   settle:RQ-000004: finalize_request as owner
+    rpc transient on eth_getTransactionReceipt (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+19:29:11     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:29:15   settle:RQ-000005: finalize_request as owner
+19:29:54     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
+19:29:58   settle:RQ-000006: finalize_request as owner
+19:30:37     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:30:41   settle:RQ-000008: finalize_request as owner
+19:31:19     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:31:23   settle:RQ-000009: finalize_request as owner
+19:32:03     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:32:07   settle:RQ-000010: finalize_request as owner
+19:32:47     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:32:51   settle:RQ-000011: finalize_request as owner
+19:33:29     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:33:33   settle:RQ-000012: finalize_request as owner
+19:34:16     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:34:19   settle:RQ-000007: finalize_request as owner
+    rpc transient on eth_sendRawTransaction (1/8): eth_sendRawTransaction returned invalid JSON: Expecting value: line 1 column 1 (char 0). R; retry in 5s
+19:35:03     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:35:07   settle:RQ-000013: finalize_request as owner
+19:35:45     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+19:35:51   finalize_event:AS01: finalize_event as bob
+19:36:32     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:36:36   finalize_event:AS02: finalize_event as bob
+19:37:23     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:37:26   finalize_event:AS03: finalize_event as bob
+19:38:05     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:38:08   finalize_event:AS04: finalize_event as bob
+19:38:48     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:38:51   finalize_event:AS05: finalize_event as bob
+19:39:32     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+19:39:36   finalize_event:AS06: finalize_event as bob
+19:40:17     FINALIZED/SUCCESS votes idle,agree,agree,idle,agree
+19:40:21   finalize_event:AS07: finalize_event as bob
+19:41:06     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+19:41:09   finalize_event:AS08: finalize_event as bob
+19:41:48     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:41:51   finalize_event:AS09: finalize_event as bob
+19:42:30     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+19:42:33   finalize_event:AS10: finalize_event as bob
+19:43:13     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:43:17   finalize_event:AS11: finalize_event as bob
+19:43:58     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+19:44:02   finalize_event:AS12: finalize_event as bob
+19:44:44     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+19:44:48   finalize_event:AS13: finalize_event as bob
+19:45:31     FINALIZED/SUCCESS votes idle,agree,agree,agree,idle
+19:45:35   finalize_event:AS14: finalize_event as bob
+19:46:13     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:46:17   finalize_event:AS15: finalize_event as bob
+19:46:56     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+19:47:00   finalize_event:AS16: finalize_event as bob
+19:47:38     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+19:47:41   withdraw:alice: withdraw as alice
+19:48:20     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:48:24   withdraw:bob: withdraw as bob
+19:49:04     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:49:08   withdraw:carol: withdraw as carol
+19:49:49     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+19:49:52   treasury: pools 9000000000000000000, credits 0, balance 9000000000000000000
+19:49:52 phase refusals
+19:49:54   refuse:wrong_hash: expecting a refusal of open_event
+19:50:39     refused
+19:50:39   refuse:unknown_charter: expecting a refusal of open_event
+19:51:25     refused
+19:51:25   refuse:not_steward_retire: expecting a refusal of retire_charter
+19:52:07     refused
+19:52:07   refuse:category_not_promised: expecting a refusal of file_request
+19:52:47     refused
+19:52:48   refuse:no_band: expecting a refusal of file_request
+19:53:28     refused
+19:53:28   refuse:duplicate_source: expecting a refusal of file_request
+19:54:07     refused
+19:54:07   refuse:plain_http: expecting a refusal of file_request
+19:54:49     refused
+19:54:49   refuse:withdraw_empty: expecting a refusal of withdraw
+19:55:30     refused
+19:55:30   refuse:reclaim_active: expecting a refusal of reclaim_unreserved
+19:56:10     refused
+19:56:10   fund:not_steward: fund_charter as alice with 1000000000000000000 atto
+19:56:49     FINALIZED/SUCCESS votes agree,agree,agree,idle,agree
+19:56:54   withdraw:alice_returned: withdraw as alice
+19:57:34     FINALIZED/SUCCESS votes agree,agree,idle,agree,agree
+19:57:34 summary {"steps": 122, "transactions": 121, "outcomes_checked": 73, "outcomes_held": 73, "missed": [], "refusals": 9}

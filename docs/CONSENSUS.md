@@ -233,13 +233,13 @@ the reading itself was unclear.
 ## Live findings
 
 One disposable deployment carried the diagnostic pass
-(`deploy/diagnostics/`), never the deployment of record:
+(`deploy/diagnostics/`), never a deployment of record:
 `0xB04C0D6C185b68b0AFd7645E28D9bBEE420a3301`, sources served from commit
 `6e7c961`, 72 transactions, 27 outcomes checked, 25 held. Every code-decided
 outcome held on real retrieval - three injections caught in code, a missing
-source read as unavailable from a real 404, a DYNAMIC feed read without its
-bytes being compared - and the panel reached every band and every relief
-outcome the catalogue asks for.
+source read as unavailable from a real 404, a DYNAMIC feed read without its bytes
+being compared - and the panel reached every band and every relief outcome the
+catalogue asks for.
 
 Two outcomes did not match what the catalogue expected. Neither was a fault in
 the contract; both were cases that did not isolate what they were meant to test.
@@ -247,13 +247,15 @@ the contract; both were cases that did not isolate what they were meant to test.
 | Case | Expected | Observed | What it showed | What changed |
 |---|---|---|---|---|
 | AS05 | `CORROBORATION_SHORT` | band `declared` | the band's conditions are a sentence with two halves - a warning in force **and** a gauge past danger - and the second watched source carried the first half. A panel citing it for that half is reading the condition as written, so the band had its two sources | the case now watches a road closure notice, which bears on none of the conditions. The corroboration floor is what the case tests, and it now tests only that |
-| RQ06 | `EVIDENCE_PREDATES_ONSET` | `NOT_LINKED` | a survey taken before the event does not tie a need to it. The panel says so, and the link is read before the date floor is reached | the case now expects `NOT_LINKED`, which is the honest reading of that document, and a new case (RQ12) carries the document the floor exists for: one that blames this event and is dated before it began. Both held in the run of record |
+| RQ06 | `EVIDENCE_PREDATES_ONSET` | `NOT_LINKED` | a survey taken before the event does not tie a need to it. The panel says so, and the link is read before the date floor is reached | the case now expects `NOT_LINKED`, and a new case (RQ12) carries the document the floor exists for: one that blames this event and is dated before it began. Both held in the run of record |
 
-The onset that RQ12 is measured against is the onset the declaration recorded,
-which is why it is compared. Nothing in the contract changed in response to
-either finding.
+Nothing in the contract changed in response to either finding.
 
 In the live run of record, on the deployment of record, **73 of 73 outcomes
-held** and every one of nine refusals was refused. No round was rejected, and no
-round failed to reach a majority.
+held** and every one of nine refusals was refused. Every recorded round reached
+its majority on the first attempt: no round was rejected and none needed a
+rotation.
+
+The deployment before it, `0xBddAFAbb…6B44`, also held 73 of 73; it was replaced
+by the standards audit, not by a live finding.
 <!-- LIVE:END -->
