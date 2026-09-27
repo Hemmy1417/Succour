@@ -152,6 +152,38 @@ The receipt stores only what the validators agreed on or could check:
   `WALLET_CAP_REACHED`) stores no sources and no findings at all. No panel was
   convened, because nothing about the evidence could change it.
 
+## Corroboration is counted over origins
+
+`min_corroboration` is a number of **hosts**, not of source ids.
+`_cited_origins` maps the sources a band's quotes grounded in to the hosts the
+charter published for them and counts the distinct ones, so three pages of one
+agency support a band no better than one page does. The charter parser enforces
+the other half: a band cannot demand more corroboration than the charter's own
+monitors have distinct hosts.
+
+The receipt records both: `corroborating_sources` (which sources the quotes
+grounded in) and `corroborating_origins` (which hosts those were), each marked
+`corroboration_compared: false`, because the set a panel cites is not compared -
+the floor it clears is.
+
+## A second look judges the same bytes
+
+`recheck_request` exists so a reading can be contested and so a treasury that
+was empty can be funded. It must not become a way to be judged on better
+evidence. At the first adjudication the contract binds the content digest of the
+request's source, where the validators agreed on it - a source declared STABLE
+that was read - and `_same_evidence` refuses a later round whose retrieval
+differs from it:
+
+- the refusal is deterministic, so every node raises the same
+  `[EXPECTED]` message, the round ratifies the refusal, and the decision that
+  stands is left exactly as it was;
+- a request whose evidence is declared DYNAMIC binds nothing, because nothing
+  about its bytes was ever agreed, and such a request is not rechecked at all -
+  `get_request_status` says so before anyone tries;
+- a request whose source could not be read at all binds nothing either, so a
+  page that was down when the panel first looked can be read on a second look.
+
 ## Why a milder band can be declared
 
 `_band_outcome` walks the charter's bands from the most severe down and takes

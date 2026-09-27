@@ -93,6 +93,7 @@ def charter(**overrides) -> dict:
         "hazard": "FLOOD",
         "region": "The Lower Marrow river basin, Eastfield province",
         "authority_domains": ["example.gov"],
+        "evidence_domains": ["example.org", "example.gov"],
         "monitors": [
             {"source_id": "M1", "url": M1_URL, "stability": "STABLE",
              "description": "The provincial hazards agency flood bulletin"},

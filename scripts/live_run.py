@@ -265,11 +265,31 @@ def fund_account(address: str, amount: int) -> bool:
 
 # -- the phases ----------------------------------------------------------------
 
+def mirrors(raw_base: str) -> dict:
+    """The same commit, served by three origins. A charter's watched sources must
+    sit on distinct hosts, so a live run cannot serve them all from one."""
+    prefix = "https://raw.githubusercontent.com/"
+    if not raw_base.startswith(prefix):
+        sys.exit("--raw-base must be a commit-pinned raw.githubusercontent.com URL")
+    owner, repo, commit, rest = raw_base[len(prefix):].split("/", 3)
+    return {
+        "{base}": raw_base,
+        "{mirror}": "https://cdn.jsdelivr.net/gh/" + owner + "/" + repo + "@" + commit
+                    + "/" + rest,
+        "{mirror2}": "https://rawcdn.githack.com/" + owner + "/" + repo + "/" + commit
+                     + "/" + rest,
+    }
+
+
 def load_catalogue(raw_base: str) -> tuple:
     charters = json.loads((FIXTURES / "charters.json").read_text(encoding="utf-8"))
     cases = json.loads((FIXTURES / "cases.json").read_text(encoding="utf-8"))
-    filled = {name: json.dumps(spec, sort_keys=True).replace("{base}", raw_base)
-              for name, spec in charters.items()}
+    filled = {}
+    for name, spec in charters.items():
+        text = json.dumps(spec, sort_keys=True)
+        for placeholder, origin in mirrors(raw_base).items():
+            text = text.replace(placeholder, origin)
+        filled[name] = text
     return (filled, cases)
 
 

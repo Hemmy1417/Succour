@@ -14,6 +14,9 @@ import pytest
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 FIXTURES = ROOT / "fixtures"
 BASE = "https://raw.githubusercontent.com/example/succour/0000000/fixtures/"
+ORIGINS = {"{base}": BASE,
+           "{mirror}": "https://cdn.jsdelivr.net/gh/example/succour@0000000/fixtures/",
+           "{mirror2}": "https://rawcdn.githack.com/example/succour/0000000/fixtures/"}
 
 CHARTERS = json.loads((FIXTURES / "charters.json").read_text(encoding="utf-8"))
 CASES = json.loads((FIXTURES / "cases.json").read_text(encoding="utf-8"))
@@ -22,7 +25,17 @@ MISSING = ("AS09-missing-bulletin.html", "AS09-missing-gauges.html", "AS10-missi
 
 
 def filled(template: dict) -> str:
-    return json.dumps(template).replace("{base}", BASE)
+    text = json.dumps(template)
+    for placeholder, origin in ORIGINS.items():
+        text = text.replace(placeholder, origin)
+    return text
+
+
+def served_path(url: str) -> str:
+    for origin in ORIGINS.values():
+        if url.startswith(origin):
+            return url[len(origin):]
+    return url
 
 
 @pytest.mark.parametrize("name", sorted(CHARTERS))
@@ -30,8 +43,13 @@ def test_every_charter_template_parses(mod, name):
     error, spec = mod._parse_charter(filled(CHARTERS[name]))
     assert error == "", name
     assert spec["hazard"] in mod.HAZARDS
+    hosts = []
     for entry in spec["monitors"]:
-        assert entry["url"].startswith(BASE)
+        assert served_path(entry["url"]) != entry["url"], entry["url"]
+        hosts.append(mod._host_of(entry["url"]))
+    assert len(set(hosts)) == len(hosts), (name, hosts)
+    for band in spec["bands"]:
+        assert band["min_corroboration"] <= len(set(hosts)), name
 
 
 def test_the_catalogue_covers_every_charter(mod):
@@ -62,7 +80,7 @@ def test_every_named_source_exists_unless_the_case_is_about_its_absence():
     referenced = []
     for template in CHARTERS.values():
         for entry in template["monitors"]:
-            referenced.append(entry["url"].replace("{base}", ""))
+            referenced.append(entry["url"].split("}", 1)[-1])
     for case in CASES["requests"]:
         referenced.append(case["evidence"])
     for path in referenced:
@@ -76,7 +94,7 @@ def test_no_fixture_page_is_unreferenced():
     referenced = set()
     for template in CHARTERS.values():
         for entry in template["monitors"]:
-            referenced.add(entry["url"].replace("{base}", ""))
+            referenced.add(entry["url"].split("}", 1)[-1])
     for case in CASES["requests"]:
         referenced.add(case["evidence"])
     assert served - referenced == set()

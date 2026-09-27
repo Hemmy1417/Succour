@@ -92,6 +92,25 @@ shape a relief organisation actually has, and neither half works alone: without
 the declaration the requests have nothing to be inside of, and without the
 requests the declaration pays nobody.
 
+## The standards audit, and what it changed
+
+After the first deployment the build was read against the standards this
+portfolio has collected from reviewer letters. Four of them were not met; three
+were architecture, and architecture cannot be retrofitted around a deployment, so
+the contract changed and the deployment of record was replaced.
+
+| Standard | What was wrong | What it is now |
+|---|---|---|
+| a second look must judge the snapshot, not a refetch | `recheck_request` refetched, so a claimant refused on what their page said could edit it and be re-judged on bytes no panel had agreed on - and money moves on that reading | the first adjudication binds the content digest where the validators agreed on it; a later round whose retrieval differs is refused deterministically and the standing decision is left alone. Evidence declared DYNAMIC binds nothing and is judged once |
+| the subject of a judgement must not choose its own sources | a claimant could cite any admitted host, including a page they publish about themselves | the charter names its `evidence_domains` before any event exists, and a request citing anything else is refused at filing |
+| source diversity is not source independence | corroboration counted distinct source **ids**, so a charter could watch three pages of one host and call two of them corroboration | corroboration is counted over distinct **hosts**, and a charter cannot demand more than its monitors' origins can give. The live catalogue now serves its watched sources from three origins, each commit-pinned to this repository and byte-identical |
+| party-declared metadata that steers a panel must be disclosed as a claim | the opener's `situation` and `area` entered the assessment prompt as given | the panel is told that `DATA.event` is the opener's claim, to be tested against the sources, and that where they disagree the sources decide |
+
+Two further standards were already met but not written down, and now are: the
+table of every field the payout math reads ([`docs/SECURITY.md`](docs/SECURITY.md#what-the-payout-math-reads))
+and the mirror of every asymmetric floor
+([`docs/SECURITY.md`](docs/SECURITY.md#both-sides-of-every-floor)).
+
 ## Design decisions worth naming
 
 **Corroboration is counted, not claimed.** The panel is asked to quote every

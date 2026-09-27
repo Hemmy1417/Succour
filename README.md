@@ -18,9 +18,10 @@ event, and that the request is real. SUCCOUR turns each of those into a record
 anyone can check.
 
 A **charter** is published first, while nothing is happening: the sources the
-organisation watches, what each severity band requires in words, how many
-sources must corroborate it, what relief each band promises for each category,
-and what a relief request must show. Then:
+organisation watches, the authorities whose documents a claimant may cite, what
+each severity band requires in words, how many **independent origins** must
+corroborate it, what relief each band promises for each category, and what a
+relief request must show. Then:
 
 - an **event** is opened against that charter and **assessed** - one consensus
   round reads every watched source and code derives the band;
@@ -42,7 +43,7 @@ source it rests on.
 | every field limit, URL admission, the authority-domain rule | which date the sources give for the onset |
 | source status from the HTTP answer, normalisation, digests | whether each band's conditions - written in words - are met |
 | where a source addresses the adjudicator | whether a need is inside the declared area |
-| how many distinct sources a band's finding rests on | whether the evidence establishes that need |
+| how many distinct origins a band's finding rests on | whether the evidence establishes that need |
 | the onset and freshness arithmetic | whether the need is tied to this event or to something else |
 | which band the findings add up to, and whether a request qualifies | what date the evidence carries |
 | the amount, the caps, duplicate evidence, reservations, the ledger | |

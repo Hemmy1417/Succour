@@ -70,6 +70,18 @@ that reads a different band or a different onset disagrees.
 ratified; a model failure never is; a leader that failed where the validator
 succeeded is refused.
 
+**A claimant who edits the page after a refusal.** Refused on `NEED_ABSENT`,
+the requester serves an improved page and asks for a second look. The recheck is
+refused, the standing decision is left alone, and the same bytes can still be
+re-judged - which is what a contested reading needs.
+
+**A claimant who cites their own site.** Refused at filing: the charter named
+its evidence authorities before the event.
+
+**A steward who watches three pages of one agency.** The charter parser refuses a
+band demanding more corroboration than the charter has origins, and a band whose
+quotes come from two pages of one host is short of its floor.
+
 **Money.** A deposit from anyone but the steward is credited back rather than
 lost; a reserved grant cannot be reclaimed; a released reservation gives its
 grant slot back; the same source cannot back two live requests; a paid source

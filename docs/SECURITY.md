@@ -14,6 +14,26 @@ defend against.
 | the leader | whoever is leading the round | a structural gate on its payload, then a comparison of what was retrieved and what it leads to, both reproduced independently |
 | the treasury | everyone | only the steward funds, only reservations pay, and money leaves only through `withdraw` |
 
+## What the payout math reads
+
+Every field that can change whether money moves, or how much:
+
+| Field | Who produces it | How it is bound |
+|---|---|---|
+| the declared band | panel readings, reduced by code | compared by every validator (`declared_band`) |
+| the band's conditions and `min_corroboration` | the charter | immutable, hashed, committed by the event |
+| how many origins a band rests on | **code**, from the hosts the grounded quotes came from | each quote re-grounded by every validator in its own retrieval |
+| the onset date | the panel, quoted | compared (`onset`), and the quote must carry year, month and day |
+| the request outcome and its reason | panel readings, reduced by code | compared (`outcome`, `reason_code`) |
+| the evidence date | the panel, quoted | compared where it bears on the result |
+| `grant_atto` for the band and category | the charter | immutable, hashed, committed by the request |
+| `max_grants`, `max_grants_per_wallet` | the charter | counted in code over reservations and payments |
+| the charter's free pool | contract state | deterministic on every node |
+| the bytes the decision rested on | the source record | compared for a STABLE source, and bound across rounds |
+
+Nothing else enters it. The model never sees an amount, and no amount is
+derived from anything a model returned.
+
 ## Prompt injection
 
 Every source is data. The panel header says so, and the contract does not rely
@@ -36,6 +56,20 @@ on the panel obeying it:
 would let whoever poisoned it choose which sources count - and with a
 corroboration floor, removing one source can change the band. The whole round
 stops.
+
+## Choosing the evidence
+
+- The charter names the hosts it **watches** and the hosts a claimant may
+  **cite**, both before any event exists. A request citing anything else is
+  refused at filing.
+- A band rests on distinct origins, so a steward cannot manufacture
+  corroboration by watching three pages of one site.
+- A second look judges the bytes the first look judged: the digest is bound at
+  the first adjudication and a round that retrieves something else is refused,
+  so a claimant cannot be refused on what their page said, improve it, and be
+  paid on the improvement.
+- Evidence declared DYNAMIC is judged once. Nothing about its bytes was agreed,
+  so there is nothing for a second look to hold it to.
 
 ## Fabricated support
 
@@ -93,6 +127,19 @@ into a hex string. No method takes an address for someone else, so a record can
 never name a wallet that did not sign for it. Assessment, adjudication and
 settlement are deliberately public: a keeper who is nobody's agent can move a
 record forward, and none of them can change an outcome.
+
+## Both sides of every floor
+
+A floor that only bites one way is a bias. The mirrors, explicitly:
+
+| Floor | Mirror |
+|---|---|
+| a band needs `min_corroboration` origins before it is declared | a refusal needs none - it moves no money, and requiring corroboration to *withhold* relief would favour whoever benefits from silence |
+| evidence dated before the onset does not qualify | evidence dated in the future is `UNDATED`, not fresh |
+| a watched page that addresses the adjudicator stops the round | so does a requester's page that addresses it |
+| a treasury that cannot cover a grant authorises nothing | a treasury holding more than its reservations is reclaimable, and only after the charter is retired |
+| a request that qualifies reserves before it is paid | a request that stops qualifying releases before it is settled |
+| a source a request holds cannot back another | a source freed by a lapse or an ungranted settlement can |
 
 ## Out of scope
 

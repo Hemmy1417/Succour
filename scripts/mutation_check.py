@@ -106,7 +106,7 @@ MUTATIONS = [
     # source nobody retrieved.
     # -- the band -------------------------------------------------------------------------
     m("the corroboration floor does not hold",
-      '        if len(cited) >= band["min_corroboration"]:',
+      '        if len(_cited_origins(ctx, payload, subject)) >= band["min_corroboration"]:',
       "        if True:"),
     m("corroboration counts quotes, not distinct sources",
       '    return sorted(set(q["evidence_id"] for q in f["quotes"]))\n',
@@ -194,6 +194,28 @@ MUTATIONS = [
     # has already passed the gate, so the second pass cannot be pinned offline.
     # It guards the on-chain path, where the ratified text comes from consensus.
     # -- the charter -----------------------------------------------------------------------
+    m("corroboration counts source labels, not distinct hosts",
+      "        if len(_cited_origins(ctx, payload, subject)) >= band[\"min_corroboration\"]:",
+      '        if len(cited) >= band["min_corroboration"]:'),
+    m("a charter may demand more corroboration than it has hosts",
+      '    err = _bands_error(charter["bands"], len(_origins(charter["monitors"])))\n',
+      '    err = _bands_error(charter["bands"], len(charter["monitors"]))\n'),
+    m("a request may cite any host at all",
+      '        if not _domain_allowed(_host_of(url), spec["evidence_domains"]):'),
+    m("the charter need not name its evidence authorities",
+      '    evidence = charter["evidence_domains"]\n'
+      "    if not isinstance(evidence, list) or len(evidence) < 1 or len(evidence) > MAX_DOMAINS \\\n",
+      '    evidence = charter["evidence_domains"]\n'
+      "    if False:\n"),
+    m("a second look may judge different bytes",
+      "    sources, texts, markers = _retrieve(ctx)\n    _same_evidence(ctx, sources)\n",
+      "    sources, texts, markers = _retrieve(ctx)\n"),
+    m("the bytes a decision rested on are never recorded",
+      "        source = _source_of(payload, REQUEST_SOURCE_ID)\n"
+      '        if source is not None and source["status"] in READABLE:\n'
+      '            request.evidence_digest = source["content_digest"]\n', ""),
+    m("evidence whose bytes were never agreed may be rechecked",
+      '        if str(request.stability) == "DYNAMIC" and str(request.evidence_digest) == "":'),
     m("min_corroboration may exceed the watched sources",
       '        if not _int_in(entry["min_corroboration"], 1, monitors):'),
     m("a monitor may sit outside the charter's authority domains",

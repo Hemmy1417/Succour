@@ -13,7 +13,8 @@ hash, so nobody can argue afterwards about what was promised.
 | `hazard` | enum | `EARTHQUAKE`, `FLOOD`, `STORM`, `WILDFIRE`, `DROUGHT`, `OTHER` |
 | `region` | string | 1-200 characters, one line: the area this charter covers |
 | `authority_domains` | list | 1-4 lowercase host suffixes; every watched source must sit under one |
-| `monitors` | list | 1-3 watched sources, numbered `M1`, `M2`, `M3` in order |
+| `evidence_domains` | list | 1-4 lowercase host suffixes; the authorities whose documents a relief request may cite |
+| `monitors` | list | 1-3 watched sources, numbered `M1`, `M2`, `M3` in order, **on distinct hosts where corroboration is required** |
 | `bands` | list | 1-3 severity bands, **mildest first** |
 | `qualification` | string | 1-600 characters: what a relief request must show |
 | `assessment_window` | int | 60 to 2,592,000 seconds |
@@ -35,8 +36,10 @@ A band is `{band_id, label, conditions, min_corroboration, relief}`:
   would share a slot with a subject;
 - `conditions` is up to 400 characters of prose, and is what the panel is asked
   to read;
-- `min_corroboration` is 1 to the number of monitors: how many distinct watched
-  sources a finding for this band must rest on;
+- `min_corroboration` is 1 to the number of distinct **hosts** the charter
+  watches: how many independent publishers a finding for this band must rest on.
+  Two pages of one agency are one publisher, and a charter cannot demand more
+  corroboration than its origins can give;
 - `relief` is 1-3 actions, each `{category, grant_atto, max_grants}`, one per
   category, from `SHELTER`, `MEDICAL`, `WATER`, `FOOD`, `EVACUATION`, `CASH`.
 
@@ -69,6 +72,23 @@ is fine when that is what you meant, and confusing when it is not.
 that spends real money; one for a watch band that only opens the smallest
 grants. Remember that a missing source cannot corroborate: a charter with two
 monitors and `min_corroboration: 2` declares nothing while either one is down.
+
+## Two lists of authorities, both fixed in advance
+
+`authority_domains` bounds what the organisation **watches**: the bulletins and
+data releases a declaration may rest on. `evidence_domains` bounds what a
+claimant may **cite**: the offices whose assessments, registers and reports
+count as evidence of a need.
+
+Both are in the charter because both must be settled before anyone has an
+interest in the answer. Without the first, a steward could point the panel at a
+page they control; without the second, a claimant could publish their own field
+report and be paid on it. Naming them in advance is what makes the declaration
+and the grant something other than a self-assessment.
+
+They may overlap - a relief office that publishes both bulletins and site
+assessments belongs in both - and each list holds at most four suffixes, so the
+choice stays small enough for a reader to check.
 
 ## Writing the qualification rule
 

@@ -18,7 +18,7 @@ writes are signed transactions that go through consensus.
 | `expire_event(event_id)` | anyone | lapses an event nobody assessed in time |
 | `file_request(event_id, charter_hash, category, need, area_note, evidence_url, stability)` | claimant | files a relief request against the band that stands and returns its id (`RQ-000001`) |
 | `adjudicate(request_id)` | anyone | decides the request; a qualifying one reserves the charter's grant. Returns the adjudication id (`AD-000001`) |
-| `recheck_request(request_id)` | anyone | one more decision while the window is open, at most once |
+| `recheck_request(request_id)` | the filer or the charter's steward | one more decision while the window is open, at most once, **on the same bytes** - a round whose retrieval differs from the bound digest is refused, and evidence declared DYNAMIC is not rechecked at all |
 | `finalize_request(request_id)` | anyone | settles: a reservation becomes a claimable credit, anything else is released. Returns the amount |
 | `expire_request(request_id)` | anyone | lapses a request nobody adjudicated in time, freeing its source |
 | `withdraw()` | anyone with a credit | pays the caller's whole credit and returns the amount |
@@ -36,7 +36,7 @@ because a u256 does not survive a JSON number.
 | `get_declaration(declaration_id)` | one declaration receipt in full |
 | `get_latest_declaration(event_id)` | the declaration that stands |
 | `get_event_history(event_id)` | one line per round: mode, band, reason, onset |
-| `get_request(request_id)` | the request as filed, its status, its outcome and its reserved and paid amounts |
+| `get_request(request_id)` | the request as filed, its status, its outcome, its reserved and paid amounts, and the evidence digest the first adjudication bound |
 | `get_request_status(request_id, as_of)` | what may happen at that time |
 | `get_adjudication(adjudication_id)` | one adjudication receipt in full |
 | `get_latest_adjudication(request_id)` | the decision that stands |

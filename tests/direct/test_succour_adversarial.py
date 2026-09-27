@@ -789,3 +789,161 @@ def test_a_deterministic_failure_is_not_ratified_by_a_transient_one(court, direc
                subjects=_watch_said())
     direct_vm._llm_mocks.clear()
     assert s.replay(direct_vm, error=Exception("[EXPECTED] the charter forbids it")) is False
+
+
+# -- the evidence a request may cite, and the bytes a second look judges -------
+
+def test_evidence_must_come_from_an_authority_the_charter_named(court, direct_vm,
+                                                               direct_alice, direct_bob):
+    """The subject of a judgement must not choose its own sources. The charter
+    names, in advance, both the sources it watches and the authorities whose
+    documents a request may cite."""
+    charter_id = s.published(court, direct_vm, direct_alice,
+                             evidence_domains=["reports.example.org"])
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    s.serve_all(direct_vm)
+    event_id, _d = s.declared(court, direct_vm, direct_bob, charter_id, charter_hash)
+    own_page = "https://claimant-site.example.net/my-own-assessment.html"
+    s.serve(direct_vm, own_page, s.ASSESSMENT)
+    direct_vm.sender = direct_bob
+    with direct_vm.expect_revert("evidence authorities"):
+        court.file_request(event_id, charter_hash, "SHELTER", "A need", "Eastfield",
+                           own_page, "STABLE")
+    request_id = s.filed(court, direct_vm, direct_bob, event_id, charter_hash)
+    assert court.get_request(request_id)["source_url"] == s.EVIDENCE_URL
+
+
+def test_the_first_adjudication_binds_the_bytes_it_read(court, direct_vm, direct_alice,
+                                                       direct_bob, direct_charlie):
+    charter_id = s.published(court, direct_vm, direct_alice)
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    s.funded(court, direct_vm, direct_alice, charter_id, 10 * s.GEN)
+    s.serve_all(direct_vm)
+    event_id, _d = s.declared(court, direct_vm, direct_bob, charter_id, charter_hash)
+    request_id = s.filed(court, direct_vm, direct_charlie, event_id, charter_hash)
+    assert court.get_request(request_id)["evidence_digest"] == ""
+    s.panel(direct_vm, s.request_said(need="ABSENT"), header="relief")
+    court.adjudicate(request_id)
+    assert len(court.get_request(request_id)["evidence_digest"]) == 64
+
+
+def test_a_requester_cannot_edit_the_page_and_be_judged_again(court, direct_vm,
+                                                              direct_alice, direct_bob,
+                                                              direct_charlie):
+    """The sharpest version of the attack: refused on what the page said, the
+    requester improves the page and asks for a second look."""
+    charter_id = s.published(court, direct_vm, direct_alice)
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    s.funded(court, direct_vm, direct_alice, charter_id, 10 * s.GEN)
+    s.serve_all(direct_vm)
+    event_id, _d = s.declared(court, direct_vm, direct_bob, charter_id, charter_hash)
+    request_id = s.filed(court, direct_vm, direct_charlie, event_id, charter_hash)
+    s.panel(direct_vm, s.request_said(need="ABSENT"), header="relief")
+    court.adjudicate(request_id)
+    direct_vm.clear_mocks()
+    improved = s.page("Eastfield shelter assessment",
+                      [s.AREA_LINE, s.NEED_LINE, s.LINK_LINE, s.DATE_LINE,
+                       "A further visit confirms seventy-two households without shelter."])
+    s.serve_all(direct_vm, {s.EVIDENCE_URL: improved})
+    s.panel(direct_vm, s.request_said(), header="relief")
+    direct_vm.sender = direct_charlie
+    with direct_vm.expect_revert("the evidence changed since the adjudication"):
+        court.recheck_request(request_id)
+    standing = court.get_latest_adjudication(request_id)["adjudication"]
+    assert standing["reason_code"] == "NEED_ABSENT"
+    assert court.get_request(request_id)["reserved_atto"] == "0"
+
+
+def test_the_same_bytes_may_be_judged_again(court, direct_vm, direct_alice, direct_bob,
+                                            direct_charlie):
+    charter_id = s.published(court, direct_vm, direct_alice)
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    s.funded(court, direct_vm, direct_alice, charter_id, 10 * s.GEN)
+    s.serve_all(direct_vm)
+    event_id, _d = s.declared(court, direct_vm, direct_bob, charter_id, charter_hash)
+    request_id = s.filed(court, direct_vm, direct_charlie, event_id, charter_hash)
+    s.panel(direct_vm, s.request_said(need="UNCLEAR"), header="relief")
+    court.adjudicate(request_id)
+    s.panel(direct_vm, s.request_said(), header="relief")
+    direct_vm.sender = direct_charlie
+    ruling = court.get_adjudication(court.recheck_request(request_id))["adjudication"]
+    assert ruling["outcome"] == "QUALIFIES" and ruling["funding"] == "RESERVED"
+
+
+def test_evidence_declared_dynamic_gets_one_look(court, direct_vm, direct_alice,
+                                                 direct_bob, direct_charlie):
+    charter_id = s.published(court, direct_vm, direct_alice)
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    s.funded(court, direct_vm, direct_alice, charter_id, 10 * s.GEN)
+    s.serve_all(direct_vm)
+    event_id, _d = s.declared(court, direct_vm, direct_bob, charter_id, charter_hash)
+    request_id = s.filed(court, direct_vm, direct_charlie, event_id, charter_hash,
+                         stability="DYNAMIC")
+    s.panel(direct_vm, s.request_said(need="ABSENT"), header="relief")
+    court.adjudicate(request_id)
+    assert court.get_request(request_id)["evidence_digest"] == ""
+    assert court.get_request_status(request_id, s.NOW)["may_recheck"] is False
+    s.panel(direct_vm, s.request_said(), header="relief")
+    direct_vm.sender = direct_charlie
+    with direct_vm.expect_revert("DYNAMIC is not rechecked"):
+        court.recheck_request(request_id)
+
+
+# -- corroboration is over origins, not labels --------------------------------
+
+def test_two_pages_of_one_publisher_are_one_source(court, direct_vm, direct_alice,
+                                                   direct_bob):
+    """A band that needs two sources needs two publishers. M1 and M2 sit on one
+    host; only a quote from M3 brings a second origin."""
+    same = "https://alerts.example.gov/basin/second-bulletin"
+    monitors = [{"source_id": "M1", "url": s.M1_URL, "stability": "STABLE",
+                 "description": "The provincial flood bulletin"},
+                {"source_id": "M2", "url": same, "stability": "STABLE",
+                 "description": "The same agency's second bulletin"},
+                {"source_id": "M3", "url": s.M3_URL, "stability": "STABLE",
+                 "description": "The district situation report"}]
+    bands = [s.band("declared", "Declared", "A flood warning is in force.", 2,
+                    [s.relief("SHELTER", 2 * s.GEN, 4)])]
+    charter_id = s.published(court, direct_vm, direct_alice, monitors=monitors, bands=bands)
+    charter_hash = court.get_charter(charter_id)["charter_hash"]
+    s.serve_all(direct_vm, {same: s.BULLETIN})
+    said = {"HAZARD_MATCH": s.said("MATCHES", [("M1", s.HAZARD_LINE)]),
+            "ONSET": s.said("DATED", [("M1", s.ONSET_LINE)], date=s.ONSET_DATE),
+            "BAND_DECLARED": s.said("MET", [("M1", s.WATCH_LINE),
+                                            ("M2", s.DECLARED_LINE)])}
+    _event_id, declaration_id = s.declared(court, direct_vm, direct_bob, charter_id,
+                                           charter_hash, subjects=said)
+    receipt = court.get_declaration(declaration_id)["declaration"]
+    assert receipt["reason_code"] == "CORROBORATION_SHORT"
+    assert receipt["corroborating_origins"] == []
+    said["BAND_DECLARED"] = s.said("MET", [("M1", s.WATCH_LINE), ("M3", s.FIELD_LINE)])
+    direct_vm.sender = direct_bob
+    second = court.open_event(charter_id, charter_hash, "Flooding reported again",
+                              "The lower town")
+    s.panel(direct_vm, said)
+    receipt = court.get_declaration(court.assess(second))["declaration"]
+    assert receipt["declared_band"] == "declared"
+    assert receipt["corroborating_origins"] == ["alerts.example.gov", "relief.example.gov"]
+
+
+def test_a_charter_cannot_demand_more_corroboration_than_it_watches(court, direct_vm,
+                                                                    direct_alice):
+    same = "https://alerts.example.gov/basin/second-bulletin"
+    monitors = [{"source_id": "M1", "url": s.M1_URL, "stability": "STABLE",
+                 "description": "The provincial flood bulletin"},
+                {"source_id": "M2", "url": same, "stability": "STABLE",
+                 "description": "The same agency's second bulletin"}]
+    bands = [s.band("declared", "Declared", "A flood warning is in force.", 2,
+                    [s.relief("SHELTER", 2 * s.GEN, 4)])]
+    direct_vm.sender = direct_alice
+    with direct_vm.expect_revert("min_corroboration must be 1 to 1"):
+        court.create_charter(s.charter_json(monitors=monitors, bands=bands))
+
+
+def test_the_evidence_authorities_are_checked_in_the_charter(court, direct_vm,
+                                                             direct_alice):
+    direct_vm.sender = direct_alice
+    for value in ([], ["Example.Org"], ["example.org", "example.org"],
+                  ["a.org", "b.org", "c.org", "d.org", "e.org"]):
+        with direct_vm.expect_revert("evidence_domains must be"):
+            court.create_charter(s.charter_json(evidence_domains=value))

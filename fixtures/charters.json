@@ -2,7 +2,9 @@
  "AS01": {
   "assessment_window": 1800,
   "authority_domains": [
-   "raw.githubusercontent.com"
+   "raw.githubusercontent.com",
+   "cdn.jsdelivr.net",
+   "rawcdn.githack.com"
   ],
   "bands": [
    {
@@ -56,6 +58,9 @@
    }
   ],
   "budget_atto": "30000000000000000000",
+  "evidence_domains": [
+   "raw.githubusercontent.com"
+  ],
   "hazard": "FLOOD",
   "max_age_seconds": 1209600,
   "max_grants_per_wallet": 3,
@@ -70,7 +75,7 @@
     "description": "The published river gauge readings for the basin",
     "source_id": "M2",
     "stability": "STABLE",
-    "url": "{base}sources/monitors/AS01-gauges.html"
+    "url": "{mirror}sources/monitors/AS01-gauges.html"
    }
   ],
   "name": "Lower Marrow flood relief",
@@ -81,7 +86,9 @@
  "AS02": {
   "assessment_window": 1800,
   "authority_domains": [
-   "raw.githubusercontent.com"
+   "raw.githubusercontent.com",
+   "cdn.jsdelivr.net",
+   "rawcdn.githack.com"
   ],
   "bands": [
    {
@@ -135,6 +142,9 @@
    }
   ],
   "budget_atto": "30000000000000000000",
+  "evidence_domains": [
+   "raw.githubusercontent.com"
+  ],
   "hazard": "FLOOD",
   "max_age_seconds": 1209600,
   "max_grants_per_wallet": 3,
@@ -149,7 +159,7 @@
     "description": "The published river gauge readings for the basin",
     "source_id": "M2",
     "stability": "STABLE",
-    "url": "{base}sources/monitors/AS02-gauges.html"
+    "url": "{mirror}sources/monitors/AS02-gauges.html"
    }
   ],
   "name": "Lower Marrow flood relief, second reading",
@@ -160,7 +170,9 @@
  "AS03": {
   "assessment_window": 1800,
   "authority_domains": [
-   "raw.githubusercontent.com"
+   "raw.githubusercontent.com",
+   "cdn.jsdelivr.net",
+   "rawcdn.githack.com"
   ],
   "bands": [
    {
@@ -214,6 +226,9 @@
    }
   ],
   "budget_atto": "30000000000000000000",
+  "evidence_domains": [
+   "raw.githubusercontent.com"
+  ],
   "hazard": "FLOOD",
   "max_age_seconds": 1209600,
   "max_grants_per_wallet": 3,
@@ -228,7 +243,7 @@
     "description": "The published river gauge readings for the basin",
     "source_id": "M2",
     "stability": "STABLE",
-    "url": "{base}sources/monitors/AS03-gauges.html"
+    "url": "{mirror}sources/monitors/AS03-gauges.html"
    }
   ],
   "name": "Lower Marrow flood relief, severe reading",
@@ -239,7 +254,9 @@
  "AS04": {
   "assessment_window": 1800,
   "authority_domains": [
-   "raw.githubusercontent.com"
+   "raw.githubusercontent.com",
+   "cdn.jsdelivr.net",
+   "rawcdn.githack.com"
   ],
   "bands": [
    {
@@ -293,6 +310,9 @@
    }
   ],
   "budget_atto": "30000000000000000000",
+  "evidence_domains": [
+   "raw.githubusercontent.com"
+  ],
   "hazard": "FLOOD",
   "max_age_seconds": 0,
   "max_grants_per_wallet": 3,
@@ -307,7 +327,7 @@
     "description": "The published river gauge readings for the basin",
     "source_id": "M2",
     "stability": "STABLE",
-    "url": "{base}sources/monitors/AS04-gauges.html"
+    "url": "{mirror}sources/monitors/AS04-gauges.html"
    }
   ],
   "name": "Lower Marrow flood relief, quiet season",
@@ -318,7 +338,9 @@
  "AS05": {
   "assessment_window": 1800,
   "authority_domains": [
-   "raw.githubusercontent.com"
+   "raw.githubusercontent.com",
+   "cdn.jsdelivr.net",
+   "rawcdn.githack.com"
   ],
   "bands": [
    {
@@ -336,6 +358,9 @@
    }
   ],
   "budget_atto": "30000000000000000000",
+  "evidence_domains": [
+   "raw.githubusercontent.com"
+  ],
   "hazard": "FLOOD",
   "max_age_seconds": 1209600,
   "max_grants_per_wallet": 3,
@@ -350,7 +375,7 @@
     "description": "The published river gauge readings for the basin",
     "source_id": "M2",
     "stability": "STABLE",
-    "url": "{base}sources/monitors/AS05-gauges.html"
+    "url": "{mirror}sources/monitors/AS05-gauges.html"
    }
   ],
   "name": "Lower Marrow flood relief, single witness",
@@ -361,7 +386,9 @@
  "AS06": {
   "assessment_window": 1800,
   "authority_domains": [
-   "raw.githubusercontent.com"
+   "raw.githubusercontent.com",
+   "cdn.jsdelivr.net",
+   "rawcdn.githack.com"
   ],
   "bands": [
    {
@@ -415,6 +442,9 @@
    }
   ],
   "budget_atto": "30000000000000000000",
+  "evidence_domains": [
+   "raw.githubusercontent.com"
+  ],
   "hazard": "FLOOD",
   "max_age_seconds": 1209600,
   "max_grants_per_wallet": 3,
@@ -429,7 +459,7 @@
     "description": "The published river gauge readings for the basin",
     "source_id": "M2",
     "stability": "STABLE",
-    "url": "{base}sources/monitors/AS06-gauges.html"
+    "url": "{mirror}sources/monitors/AS06-gauges.html"
    }
   ],
   "name": "Lower Marrow flood relief, heat advisory",
@@ -440,7 +470,9 @@
  "AS07": {
   "assessment_window": 1800,
   "authority_domains": [
-   "raw.githubusercontent.com"
+   "raw.githubusercontent.com",
+   "cdn.jsdelivr.net",
+   "rawcdn.githack.com"
   ],
   "bands": [
    {
@@ -494,6 +526,9 @@
    }
   ],
   "budget_atto": "30000000000000000000",
+  "evidence_domains": [
+   "raw.githubusercontent.com"
+  ],
   "hazard": "FLOOD",
   "max_age_seconds": 1209600,
   "max_grants_per_wallet": 3,
@@ -508,7 +543,7 @@
     "description": "The published river gauge readings for the basin",
     "source_id": "M2",
     "stability": "STABLE",
-    "url": "{base}sources/monitors/AS07-gauges.html"
+    "url": "{mirror}sources/monitors/AS07-gauges.html"
    }
   ],
   "name": "Lower Marrow flood relief, undated",
@@ -519,7 +554,9 @@
  "AS08": {
   "assessment_window": 1800,
   "authority_domains": [
-   "raw.githubusercontent.com"
+   "raw.githubusercontent.com",
+   "cdn.jsdelivr.net",
+   "rawcdn.githack.com"
   ],
   "bands": [
    {
@@ -573,6 +610,9 @@
    }
   ],
   "budget_atto": "30000000000000000000",
+  "evidence_domains": [
+   "raw.githubusercontent.com"
+  ],
   "hazard": "FLOOD",
   "max_age_seconds": 1209600,
   "max_grants_per_wallet": 3,
@@ -587,7 +627,7 @@
     "description": "The published river gauge readings for the basin",
     "source_id": "M2",
     "stability": "STABLE",
-    "url": "{base}sources/monitors/AS08-gauges.html"
+    "url": "{mirror}sources/monitors/AS08-gauges.html"
    }
   ],
   "name": "Lower Marrow flood relief, stale signal",
@@ -598,7 +638,9 @@
  "AS09": {
   "assessment_window": 1800,
   "authority_domains": [
-   "raw.githubusercontent.com"
+   "raw.githubusercontent.com",
+   "cdn.jsdelivr.net",
+   "rawcdn.githack.com"
   ],
   "bands": [
    {
@@ -652,6 +694,9 @@
    }
   ],
   "budget_atto": "30000000000000000000",
+  "evidence_domains": [
+   "raw.githubusercontent.com"
+  ],
   "hazard": "FLOOD",
   "max_age_seconds": 1209600,
   "max_grants_per_wallet": 3,
@@ -666,7 +711,7 @@
     "description": "The published river gauge readings for the basin",
     "source_id": "M2",
     "stability": "STABLE",
-    "url": "{base}sources/monitors/AS09-missing-gauges.html"
+    "url": "{mirror}sources/monitors/AS09-missing-gauges.html"
    }
   ],
   "name": "Lower Marrow flood relief, silent sources",
@@ -677,7 +722,9 @@
  "AS10": {
   "assessment_window": 1800,
   "authority_domains": [
-   "raw.githubusercontent.com"
+   "raw.githubusercontent.com",
+   "cdn.jsdelivr.net",
+   "rawcdn.githack.com"
   ],
   "bands": [
    {
@@ -695,6 +742,9 @@
    }
   ],
   "budget_atto": "30000000000000000000",
+  "evidence_domains": [
+   "raw.githubusercontent.com"
+  ],
   "hazard": "FLOOD",
   "max_age_seconds": 1209600,
   "max_grants_per_wallet": 3,
@@ -709,7 +759,7 @@
     "description": "The published river gauge readings for the basin",
     "source_id": "M2",
     "stability": "STABLE",
-    "url": "{base}sources/monitors/AS10-missing.html"
+    "url": "{mirror}sources/monitors/AS10-missing.html"
    }
   ],
   "name": "Lower Marrow flood relief, one source down",
@@ -720,7 +770,9 @@
  "AS11": {
   "assessment_window": 1800,
   "authority_domains": [
-   "raw.githubusercontent.com"
+   "raw.githubusercontent.com",
+   "cdn.jsdelivr.net",
+   "rawcdn.githack.com"
   ],
   "bands": [
    {
@@ -774,6 +826,9 @@
    }
   ],
   "budget_atto": "30000000000000000000",
+  "evidence_domains": [
+   "raw.githubusercontent.com"
+  ],
   "hazard": "FLOOD",
   "max_age_seconds": 1209600,
   "max_grants_per_wallet": 3,
@@ -788,7 +843,7 @@
     "description": "The published river gauge readings for the basin",
     "source_id": "M2",
     "stability": "STABLE",
-    "url": "{base}sources/monitors/AS11-gauges.html"
+    "url": "{mirror}sources/monitors/AS11-gauges.html"
    }
   ],
   "name": "Lower Marrow flood relief, injected body",
@@ -799,7 +854,9 @@
  "AS12": {
   "assessment_window": 1800,
   "authority_domains": [
-   "raw.githubusercontent.com"
+   "raw.githubusercontent.com",
+   "cdn.jsdelivr.net",
+   "rawcdn.githack.com"
   ],
   "bands": [
    {
@@ -853,6 +910,9 @@
    }
   ],
   "budget_atto": "30000000000000000000",
+  "evidence_domains": [
+   "raw.githubusercontent.com"
+  ],
   "hazard": "FLOOD",
   "max_age_seconds": 1209600,
   "max_grants_per_wallet": 3,
@@ -867,7 +927,7 @@
     "description": "The published river gauge readings for the basin",
     "source_id": "M2",
     "stability": "STABLE",
-    "url": "{base}sources/monitors/AS12-gauges.html"
+    "url": "{mirror}sources/monitors/AS12-gauges.html"
    }
   ],
   "name": "Lower Marrow flood relief, injected markup",
@@ -878,7 +938,9 @@
  "AS13": {
   "assessment_window": 1800,
   "authority_domains": [
-   "raw.githubusercontent.com"
+   "raw.githubusercontent.com",
+   "cdn.jsdelivr.net",
+   "rawcdn.githack.com"
   ],
   "bands": [
    {
@@ -932,6 +994,9 @@
    }
   ],
   "budget_atto": "30000000000000000000",
+  "evidence_domains": [
+   "raw.githubusercontent.com"
+  ],
   "hazard": "FLOOD",
   "max_age_seconds": 1209600,
   "max_grants_per_wallet": 3,
@@ -946,7 +1011,7 @@
     "description": "The published river gauge readings for the basin",
     "source_id": "M2",
     "stability": "STABLE",
-    "url": "{base}sources/monitors/AS13-gauges.html"
+    "url": "{mirror}sources/monitors/AS13-gauges.html"
    }
   ],
   "name": "Lower Marrow flood relief, hidden instruction",
@@ -957,7 +1022,9 @@
  "AS14": {
   "assessment_window": 1800,
   "authority_domains": [
-   "raw.githubusercontent.com"
+   "raw.githubusercontent.com",
+   "cdn.jsdelivr.net",
+   "rawcdn.githack.com"
   ],
   "bands": [
    {
@@ -1011,6 +1078,9 @@
    }
   ],
   "budget_atto": "30000000000000000000",
+  "evidence_domains": [
+   "raw.githubusercontent.com"
+  ],
   "hazard": "FLOOD",
   "max_age_seconds": 1209600,
   "max_grants_per_wallet": 3,
@@ -1025,7 +1095,7 @@
     "description": "The basin's live operational feed",
     "source_id": "M2",
     "stability": "DYNAMIC",
-    "url": "{base}sources/monitors/AS14-feed.html"
+    "url": "{mirror}sources/monitors/AS14-feed.html"
    }
   ],
   "name": "Lower Marrow flood relief, live feed",
@@ -1036,7 +1106,9 @@
  "AS15": {
   "assessment_window": 1800,
   "authority_domains": [
-   "raw.githubusercontent.com"
+   "raw.githubusercontent.com",
+   "cdn.jsdelivr.net",
+   "rawcdn.githack.com"
   ],
   "bands": [
    {
@@ -1090,6 +1162,9 @@
    }
   ],
   "budget_atto": "30000000000000000000",
+  "evidence_domains": [
+   "raw.githubusercontent.com"
+  ],
   "hazard": "FLOOD",
   "max_age_seconds": 1209600,
   "max_grants_per_wallet": 3,
@@ -1104,7 +1179,7 @@
     "description": "The published river gauge readings for the basin",
     "source_id": "M2",
     "stability": "STABLE",
-    "url": "{base}sources/monitors/AS15-gauges.html"
+    "url": "{mirror}sources/monitors/AS15-gauges.html"
    }
   ],
   "name": "Lower Marrow flood relief, future onset",
@@ -1115,7 +1190,9 @@
  "AS16": {
   "assessment_window": 1800,
   "authority_domains": [
-   "raw.githubusercontent.com"
+   "raw.githubusercontent.com",
+   "cdn.jsdelivr.net",
+   "rawcdn.githack.com"
   ],
   "bands": [
    {
@@ -1169,6 +1246,9 @@
    }
   ],
   "budget_atto": "30000000000000000000",
+  "evidence_domains": [
+   "raw.githubusercontent.com"
+  ],
   "hazard": "FLOOD",
   "max_age_seconds": 1209600,
   "max_grants_per_wallet": 3,
@@ -1183,13 +1263,13 @@
     "description": "The published river gauge readings for the basin",
     "source_id": "M2",
     "stability": "STABLE",
-    "url": "{base}sources/monitors/AS16-gauges.html"
+    "url": "{mirror}sources/monitors/AS16-gauges.html"
    },
    {
     "description": "The district relief office situation report",
     "source_id": "M3",
     "stability": "STABLE",
-    "url": "{base}sources/monitors/AS16-field.html"
+    "url": "{mirror2}sources/monitors/AS16-field.html"
    }
   ],
   "name": "Lower Marrow flood relief, three sources",

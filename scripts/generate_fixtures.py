@@ -110,9 +110,20 @@ def feed(entries) -> str:
 
 # -- the charter templates -----------------------------------------------------
 
+# A charter's watched sources must sit on distinct hosts, because corroboration
+# is counted over origins: one publisher wearing three labels is one source. A
+# live run therefore serves each monitored source from a different origin, every
+# one commit-pinned to this repository and serving the same bytes - the raw host,
+# the jsDelivr mirror and the githack mirror. The placeholders are filled by the
+# live run from the commit it was given.
+ORIGINS = {"M1": "{base}", "M2": "{mirror}", "M3": "{mirror2}"}
+ORIGIN_DOMAINS = ["raw.githubusercontent.com", "cdn.jsdelivr.net",
+                  "rawcdn.githack.com"]
+
+
 def monitor(source_id: str, path: str, stability: str, description: str) -> dict:
-    return {"source_id": source_id, "url": "{base}" + path, "stability": stability,
-            "description": description}
+    return {"source_id": source_id, "url": ORIGINS[source_id] + path,
+            "stability": stability, "description": description}
 
 
 def relief(category: str, grant: int, max_grants: int) -> dict:
@@ -152,7 +163,8 @@ def charter(name: str, monitors, bands=None, hazard: str = "FLOOD",
         "name": name,
         "hazard": hazard,
         "region": REGION,
-        "authority_domains": ["raw.githubusercontent.com"],
+        "authority_domains": ORIGIN_DOMAINS,
+        "evidence_domains": ["raw.githubusercontent.com"],
         "monitors": monitors,
         "bands": bands if bands is not None else THREE_BANDS,
         "qualification": QUALIFICATION,
